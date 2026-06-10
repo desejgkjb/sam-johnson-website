@@ -1,0 +1,145 @@
+{
+  "hero": {
+    "heading": "Catalysing a revolution in youth leadership.",
+    "subheading": "Founder of the Student Volunteer Army. Speaker, disaster recovery practitioner, and champion of practical youth leadership worldwide.",
+    "photo": "",
+    "attribution": "Young New Zealander of the Year · Sir Peter Blake Leadership Award"
+  },
+  "about_teaser": {
+    "heading": "From a student with a shovel to a global voice for young leaders.",
+    "body": "When the Christchurch earthquakes struck, Sam Johnson mobilised 11,000 students through social media to dig the city out — and the Student Volunteer Army was born. Since then his work has taken him from disaster zones in Japan, the Philippines, Vanuatu and Nepal to boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil.",
+    "portrait": ""
+  },
+  "about_full": {
+    "heading": "A leader forged in the rubble of Christchurch.",
+    "subheading": "Founder of the Student Volunteer Army, international disaster recovery practitioner, and advocate for trusting young people with real responsibility.",
+    "portrait": "",
+    "origin_heading": "The origin story",
+    "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart — and watching thousands of young people being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p><p>Eleven thousand volunteers answered. The Student Volunteer Army was born — proof that young people, given trust and a practical task, will show up in extraordinary numbers.</p><p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p><p>His vision remains the same as it was in 2011: to catalyse a revolution in youth leadership.</p>",
+    "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now."
+  },
+  "stats": [
+    { "number": "11,000", "label": "Volunteers mobilised" },
+    { "number": "5", "label": "Countries — disaster recovery missions" },
+    { "number": "1", "label": "Movement — the Student Volunteer Army" }
+  ],
+  "projects": [
+    {
+      "title": "Student Volunteer Army",
+      "meta": "2011 – present · Christchurch & nationwide",
+      "description": "When the Christchurch earthquakes struck, Sam used Facebook to mobilise students into a coordinated volunteer force, clearing thousands of tonnes of liquefaction silt from the city's streets and homes. The SVA has since grown into a national movement with school, tertiary and community programmes that put young people at the heart of civic service.",
+      "chip": "11,000 volunteers mobilised",
+      "image": "",
+      "featured": true
+    },
+    {
+      "title": "Tōhoku earthquake & tsunami response",
+      "meta": "2011 · Japan",
+      "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand.",
+      "chip": "First international mission",
+      "image": "",
+      "featured": false
+    },
+    {
+      "title": "Typhoon Haiyan recovery",
+      "meta": "2013 · Philippines",
+      "description": "Advisory and on-the-ground support for community-led recovery after one of the strongest storms ever recorded.",
+      "chip": "Community mobilisation",
+      "image": "",
+      "featured": false
+    },
+    {
+      "title": "Cyclone Pam & Nepal earthquake responses",
+      "meta": "2015 · Vanuatu · Nepal",
+      "description": "Back-to-back disaster deployments focused on volunteer mobilisation and community resilience in two very different contexts.",
+      "chip": "2 major deployments",
+      "image": "",
+      "featured": false
+    },
+    {
+      "title": "Global youth leadership advocacy",
+      "meta": "2016 – present · Pacific · Saudi Arabia · Brazil",
+      "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents.",
+      "chip": "3 continents",
+      "image": "",
+      "featured": false
+    }
+  ],
+  "timeline": [
+    {
+      "year": "2011",
+      "title": "Student Volunteer Army founded",
+      "location": "Christchurch, New Zealand",
+      "description": "After the February earthquake, Sam mobilised students through social media to clear liquefaction silt across the city. What began as one Facebook event became a coordinated volunteer force.",
+      "chip": "11,000 volunteers"
+    },
+    {
+      "year": "2011",
+      "title": "Tōhoku earthquake response",
+      "location": "Japan",
+      "description": "Sam joined recovery efforts following the Tōhoku earthquake and tsunami, beginning the international chapter of the SVA model.",
+      "chip": ""
+    },
+    {
+      "year": "2013",
+      "title": "Typhoon Haiyan recovery",
+      "location": "Philippines",
+      "description": "Supporting community-led recovery after one of the strongest storms ever recorded, applying volunteer coordination lessons from Christchurch.",
+      "chip": ""
+    },
+    {
+      "year": "2015",
+      "title": "Cyclone Pam & Nepal earthquake responses",
+      "location": "Vanuatu · Nepal",
+      "description": "Back-to-back deployments supporting volunteer mobilisation and community resilience in two major disasters.",
+      "chip": ""
+    },
+    {
+      "year": "2016+",
+      "title": "Global youth leadership advocacy",
+      "location": "Pacific · Saudi Arabia · Brazil",
+      "description": "Sam's work expanded to influencing school students, boardrooms and politicians internationally — championing practical, commonsense youth leadership.",
+      "chip": ""
+    },
+    {
+      "year": "Today",
+      "title": "The mission continues",
+      "location": "New Zealand & worldwide",
+      "description": "Speaking, advising and building programmes that put young people at the centre of civic life and disaster resilience.",
+      "chip": ""
+    }
+  ],
+  "testimonials": [
+    {
+      "quote": "Placeholder testimonial — event organiser quote to be supplied and approved by Sam. Two to three sentences on impact and audience response.",
+      "author": "Name Surname",
+      "title": "Title, Organisation"
+    },
+    {
+      "quote": "Placeholder testimonial — partner or media quote to be supplied and approved by Sam. Two to three sentences on working with Sam.",
+      "author": "Name Surname",
+      "title": "Title, Organisation"
+    }
+  ],
+  "awards": [
+    {
+      "title": "Young New Zealander of the Year",
+      "description": "National recognition for the SVA and youth mobilisation"
+    },
+    {
+      "title": "Communicator of the Year",
+      "description": "For pioneering social media mobilisation in crisis"
+    },
+    {
+      "title": "Sir Peter Blake Leadership Award",
+      "description": "For outstanding leadership in service of New Zealand"
+    }
+  ],
+  "settings": {
+    "name": "Sam Johnson",
+    "email": "hello@samjohnson.co.nz",
+    "linkedin_url": "#",
+    "sva_url": "#",
+    "footer_tagline": "Speaker, SVA founder and advocate for a revolution in youth leadership."
+  }
+}

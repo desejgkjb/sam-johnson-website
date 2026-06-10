@@ -1,0 +1,8 @@
+# Internal documents — not for the public repo/site
+*.docx
+samjohnson-theme.zip
+wp-theme/
+.DS_Store
+
+# Local Netlify folder
+.netlify

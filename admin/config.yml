@@ -1,0 +1,110 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - name: "main"
+        label: "All Content"
+        file: "_data/content.json"
+        format: json
+        fields:
+
+          - label: "⭐ Hero Section"
+            name: "hero"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Main heading", name: "heading", widget: "string" }
+              - { label: "Subheading", name: "subheading", widget: "text" }
+              - { label: "Hero photo", name: "photo", widget: "image", required: false, hint: "Full-bleed action photo of Sam" }
+              - { label: "Attribution line", name: "attribution", widget: "string" }
+
+          - label: "📖 About (Homepage teaser)"
+            name: "about_teaser"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Heading", name: "heading", widget: "string" }
+              - { label: "Body text", name: "body", widget: "text" }
+              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Natural light, warm grading, 4:5 ratio" }
+
+          - label: "📖 About (Full page)"
+            name: "about_full"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page heading", name: "heading", widget: "string" }
+              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Portrait photo", name: "portrait", widget: "image", required: false }
+              - { label: "Origin story heading", name: "origin_heading", widget: "string" }
+              - { label: "Origin story (HTML body)", name: "origin_body", widget: "markdown" }
+              - { label: "Pull quote", name: "quote", widget: "string" }
+
+          - label: "📊 Stats"
+            name: "stats"
+            widget: "list"
+            collapsed: true
+            label_singular: "Stat"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "🗂 Projects"
+            name: "projects"
+            widget: "list"
+            collapsed: true
+            label_singular: "Project"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date / Location", name: "meta", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag", name: "chip", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+
+          - label: "📅 Timeline"
+            name: "timeline"
+            widget: "list"
+            collapsed: true
+            label_singular: "Timeline item"
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag (optional)", name: "chip", widget: "string", required: false }
+
+          - label: "💬 Testimonials"
+            name: "testimonials"
+            widget: "list"
+            collapsed: true
+            label_singular: "Testimonial"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author name", name: "author", widget: "string" }
+              - { label: "Title & Organisation", name: "title", widget: "string" }
+
+          - label: "🏆 Awards"
+            name: "awards"
+            widget: "list"
+            collapsed: true
+            label_singular: "Award"
+            fields:
+              - { label: "Award name", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+
+          - label: "⚙️ Settings"
+            name: "settings"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Your name", name: "name", widget: "string" }
+              - { label: "Email address", name: "email", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
+              - { label: "SVA Website URL", name: "sva_url", widget: "string" }
+              - { label: "Footer tagline", name: "footer_tagline", widget: "string" }
