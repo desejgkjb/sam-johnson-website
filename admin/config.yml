@@ -2,6 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
+# Drafts are saved and previewed before going live
+publish_mode: editorial_workflow
+
 media_folder: "images"
 public_folder: "/images"
 
@@ -23,7 +26,36 @@ collections:
             fields:
               - { label: "Main heading", name: "heading", widget: "string" }
               - { label: "Subheading", name: "subheading", widget: "text" }
-              - { label: "Hero photo", name: "photo", widget: "image", required: false, hint: "Full-bleed action photo of Sam" }
+              - { label: "Hero photo", name: "photo", widget: "image", required: false, hint: "Full-bleed action photo of Sam. Upload a new file or pick from the media library to replace." }
+              - label: "Hero photo — fit"
+                name: "photo_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the area (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Hero photo — crop focus"
+                name: "photo_position"
+                widget: "select"
+                required: false
+                default: "center"
+                hint: "Which part of the photo stays visible when it gets cropped"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - label: "Hero section height"
+                name: "photo_height"
+                widget: "select"
+                required: false
+                default: "88vh"
+                options:
+                  - { label: "Standard (88% of screen)", value: "88vh" }
+                  - { label: "Full screen", value: "100vh" }
+                  - { label: "Compact (70% of screen)", value: "70vh" }
               - { label: "Attribution line", name: "attribution", widget: "string" }
 
           # ─── ABOUT (HOMEPAGE TEASER) ──────────────────────────
@@ -34,7 +66,36 @@ collections:
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body text", name: "body", widget: "text" }
-              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Natural light, warm grading, 4:5 ratio" }
+              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Natural light, warm grading. Upload or pick from media library to replace." }
+              - label: "Portrait — shape / size"
+                name: "portrait_aspect"
+                widget: "select"
+                required: false
+                default: "4/5"
+                options:
+                  - { label: "Portrait 4:5 (default)", value: "4/5" }
+                  - { label: "Square 1:1", value: "1/1" }
+                  - { label: "Portrait 3:4", value: "3/4" }
+                  - { label: "Landscape 16:10", value: "16/10" }
+              - label: "Portrait — fit"
+                name: "portrait_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Portrait — crop focus"
+                name: "portrait_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep head in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
 
           # ─── ABOUT (FULL PAGE) ────────────────────────────────
           - label: "📖 About (Full page)"
@@ -44,7 +105,36 @@ collections:
             fields:
               - { label: "Page heading", name: "heading", widget: "string" }
               - { label: "Page subheading", name: "subheading", widget: "text" }
-              - { label: "Portrait photo", name: "portrait", widget: "image", required: false }
+              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
+              - label: "Portrait — shape / size"
+                name: "portrait_aspect"
+                widget: "select"
+                required: false
+                default: "4/5"
+                options:
+                  - { label: "Portrait 4:5 (default)", value: "4/5" }
+                  - { label: "Square 1:1", value: "1/1" }
+                  - { label: "Portrait 3:4", value: "3/4" }
+                  - { label: "Landscape 16:10", value: "16/10" }
+              - label: "Portrait — fit"
+                name: "portrait_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Portrait — crop focus"
+                name: "portrait_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep head in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
               - { label: "Origin story heading", name: "origin_heading", widget: "string" }
               - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
               - { label: "Pull quote", name: "quote", widget: "string" }
@@ -71,7 +161,36 @@ collections:
               - { label: "Date / Location", name: "meta", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag", name: "chip", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image", required: false }
+              - { label: "Photo", name: "image", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
+              - label: "Photo — shape / size"
+                name: "image_aspect"
+                widget: "select"
+                required: false
+                default: "16/10"
+                options:
+                  - { label: "Landscape 16:10 (default)", value: "16/10" }
+                  - { label: "Landscape 4:3", value: "4/3" }
+                  - { label: "Widescreen 16:9", value: "16/9" }
+                  - { label: "Square 1:1", value: "1/1" }
+              - label: "Photo — fit"
+                name: "image_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Photo — crop focus"
+                name: "image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
 
           # ─── TIMELINE ─────────────────────────────────────────
           - label: "📅 Timeline"

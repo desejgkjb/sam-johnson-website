@@ -18,11 +18,21 @@
       .replace(/"/g, '&quot;');
   }
 
-  function imgOrPlaceholder(src, alt, cls) {
+  function imgOrPlaceholder(src, alt, s) {
+    s = s || {};
+    var aspect = s.aspect || '16/10';
     if (src) {
-      return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" class="' + (cls || 'card-img') + '">';
+      var st = 'width:100%;display:block;border-radius:6px'
+        + ';aspect-ratio:' + aspect
+        + ';object-fit:' + (s.fit || 'cover')
+        + ';object-position:' + (s.position || 'center');
+      return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" style="' + st + '">';
     }
-    return '<div class="img-placeholder" role="img" aria-label="' + esc(alt) + ' — placeholder"><span>' + esc(alt) + '</span></div>';
+    return '<div class="img-placeholder" style="aspect-ratio:' + aspect + ';border-radius:6px" role="img" aria-label="' + esc(alt) + ' — placeholder"><span>' + esc(alt) + '</span></div>';
+  }
+
+  function imgSettings(item) {
+    return { aspect: item.image_aspect, fit: item.image_fit, position: item.image_position };
   }
 
   function applyFields(data) {
@@ -54,22 +64,32 @@
       }
     });
 
-    // Hero background photo
+    // Hero background photo (fit / crop focus / section height from CMS)
     var heroSection = document.querySelector('.hero');
     if (heroSection && data.hero && data.hero.photo) {
       heroSection.style.backgroundImage = 'url(' + data.hero.photo + ')';
-      heroSection.style.backgroundSize = 'cover';
-      heroSection.style.backgroundPosition = 'center';
+      heroSection.style.backgroundSize = data.hero.photo_fit === 'contain' ? 'contain' : 'cover';
+      heroSection.style.backgroundPosition = data.hero.photo_position || 'center';
+      heroSection.style.backgroundRepeat = 'no-repeat';
+      if (data.hero.photo_height) heroSection.style.minHeight = data.hero.photo_height;
       var note = heroSection.querySelector('.hero-photo-note');
       if (note) note.style.display = 'none';
     }
 
-    // Portrait photos (about page & homepage teaser)
+    // Portrait photos (about page & homepage teaser) with shape / fit / crop focus
     document.querySelectorAll('[data-cms-portrait]').forEach(function (el) {
-      var src = get(data, el.dataset.cmsPortrait);
+      var path = el.dataset.cmsPortrait;
+      var src = get(data, path);
       if (src) {
-        el.innerHTML = '<img src="' + esc(src) + '" alt="Portrait of Sam Johnson" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">';
+        var parent = get(data, path.split('.').slice(0, -1).join('.')) || {};
+        var st = 'width:100%;display:block;border-radius:8px'
+          + ';aspect-ratio:' + (parent.portrait_aspect || '4/5')
+          + ';object-fit:' + (parent.portrait_fit || 'cover')
+          + ';object-position:' + (parent.portrait_position || 'center');
+        el.innerHTML = '<img src="' + esc(src) + '" alt="Portrait of Sam Johnson" style="' + st + '">';
         el.classList.remove('img-placeholder');
+        el.style.aspectRatio = 'auto';
+        el.style.background = 'none';
       }
     });
   }
@@ -77,7 +97,7 @@
   function renderProjects(container, projects) {
     container.innerHTML = projects.slice(0, 3).map(function (p) {
       return '<article class="card">'
-        + imgOrPlaceholder(p.image, p.title)
+        + imgOrPlaceholder(p.image, p.title, imgSettings(p))
         + '<h3>' + esc(p.title) + '</h3>'
         + '<p class="meta">' + esc(p.meta) + '</p>'
         + '<p>' + esc(p.description) + '</p>'
@@ -90,7 +110,7 @@
     container.innerHTML = projects.map(function (p, i) {
       if (i === 0) {
         return '<article class="card featured">'
-          + imgOrPlaceholder(p.image, p.title)
+          + imgOrPlaceholder(p.image, p.title, imgSettings(p))
           + '<div class="card-body">'
           + '<span class="section-label" style="margin-bottom:0">Flagship</span>'
           + '<h3>' + esc(p.title) + '</h3>'
@@ -100,7 +120,7 @@
           + '</div></article>';
       }
       return '<article class="card">'
-        + imgOrPlaceholder(p.image, p.title)
+        + imgOrPlaceholder(p.image, p.title, imgSettings(p))
         + '<h3>' + esc(p.title) + '</h3>'
         + '<p class="meta">' + esc(p.meta) + '</p>'
         + '<p>' + esc(p.description) + '</p>'

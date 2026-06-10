@@ -3,17 +3,26 @@
     "heading": "Catalysing a revolution in youth leadership.",
     "subheading": "Founder of the Student Volunteer Army. Speaker, disaster recovery practitioner, and champion of practical youth leadership worldwide.",
     "photo": "",
+    "photo_fit": "cover",
+    "photo_position": "center",
+    "photo_height": "88vh",
     "attribution": "Young New Zealander of the Year · Sir Peter Blake Leadership Award"
   },
   "about_teaser": {
     "heading": "From a student with a shovel to a global voice for young leaders.",
     "body": "When the Christchurch earthquakes struck, Sam Johnson mobilised 11,000 students through social media to dig the city out — and the Student Volunteer Army was born. Since then his work has taken him from disaster zones in Japan, the Philippines, Vanuatu and Nepal to boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil.",
-    "portrait": ""
+    "portrait": "",
+    "portrait_aspect": "4/5",
+    "portrait_fit": "cover",
+    "portrait_position": "center"
   },
   "about_full": {
     "heading": "A leader forged in the rubble of Christchurch.",
     "subheading": "Founder of the Student Volunteer Army, international disaster recovery practitioner, and advocate for trusting young people with real responsibility.",
     "portrait": "",
+    "portrait_aspect": "4/5",
+    "portrait_fit": "cover",
+    "portrait_position": "center",
     "origin_heading": "The origin story",
     "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart — and watching thousands of young people being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p><p>Eleven thousand volunteers answered. The Student Volunteer Army was born — proof that young people, given trust and a practical task, will show up in extraordinary numbers.</p><p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p><p>His vision remains the same as it was in 2011: to catalyse a revolution in youth leadership.</p>",
     "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now.",
@@ -31,6 +40,9 @@
       "description": "When the Christchurch earthquakes struck, Sam used Facebook to mobilise students into a coordinated volunteer force, clearing thousands of tonnes of liquefaction silt from the city's streets and homes. The SVA has since grown into a national movement with school, tertiary and community programmes that put young people at the heart of civic service.",
       "chip": "11,000 volunteers mobilised",
       "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": true
     },
     {
@@ -39,6 +51,9 @@
       "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand.",
       "chip": "First international mission",
       "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": false
     },
     {
@@ -47,6 +62,9 @@
       "description": "Advisory and on-the-ground support for community-led recovery after one of the strongest storms ever recorded.",
       "chip": "Community mobilisation",
       "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": false
     },
     {
@@ -55,6 +73,9 @@
       "description": "Back-to-back disaster deployments focused on volunteer mobilisation and community resilience in two very different contexts.",
       "chip": "2 major deployments",
       "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": false
     },
     {
@@ -63,6 +84,9 @@
       "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents.",
       "chip": "3 continents",
       "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
       "featured": false
     }
   ],

@@ -119,14 +119,24 @@ h2{font-size:36px;font-weight:600}
 .award h3{font-size:18px;font-weight:600;margin-bottom:6px}
 .award .meta{font-size:14px;color:var(--mid-grey)}
 
-/* Testimonials */
+/* Testimonials — horizontal carousel */
 .testimonials{background:var(--off-white);padding:112px 0}
-.testimonial-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:48px;margin-top:48px}
-.testimonial{position:relative;padding-left:56px}
-.testimonial::before{content:"\201C";position:absolute;left:0;top:-14px;font-size:72px;font-weight:700;color:var(--vermillion);line-height:1}
+.carousel{display:flex;align-items:stretch;gap:16px;margin-top:48px}
+.carousel-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px;flex:1;min-width:0}
+.carousel-track::-webkit-scrollbar{display:none}
+.carousel-track:focus-visible{outline:3px solid var(--vermillion);outline-offset:2px;border-radius:8px}
+.testimonial{position:relative;flex:0 0 calc((100% - 28px)/2);scroll-snap-align:start;background:var(--white);border-radius:8px;padding:72px 36px 36px;box-shadow:0 1px 3px rgba(45,45,45,.06);display:flex;flex-direction:column}
+.testimonial::before{content:"\201C";position:absolute;left:32px;top:18px;font-size:72px;font-weight:700;color:var(--vermillion);line-height:1}
 .testimonial blockquote{font-size:18px;margin-bottom:18px}
-.testimonial cite{font-style:normal;font-size:14px;color:var(--mid-grey)}
+.testimonial cite{font-style:normal;font-size:14px;color:var(--mid-grey);margin-top:auto}
 .testimonial cite strong{display:block;color:var(--charcoal);font-size:15px}
+.carousel-arrow{flex:0 0 44px;width:44px;height:44px;align-self:center;border-radius:50%;border:1.5px solid var(--blush-deep);background:var(--white);color:var(--charcoal);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.carousel-arrow:hover{background:var(--vermillion);border-color:var(--vermillion);color:var(--white)}
+.carousel-arrow:focus-visible{outline:3px solid var(--charcoal);outline-offset:2px}
+.carousel-arrow[disabled]{opacity:.35;cursor:default;pointer-events:none}
+.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:28px}
+.carousel-dots button{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:var(--blush-deep);cursor:pointer;transition:background .2s ease,transform .2s ease}
+.carousel-dots button.active{background:var(--vermillion);transform:scale(1.25)}
 
 /* Press strip */
 .press{background:var(--blush);padding:64px 0;text-align:center}
@@ -193,7 +203,9 @@ h2{font-size:36px;font-weight:600}
   .stat-grid{grid-template-columns:1fr;gap:40px}
   .card-grid,.card-grid-2,.values-grid,.awards-grid{grid-template-columns:1fr}
   .card.featured{grid-template-columns:1fr}
-  .testimonial-grid{grid-template-columns:1fr}
+  .carousel{gap:0}
+  .carousel-arrow{display:none}
+  .testimonial{flex:0 0 100%}
   .badge-row{gap:24px;flex-direction:column;align-items:flex-start;max-width:340px;margin:0 auto}
   .press-row{gap:28px}
   .footer-grid{grid-template-columns:1fr;gap:36px}

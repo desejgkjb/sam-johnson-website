@@ -87,15 +87,6 @@
   </div>
 </section>
 
-<!-- 06 / Impact stat band -->
-<section class="stats" aria-label="Impact statistics">
-  <div class="container" id="cms-stats">
-    <div><span class="stat-num">11,000</span><span class="stat-label">Volunteers mobilised</span></div>
-    <div><span class="stat-num">5</span><span class="stat-label">Countries — disaster recovery missions</span></div>
-    <div><span class="stat-num">1</span><span class="stat-label">Movement — the Student Volunteer Army</span></div>
-  </div>
-</section>
-
 <!-- 07 / Featured work teaser -->
 <section class="projects">
   <div class="container">
@@ -135,16 +126,29 @@
   <div class="container">
     <span class="section-label">What people say</span>
     <h2 data-cms-field="pages.home.testimonials_heading">Trusted by audiences and organisers alike.</h2>
-    <div class="testimonial-grid" id="cms-testimonials">
-      <div class="testimonial">
-        <blockquote>Placeholder testimonial — event organiser quote to be supplied and approved by Sam. Two to three sentences on impact and audience response.</blockquote>
-        <cite><strong>Name Surname</strong>Title, Organisation</cite>
+    <div class="carousel" aria-roledescription="carousel" aria-label="Testimonials">
+      <button class="carousel-arrow" id="carouselPrev" type="button" aria-label="Previous testimonials">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+      </button>
+      <div class="carousel-track" id="cms-testimonials" tabindex="0">
+        <div class="testimonial">
+          <blockquote>Placeholder testimonial — event organiser quote to be supplied and approved by Sam. Two to three sentences on impact and audience response.</blockquote>
+          <cite><strong>Name Surname</strong>Title, Organisation</cite>
+        </div>
+        <div class="testimonial">
+          <blockquote>Placeholder testimonial — partner or media quote to be supplied and approved by Sam. Two to three sentences on working with Sam.</blockquote>
+          <cite><strong>Name Surname</strong>Title, Organisation</cite>
+        </div>
+        <div class="testimonial">
+          <blockquote>Placeholder testimonial — client or audience-member quote to be supplied and approved by Sam. Two to three sentences on what changed after the talk.</blockquote>
+          <cite><strong>Name Surname</strong>Title, Organisation</cite>
+        </div>
       </div>
-      <div class="testimonial">
-        <blockquote>Placeholder testimonial — partner or media quote to be supplied and approved by Sam. Two to three sentences on working with Sam.</blockquote>
-        <cite><strong>Name Surname</strong>Title, Organisation</cite>
-      </div>
+      <button class="carousel-arrow" id="carouselNext" type="button" aria-label="Next testimonials">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      </button>
     </div>
+    <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
   </div>
 </section>
 
