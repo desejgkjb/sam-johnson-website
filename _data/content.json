@@ -13,6 +13,12 @@
   },
   "timeline": [
     {
+      "year": "2010 - 2013",
+      "title": "Board Member (elected)",
+      "description": "As a University student I stood for election for the local City Council community board in 2010 to better link students with the wider community. In my 3 year term, I helped our board navigate through a number of complex issues around city planning, infrastructure priorities, disaster response and other community issues. I turned down the opportunity to stand for full council, despite a generous offer to become Deputy Mayor, to pursue opportunities further afield in 2013.",
+      "location": "Christchurch, New Zealand"
+    },
+    {
       "year": "2011",
       "title": "Student Volunteer Army founded",
       "location": "Christchurch, New Zealand",
@@ -20,39 +26,45 @@
       "chip": "11,000 volunteers"
     },
     {
-      "year": "2011",
-      "title": "Tōhoku earthquake response",
-      "location": "Japan",
+      "year": "2014 - 2015",
+      "title": "TOMLAB Project Co-Leader",
+      "location": "Switzerland",
       "description": "Sam joined recovery efforts following the Tōhoku earthquake and tsunami, beginning the international chapter of the SVA model.",
       "chip": ""
     },
     {
-      "year": "2013",
-      "title": "Typhoon Haiyan recovery",
+      "year": "2012 - 2015 ",
+      "title": "Trustee",
       "location": "Philippines",
-      "description": "Supporting community-led recovery after one of the strongest storms ever recorded, applying volunteer coordination lessons from Christchurch.",
+      "description": "Ministry of Awesome is the starting point for people wanting to achieve new projects or ventures in Christchurch. We are an enabler, do-er and champion of and for awesome. We connect awesome ideas with the resources to turn them into reality -- people, funding, mentors, government entry points and enthusiasm, all with the aim of rippling awesome through our community to strengthen, encourage and inspire.\nwww.ministryofawesome.com",
       "chip": ""
     },
     {
       "year": "2015",
-      "title": "Cyclone Pam & Nepal earthquake responses",
-      "location": "Vanuatu · Nepal",
-      "description": "Back-to-back deployments supporting volunteer mobilisation and community resilience in two major disasters.",
+      "title": "Consultant",
+      "location": "New York City Metropolitan Area",
+      "description": "Veracity Worldwide is the premium advisor on political, reputation and corruption risks in opaque markets.",
       "chip": ""
     },
     {
-      "year": "2016+",
-      "title": "Global youth leadership advocacy",
-      "location": "Pacific · Saudi Arabia · Brazil",
-      "description": "Sam's work expanded to influencing school students, boardrooms and politicians internationally — championing practical, commonsense youth leadership.",
+      "year": "2014-2016",
+      "title": "Trustee",
+      "location": "",
+      "description": "The Plunket Foundation is a stand alone Philanthropic Trust, established by Plunket with generous support from Karitane Products Society (KPS) Limited.\n\nThe mandate is simple:\n\nTo build an independent, sustainable, world class children’s endowment fund focused on helping New Zealand communities ‘Grow Great Kiwi Kids’ today, tomorrow, and into the future.\n\nA total of 7 prominent New Zealanders*, all passionate about providing children with the best start in life, act as Trustees and sit on the Plunket Foundation Board which is chaired by former New Zealander of the Year, Sir Ray Avery GNZM.",
       "chip": ""
     },
     {
-      "year": "Today",
-      "title": "The mission continues",
-      "location": "New Zealand & worldwide",
-      "description": "Speaking, advising and building programmes that put young people at the centre of civic life and disaster resilience.",
+      "year": "2011 - 2018",
+      "title": "Advisory Trustee",
+      "location": "",
+      "description": "The Pacific Development and Conservation Trust was established by the New Zealand Government on 23 May 1989. Funding of $3.2 million was received from France in recognition of the events surrounding the destruction of the Greenpeace 'Rainbow Warrior' ship in Auckland Harbour on 10 July 1985.\n\nEvery year the Trust has approximately $250,000 to distribute as grants to groups and individuals in the South Pacific for a range of development and conservation projects.\n\nSeven Advisory Trustees are appointed by the Minister having responsibility for disarmament and arms control (as a result of changes in the composition of Ministerial portfolios announced on 12 December 2011, the Minister of Foreign Affairs is now responsible for the responsibilities formerly included in the Disarmament and Arms Control portfolio).\n\nApply here: http://www.dia.govt.nz/Services-Trust-&-Fellowship-Grants-The-Pacific-Development-and-Conservation-Trust",
       "chip": ""
+    },
+    {
+      "year": "2023 - Present",
+      "title": "Director of Projects",
+      "location": "Auckland, New Zealand",
+      "description": "Sam is the Projects Director for STILL. He is responsible for managing STILL's internal projects, startups and ideas that contribute to the STILL 100.\n\n"
     }
   ],
   "about_teaser": {
@@ -172,20 +184,9 @@
       "image_position": "center",
       "featured": false,
       "title": "Tōhoku earthquake & tsunami response",
-      "image": "",
+      "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
       "image_aspect": "16/10",
       "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand."
-    },
-    {
-      "meta": "2013 · Philippines",
-      "chip": "Community mobilisation",
-      "image_fit": "cover",
-      "image_position": "center",
-      "featured": false,
-      "title": "Typhoon Haiyan recovery",
-      "image": "",
-      "image_aspect": "16/10",
-      "description": "Advisory and on-the-ground support for community-led recovery after one of the strongest storms ever recorded."
     },
     {
       "meta": "2015 · Vanuatu · Nepal",
