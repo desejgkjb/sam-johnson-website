@@ -86,6 +86,9 @@ h2{font-size:36px;font-weight:600}
 /* Project / experience cards */
 .projects{background:var(--off-white);padding:112px 0}
 .projects h2{margin-bottom:48px;max-width:640px}
+.governance{background:var(--white);padding:112px 0;border-bottom:3px solid var(--blush)}
+.governance h2{margin-bottom:48px;max-width:640px}
+.section-intro{max-width:640px;margin:-32px 0 48px;font-size:17px}
 .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
 .card{background:var(--white);border-left:3px solid var(--vermillion);border-radius:0 8px 8px 0;padding:32px 28px;display:flex;flex-direction:column;gap:14px}
 .card .img-placeholder{aspect-ratio:16/10;border-radius:6px;margin:-8px 0 6px}

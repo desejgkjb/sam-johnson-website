@@ -192,6 +192,49 @@ collections:
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
 
+          # ─── GOVERNANCE ───────────────────────────────────────
+          - label: "🏛 Governance"
+            name: "governance"
+            widget: "list"
+            collapsed: true
+            label_singular: "Governance entry"
+            hint: "Board positions, advisory roles, committees. Drag entries to reorder them."
+            fields:
+              - { label: "Role / Title", name: "title", widget: "string", hint: "e.g. Board Member, Trustee, Chair" }
+              - { label: "Organisation / Years", name: "meta", widget: "string", hint: "e.g. Organisation name · 2020 – present" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag", name: "chip", widget: "string", required: false, hint: "e.g. Governance, Advisory, Current" }
+              - { label: "Photo (optional)", name: "image", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
+              - label: "Photo — shape / size"
+                name: "image_aspect"
+                widget: "select"
+                required: false
+                default: "16/10"
+                options:
+                  - { label: "Landscape 16:10 (default)", value: "16/10" }
+                  - { label: "Landscape 4:3", value: "4/3" }
+                  - { label: "Widescreen 16:9", value: "16/9" }
+                  - { label: "Square 1:1", value: "1/1" }
+              - label: "Photo — fit"
+                name: "image_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Photo — crop focus"
+                name: "image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+
           # ─── TIMELINE ─────────────────────────────────────────
           - label: "📅 Timeline"
             name: "timeline"
@@ -267,13 +310,17 @@ collections:
                   - { label: "CTA heading", name: "cta_heading", widget: "string" }
                   - { label: "CTA body", name: "cta_body", widget: "text" }
 
-              - label: "Projects page"
+              - label: "Governance / Projects page"
                 name: "projects"
                 widget: "object"
                 collapsed: true
                 fields:
                   - { label: "Page heading", name: "heading", widget: "string" }
                   - { label: "Page subheading", name: "subheading", widget: "text" }
+                  - { label: "Governance section heading", name: "governance_heading", widget: "string" }
+                  - { label: "Governance section intro", name: "governance_intro", widget: "text", required: false }
+                  - { label: "Projects section heading", name: "projects_heading", widget: "string" }
+                  - { label: "Projects section intro", name: "projects_intro", widget: "text", required: false }
                   - { label: "CTA heading", name: "cta_heading", widget: "string" }
                   - { label: "CTA body", name: "cta_body", widget: "text" }
 

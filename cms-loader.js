@@ -129,6 +129,18 @@
     }).join('');
   }
 
+  function renderGovernance(container, entries) {
+    container.innerHTML = entries.map(function (g) {
+      return '<article class="card">'
+        + (g.image ? imgOrPlaceholder(g.image, g.title, imgSettings(g)) : '')
+        + '<h3>' + esc(g.title) + '</h3>'
+        + '<p class="meta">' + esc(g.meta) + '</p>'
+        + '<p>' + esc(g.description) + '</p>'
+        + (g.chip ? '<span class="chip">' + esc(g.chip) + '</span>' : '')
+        + '</article>';
+    }).join('');
+  }
+
   function renderTestimonials(container, testimonials) {
     container.innerHTML = testimonials.map(function (t) {
       return '<div class="testimonial">'
@@ -197,6 +209,9 @@
 
     el = document.getElementById('cms-projects-page');
     if (el && data.projects) renderProjectsPage(el, data.projects);
+
+    el = document.getElementById('cms-governance');
+    if (el && data.governance) renderGovernance(el, data.governance);
 
     el = document.getElementById('cms-testimonials');
     if (el && data.testimonials) renderTestimonials(el, data.testimonials);
