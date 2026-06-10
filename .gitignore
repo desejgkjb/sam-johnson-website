@@ -6,3 +6,5 @@ wp-theme/
 
 # Local Netlify folder
 .netlify
+push-now.command
+push-cms-update.command

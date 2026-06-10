@@ -16,7 +16,8 @@
     "portrait": "",
     "origin_heading": "The origin story",
     "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart — and watching thousands of young people being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p><p>Eleven thousand volunteers answered. The Student Volunteer Army was born — proof that young people, given trust and a practical task, will show up in extraordinary numbers.</p><p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p><p>His vision remains the same as it was in 2011: to catalyse a revolution in youth leadership.</p>",
-    "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now."
+    "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now.",
+    "quote_cite": "Sam Johnson"
   },
   "stats": [
     { "number": "11,000", "label": "Volunteers mobilised" },
@@ -135,8 +136,60 @@
       "description": "For outstanding leadership in service of New Zealand"
     }
   ],
+  "pages": {
+    "home": {
+      "quote_band_text": "One of New Zealand's most inspiring young citizens.",
+      "quote_band_cite": "Young New Zealander of the Year citation",
+      "projects_heading": "Start here — the projects that define Sam's story.",
+      "speaking_heading": "Stories from the rubble. Lessons for every leader.",
+      "speaking_body": "Sam speaks to schools, companies, conferences and governments about mobilising people, leading through crisis, and trusting young people with real responsibility.",
+      "speaking_topics": ["Youth leadership", "Disaster response & community resilience", "Social media mobilisation", "Co-creating change"],
+      "testimonials_heading": "Trusted by audiences and organisers alike.",
+      "newsletter_heading": "Follow the movement.",
+      "newsletter_body": "Occasional updates on Sam's projects, speaking dates and the SVA — no noise."
+    },
+    "about": {
+      "values_heading": "Three beliefs that shape the work.",
+      "values": [
+        {
+          "title": "Practical leadership",
+          "body": "Leadership is a shovel, not a slogan. The fastest way to grow leaders is to give them something real to do and the trust to do it."
+        },
+        {
+          "title": "Community first",
+          "body": "Recovery, resilience and change all start with neighbours helping neighbours. Institutions work best when they back communities, not bypass them."
+        },
+        {
+          "title": "Young people now",
+          "body": "Young people are not a future asset to be developed — they are a present force to be mobilised, in disasters and in everyday civic life."
+        }
+      ],
+      "cta_heading": "Want the full journey?",
+      "cta_body": "Explore the timeline of Sam's career, or see the projects in depth."
+    },
+    "projects": {
+      "heading": "The work, in depth.",
+      "subheading": "Real projects, real outcomes — from a city-wide volunteer movement to recovery missions across five countries.",
+      "cta_heading": "Want Sam's story at your event?",
+      "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities."
+    },
+    "experience": {
+      "heading": "Fifteen years of mobilising people.",
+      "subheading": "From a Facebook post in a broken city to advisory work across five countries — the milestones of Sam's career so far.",
+      "awards_heading": "Awards along the way.",
+      "cta_heading": "See the work in depth.",
+      "cta_body": "Each chapter of this timeline is a project with its own story and impact."
+    },
+    "contact": {
+      "heading": "Book Sam to speak.",
+      "subheading": "Speaking enquiries, media requests, partnerships — send a message and you'll hear back promptly.",
+      "aside_heading": "Prefer email?",
+      "aside_response_time": "Typical response time: 2–3 working days."
+    }
+  },
   "settings": {
     "name": "Sam Johnson",
+    "cta_label": "Book Sam to Speak",
     "email": "hello@samjohnson.co.nz",
     "linkedin_url": "#",
     "sva_url": "#",

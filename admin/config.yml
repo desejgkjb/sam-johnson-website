@@ -15,6 +15,7 @@ collections:
         format: json
         fields:
 
+          # ─── HERO ────────────────────────────────────────────
           - label: "⭐ Hero Section"
             name: "hero"
             widget: "object"
@@ -25,6 +26,7 @@ collections:
               - { label: "Hero photo", name: "photo", widget: "image", required: false, hint: "Full-bleed action photo of Sam" }
               - { label: "Attribution line", name: "attribution", widget: "string" }
 
+          # ─── ABOUT (HOMEPAGE TEASER) ──────────────────────────
           - label: "📖 About (Homepage teaser)"
             name: "about_teaser"
             widget: "object"
@@ -34,6 +36,7 @@ collections:
               - { label: "Body text", name: "body", widget: "text" }
               - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Natural light, warm grading, 4:5 ratio" }
 
+          # ─── ABOUT (FULL PAGE) ────────────────────────────────
           - label: "📖 About (Full page)"
             name: "about_full"
             widget: "object"
@@ -43,9 +46,11 @@ collections:
               - { label: "Page subheading", name: "subheading", widget: "text" }
               - { label: "Portrait photo", name: "portrait", widget: "image", required: false }
               - { label: "Origin story heading", name: "origin_heading", widget: "string" }
-              - { label: "Origin story (HTML body)", name: "origin_body", widget: "markdown" }
+              - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
               - { label: "Pull quote", name: "quote", widget: "string" }
+              - { label: "Quote attribution", name: "quote_cite", widget: "string" }
 
+          # ─── STATS ────────────────────────────────────────────
           - label: "📊 Stats"
             name: "stats"
             widget: "list"
@@ -55,6 +60,7 @@ collections:
               - { label: "Number", name: "number", widget: "string" }
               - { label: "Label", name: "label", widget: "string" }
 
+          # ─── PROJECTS ─────────────────────────────────────────
           - label: "🗂 Projects"
             name: "projects"
             widget: "list"
@@ -67,6 +73,7 @@ collections:
               - { label: "Tag", name: "chip", widget: "string" }
               - { label: "Photo", name: "image", widget: "image", required: false }
 
+          # ─── TIMELINE ─────────────────────────────────────────
           - label: "📅 Timeline"
             name: "timeline"
             widget: "list"
@@ -79,6 +86,7 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag (optional)", name: "chip", widget: "string", required: false }
 
+          # ─── TESTIMONIALS ─────────────────────────────────────
           - label: "💬 Testimonials"
             name: "testimonials"
             widget: "list"
@@ -89,6 +97,7 @@ collections:
               - { label: "Author name", name: "author", widget: "string" }
               - { label: "Title & Organisation", name: "title", widget: "string" }
 
+          # ─── AWARDS ───────────────────────────────────────────
           - label: "🏆 Awards"
             name: "awards"
             widget: "list"
@@ -98,13 +107,87 @@ collections:
               - { label: "Award name", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "string" }
 
+          # ─── PAGE COPY ────────────────────────────────────────
+          - label: "📄 Page copy"
+            name: "pages"
+            widget: "object"
+            collapsed: true
+            fields:
+
+              - label: "Home page"
+                name: "home"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Pull-quote text", name: "quote_band_text", widget: "string" }
+                  - { label: "Pull-quote attribution", name: "quote_band_cite", widget: "string" }
+                  - { label: "Projects section heading", name: "projects_heading", widget: "string" }
+                  - { label: "Speaking section heading", name: "speaking_heading", widget: "string" }
+                  - { label: "Speaking section body", name: "speaking_body", widget: "text" }
+                  - label: "Speaking topics (chips)"
+                    name: "speaking_topics"
+                    widget: "list"
+                    field: { label: "Topic", name: "item", widget: "string" }
+                  - { label: "Testimonials section heading", name: "testimonials_heading", widget: "string" }
+                  - { label: "Newsletter heading", name: "newsletter_heading", widget: "string" }
+                  - { label: "Newsletter body", name: "newsletter_body", widget: "text" }
+
+              - label: "About page"
+                name: "about"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Values section heading", name: "values_heading", widget: "string" }
+                  - label: "Values (belief cards)"
+                    name: "values"
+                    widget: "list"
+                    label_singular: "Value"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Body text", name: "body", widget: "text" }
+                  - { label: "CTA heading", name: "cta_heading", widget: "string" }
+                  - { label: "CTA body", name: "cta_body", widget: "text" }
+
+              - label: "Projects page"
+                name: "projects"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Page heading", name: "heading", widget: "string" }
+                  - { label: "Page subheading", name: "subheading", widget: "text" }
+                  - { label: "CTA heading", name: "cta_heading", widget: "string" }
+                  - { label: "CTA body", name: "cta_body", widget: "text" }
+
+              - label: "Experience page"
+                name: "experience"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Page heading", name: "heading", widget: "string" }
+                  - { label: "Page subheading", name: "subheading", widget: "text" }
+                  - { label: "Awards section heading", name: "awards_heading", widget: "string" }
+                  - { label: "CTA heading", name: "cta_heading", widget: "string" }
+                  - { label: "CTA body", name: "cta_body", widget: "text" }
+
+              - label: "Contact page"
+                name: "contact"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Page heading", name: "heading", widget: "string" }
+                  - { label: "Page subheading", name: "subheading", widget: "text" }
+                  - { label: "Aside heading", name: "aside_heading", widget: "string" }
+                  - { label: "Response time note", name: "aside_response_time", widget: "string" }
+
+          # ─── SETTINGS ─────────────────────────────────────────
           - label: "⚙️ Settings"
             name: "settings"
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Your name", name: "name", widget: "string" }
-              - { label: "Email address", name: "email", widget: "string" }
+              - { label: "Your name (site-wide)", name: "name", widget: "string" }
+              - { label: "CTA button label", name: "cta_label", widget: "string", hint: "e.g. Book Sam to Speak — appears on all CTA buttons site-wide" }
+              - { label: "Contact email", name: "email", widget: "string", hint: "Shown in footer and contact page. Include domain only, e.g. hello@samjohnson.co.nz" }
               - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
               - { label: "SVA Website URL", name: "sva_url", widget: "string" }
               - { label: "Footer tagline", name: "footer_tagline", widget: "string" }

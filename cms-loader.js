@@ -1,6 +1,6 @@
 /**
  * CMS Content Loader
- * Fetches /_data/content.json and populates all data-cms-field elements
+ * Fetches /_data/content.json and populates all data-cms-* elements
  * and dynamic list containers (projects, testimonials, timeline, etc.)
  */
 (function () {
@@ -26,7 +26,7 @@
   }
 
   function applyFields(data) {
-    // Simple text/html fields
+    // data-cms-field: sets innerHTML (supports plain text and HTML)
     document.querySelectorAll('[data-cms-field]').forEach(function (el) {
       var val = get(data, el.dataset.cmsField);
       if (val !== undefined && val !== null && val !== '') {
@@ -36,6 +36,21 @@
         } else {
           el.innerHTML = val;
         }
+      }
+    });
+
+    // data-cms-href: sets href attribute (for URLs)
+    document.querySelectorAll('[data-cms-href]').forEach(function (el) {
+      var val = get(data, el.dataset.cmsHref);
+      if (val) { el.href = val; }
+    });
+
+    // data-cms-mailto: sets href to mailto:value AND sets link text to value
+    document.querySelectorAll('[data-cms-mailto]').forEach(function (el) {
+      var val = get(data, el.getAttribute('data-cms-mailto'));
+      if (val) {
+        el.href = 'mailto:' + val;
+        el.textContent = val;
       }
     });
 
@@ -50,10 +65,8 @@
     }
 
     // Portrait photos (about page & homepage teaser)
-    var portraits = document.querySelectorAll('[data-cms-portrait]');
-    portraits.forEach(function (el) {
-      var key = el.dataset.cmsPortrait;
-      var src = get(data, key);
+    document.querySelectorAll('[data-cms-portrait]').forEach(function (el) {
+      var src = get(data, el.dataset.cmsPortrait);
       if (src) {
         el.innerHTML = '<img src="' + esc(src) + '" alt="Portrait of Sam Johnson" style="width:100%;height:100%;object-fit:cover;border-radius:inherit">';
         el.classList.remove('img-placeholder');
@@ -62,7 +75,6 @@
   }
 
   function renderProjects(container, projects) {
-    // Homepage: first 3 projects
     container.innerHTML = projects.slice(0, 3).map(function (p) {
       return '<article class="card">'
         + imgOrPlaceholder(p.image, p.title)
@@ -139,6 +151,22 @@
       + '</div>';
   }
 
+  function renderValues(container, values) {
+    container.innerHTML = values.map(function (v) {
+      return '<div class="value-card">'
+        + '<i aria-hidden="true"></i>'
+        + '<h3>' + esc(v.title) + '</h3>'
+        + '<p>' + esc(v.body) + '</p>'
+        + '</div>';
+    }).join('');
+  }
+
+  function renderSpeakingTopics(container, topics) {
+    container.innerHTML = topics.map(function (t) {
+      return '<span class="chip">' + esc(t) + '</span>';
+    }).join('');
+  }
+
   function init(data) {
     applyFields(data);
 
@@ -161,6 +189,17 @@
 
     el = document.getElementById('cms-awards');
     if (el && data.awards) renderAwards(el, data.awards);
+
+    el = document.getElementById('cms-values');
+    if (el && data.pages && data.pages.about && data.pages.about.values) {
+      renderValues(el, data.pages.about.values);
+    }
+
+    el = document.getElementById('cms-speaking-topics');
+    if (el && data.pages && data.pages.home && data.pages.home.speaking_topics) {
+      renderSpeakingTopics(el, data.pages.home.speaking_topics);
+    }
+
   }
 
   function load() {
