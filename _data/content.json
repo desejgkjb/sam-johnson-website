@@ -83,6 +83,14 @@
     "sva_url": "#https://www.sva.org.nz/",
     "footer_tagline": "Speaker, SVA founder and advocate for a revolution in youth leadership."
   },
+  "press": [
+    {
+      "show_name": false,
+      "logo_height": "36",
+      "name": "TVNZ",
+      "logo": "/images/tvnz_idj5yla7fw_0.png"
+    }
+  ],
   "pages": {
     "home": {
       "newsletter_body": "Occasional updates on Sam's projects, speaking dates and the SVA — no noise.",
@@ -225,10 +233,13 @@
   "hero": {
     "heading": "Civic Entrepreneurr",
     "subheading": "Project Director at STILL.",
-    "photo": "/images/sam-johnson-speaker-1920x960.jpg",
     "photo_fit": "cover",
-    "photo_position": "center",
+    "video_muted": true,
+    "video_autoplay": true,
+    "video_loop": true,
+    "photo": "/images/sam-johnson-speaker-1920x960.jpg",
     "photo_height": "88vh",
+    "photo_position": "center",
     "attribution": "Officer of New Zealand Order of Merit"
   },
   "stats": [
