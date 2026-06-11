@@ -64,6 +64,25 @@
       }
     });
 
+    // data-cms-bg: sets a background image (with optional crop-focus path)
+    document.querySelectorAll('[data-cms-bg]').forEach(function (el) {
+      var src = get(data, el.dataset.cmsBg);
+      if (src) {
+        el.style.backgroundImage = 'url(' + src + ')';
+        el.style.backgroundSize = 'cover';
+        var pos = el.dataset.cmsBgPos ? get(data, el.dataset.cmsBgPos) : null;
+        el.style.backgroundPosition = pos || 'center';
+        var n = el.querySelector('.hero-photo-note');
+        if (n) n.style.display = 'none';
+      }
+    });
+
+    // data-cms-placeholder: sets input placeholder text
+    document.querySelectorAll('[data-cms-placeholder]').forEach(function (el) {
+      var val = get(data, el.dataset.cmsPlaceholder);
+      if (val) el.placeholder = val;
+    });
+
     // Hero background photo (fit / crop focus / section height from CMS)
     var heroSection = document.querySelector('.hero');
     if (heroSection && data.hero && data.hero.photo) {
@@ -233,6 +252,24 @@
     }).join('');
   }
 
+  function renderContactCategories(container, cats) {
+    container.innerHTML = cats.map(function (c) {
+      return '<button type="button" class="cat-card" data-enquiry="' + esc(c.title) + '">'
+        + '<h3>' + esc(c.title) + '</h3>'
+        + '<p>' + esc(c.description) + '</p>'
+        + '<span class="cat-link">Start an enquiry →</span>'
+        + '</button>';
+    }).join('');
+    // Keep the form's enquiry-type dropdown in sync with the categories
+    var sel = document.getElementById('cf-type');
+    if (sel) {
+      var current = sel.value;
+      sel.innerHTML = '<option value="" selected disabled>Select an enquiry type</option>'
+        + cats.map(function (c) { return '<option>' + esc(c.title) + '</option>'; }).join('');
+      if (current) sel.value = current;
+    }
+  }
+
   function renderTestimonials(container, testimonials) {
     container.innerHTML = testimonials.map(function (t) {
       return '<div class="testimonial">'
@@ -319,6 +356,33 @@
       renderGovernance(el, data.governance);
       applyShowMore(el, 4, 'View all governance');
     }
+
+    el = document.getElementById('cms-contact-categories');
+    if (el && data.pages && data.pages.contact && data.pages.contact.categories) {
+      renderContactCategories(el, data.pages.contact.categories);
+    }
+
+    // Cinematic banners (media spotlight + closing CTA): image or looping muted video
+    document.querySelectorAll('[data-cms-media]').forEach(function (sec) {
+      var cb = get(data, sec.dataset.cmsMedia);
+      var media = sec.querySelector('.cta-media');
+      if (!cb || !media) return;
+      if (cb.image) {
+        media.style.backgroundImage = 'url(' + cb.image + ')';
+      }
+      if (cb.video) {
+        var bv = document.createElement('video');
+        bv.className = 'cta-video';
+        bv.src = cb.video;
+        if (cb.image) bv.poster = cb.image;
+        bv.muted = true; bv.loop = true; bv.autoplay = true;
+        bv.playsInline = true; bv.setAttribute('playsinline', ''); bv.setAttribute('muted', '');
+        bv.preload = 'metadata'; bv.setAttribute('aria-hidden', 'true'); bv.tabIndex = -1;
+        media.appendChild(bv);
+        var bp = bv.play();
+        if (bp && bp.catch) bp.catch(function () { bv.remove(); });
+      }
+    });
 
     el = document.getElementById('cms-testimonials');
     if (el && data.testimonials) renderTestimonials(el, data.testimonials);

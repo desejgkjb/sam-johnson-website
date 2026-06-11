@@ -92,5 +92,21 @@
     "newsletter_heading": "Join the movement",
     "projects_heading": "Start here: the projects that define Sam's story.",
     "quote_band_cite": "Young New Zealander of the Year citation"
+  },
+  "cta_banner": {
+    "heading": "Ready to mobilise your community?",
+    "body": "Sam has spoken to audiences across New Zealand and internationally on leadership, community mobilisation, resilience and social impact.",
+    "button_label": "Book Sam to Speak",
+    "button_url": "contact.html",
+    "image": "",
+    "video": ""
+  },
+  "media_banner": {
+    "heading": "See Sam in action.",
+    "body": "Moments from Sam's speaking, community leadership and mobilisation work.",
+    "button_label": "See Sam Speak",
+    "button_url": "contact.html",
+    "image": "",
+    "video": ""
   }
 }

@@ -11,6 +11,51 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', 'false');
 }));
 
+/* Contact page — enquiry bar and pathway cards feed the form */
+(function () {
+  const formSec = document.getElementById('contactForm');
+  if (!formSec) return;
+
+  const bar = document.getElementById('enquiryBar');
+  if (bar) {
+    bar.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const v = document.getElementById('enquiryInput').value.trim();
+      const msg = document.getElementById('cf-msg');
+      if (v && msg && !msg.value) msg.value = v;
+      formSec.scrollIntoView({ behavior: 'smooth' });
+      setTimeout(function () {
+        const target = document.getElementById('cf-name');
+        if (target) target.focus({ preventScroll: true });
+      }, 650);
+    });
+  }
+
+  const cats = document.getElementById('cms-contact-categories');
+  if (cats) {
+    cats.addEventListener('click', function (e) {
+      const card = e.target.closest('[data-enquiry]');
+      if (!card) return;
+      const sel = document.getElementById('cf-type');
+      if (sel) {
+        const val = card.dataset.enquiry;
+        let found = Array.prototype.some.call(sel.options, function (o) { return o.text === val; });
+        if (!found) sel.add(new Option(val, val));
+        sel.value = val;
+      }
+      formSec.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+
+  if (location.search.indexOf('sent=1') !== -1) {
+    const ok = document.getElementById('formSuccess');
+    if (ok) {
+      ok.hidden = false;
+      setTimeout(function () { formSec.scrollIntoView(); }, 100);
+    }
+  }
+})();
+
 /* Scroll reveal — elements with [data-reveal] fade and lift in */
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;

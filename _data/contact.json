@@ -1,8 +1,37 @@
 {
   "copy": {
-    "heading": "Book Sam to speak.",
-    "subheading": "Speaking enquiries, media requests, partnerships — send a message and you'll hear back promptly.",
+    "heading": "How can we help you connect with Sam?",
+    "subheading": "Speaking, governance, media or partnership — tell us what you have in mind and you'll hear back promptly.",
     "aside_heading": "Prefer email?",
-    "aside_response_time": "Typical response time: 2–3 working days."
+    "aside_response_time": "Typical response time: 2–3 working days.",
+    "hero_image": "",
+    "hero_position": "center",
+    "enquiry_placeholder": "Looking to book Sam for an event?",
+    "categories_heading": "What would you like to talk about?",
+    "categories": [
+      {
+        "title": "Speaking Engagements",
+        "description": "Book Sam for conferences, keynotes, leadership events and workshops."
+      },
+      {
+        "title": "Governance Opportunities",
+        "description": "Board positions, advisory work and governance engagements."
+      },
+      {
+        "title": "Media & Interviews",
+        "description": "Podcast appearances, interviews and media enquiries."
+      },
+      {
+        "title": "Partnerships",
+        "description": "Collaborations, community initiatives and strategic partnerships."
+      },
+      {
+        "title": "General Enquiries",
+        "description": "Questions and anything else — we'll point it the right way."
+      }
+    ],
+    "form_heading": "Send an enquiry",
+    "submit_label": "Send Enquiry",
+    "success_message": "Thanks — your enquiry is on its way. You'll hear back within 2–3 working days."
   }
 }

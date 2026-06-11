@@ -137,7 +137,31 @@ collections:
                   - { label: "Large (48px)", value: "48" }
               - { label: "Link to article / feature (optional)", name: "url", widget: "string", required: false }
 
-          - label: "5 · Section headings & copy (rest of the homepage)"
+          - label: "5 · Media spotlight (video section after Featured Work)"
+            name: "media_banner"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Headline", name: "heading", widget: "string", hint: "e.g. See Sam in action." }
+              - { label: "Supporting text", name: "body", widget: "text" }
+              - { label: "Button label", name: "button_label", widget: "string" }
+              - { label: "Button link", name: "button_url", widget: "string", hint: "e.g. contact.html, or a YouTube link" }
+              - { label: "Fallback image", name: "image", widget: "image", required: false, hint: "Shown while the video loads, and on slow connections / reduced-motion devices." }
+              - { label: "Background video", name: "video", widget: "file", required: false, hint: "MP4 under ~20 MB. Plays muted on loop behind the text. Remove to use the image only." }
+
+          - label: "6 · Closing CTA banner (cinematic section above the footer)"
+            name: "cta_banner"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Headline", name: "heading", widget: "string", hint: "e.g. Ready to mobilise your community?" }
+              - { label: "Supporting text", name: "body", widget: "text" }
+              - { label: "Button label", name: "button_label", widget: "string" }
+              - { label: "Button link", name: "button_url", widget: "string", hint: "e.g. contact.html" }
+              - { label: "Background image", name: "image", widget: "image", required: false, hint: "Cinematic photo of Sam in action. Also used as the video fallback." }
+              - { label: "Background video (optional)", name: "video", widget: "file", required: false, hint: "MP4 under ~20 MB. Plays muted on loop. The image above is the fallback." }
+
+          - label: "7 · Section headings & copy (rest of the homepage)"
             name: "copy"
             widget: "object"
             collapsed: true
@@ -410,13 +434,38 @@ collections:
         file: "_data/contact.json"
         format: json
         fields:
-          - label: "Page headings & copy"
+          - label: "Contact page content"
             name: "copy"
             widget: "object"
             collapsed: false
             fields:
-              - { label: "Page heading", name: "heading", widget: "string" }
-              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Hero — headline", name: "heading", widget: "string", hint: "e.g. How can we help you connect with Sam?" }
+              - { label: "Hero — supporting text", name: "subheading", widget: "text" }
+              - { label: "Hero — background image", name: "hero_image", widget: "image", required: false, hint: "Full-width photo of Sam speaking / in action" }
+              - label: "Hero image — crop focus"
+                name: "hero_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - { label: "Enquiry box — placeholder text", name: "enquiry_placeholder", widget: "string", required: false, hint: "e.g. Looking to book Sam for an event?" }
+              - { label: "Pathways — section heading", name: "categories_heading", widget: "string", required: false }
+              - label: "Pathways — contact categories"
+                name: "categories"
+                widget: "list"
+                label_singular: "Category"
+                hint: "The clickable pathway cards. Drag to reorder. Clicking a card pre-selects the enquiry type on the form."
+                fields:
+                  - { label: "Category name", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "string" }
+              - { label: "Form — section heading", name: "form_heading", widget: "string", required: false }
+              - { label: "Form — submit button label", name: "submit_label", widget: "string", required: false }
+              - { label: "Form — success message", name: "success_message", widget: "string", required: false, hint: "Shown after a successful submission" }
               - { label: "Side panel — heading", name: "aside_heading", widget: "string" }
               - { label: "Side panel — response time note", name: "aside_response_time", widget: "string" }
 

@@ -39,53 +39,106 @@
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="container">
-    <span class="section-label">Contact</span>
-    <h1 data-cms-field="pages.contact.heading">Book Sam to speak.</h1>
-    <p data-cms-field="pages.contact.subheading">Speaking enquiries, media requests, partnerships — send a message and you'll hear back promptly.</p>
+<section class="contact-hero" data-cms-bg="pages.contact.hero_image" data-cms-bg-pos="pages.contact.hero_position">
+  <div class="contact-hero-inner">
+    <p class="hero-photo-note">Image placeholder — Sam on stage · upload via the CMS</p>
+    <h1 data-cms-field="pages.contact.heading">How can we help you connect with Sam?</h1>
+    <p data-cms-field="pages.contact.subheading">Speaking, governance, media or partnership — tell us what you have in mind and you'll hear back promptly.</p>
+    <form class="enquiry-bar" id="enquiryBar">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <label for="enquiryInput" style="position:absolute;left:-9999px">What would you like to discuss?</label>
+      <input id="enquiryInput" type="text" data-cms-placeholder="pages.contact.enquiry_placeholder" placeholder="Looking to book Sam for an event?">
+      <button class="btn" type="submit">Start</button>
+    </form>
   </div>
 </section>
 
-<section class="contact-section">
-  <div class="container contact-grid">
-    <form class="contact-form" action="#" method="post">
-      <div>
-        <label for="cf-name">Name</label>
-        <input id="cf-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
-      </div>
-      <div>
-        <label for="cf-email">Email</label>
-        <input id="cf-email" type="email" name="email" placeholder="you@organisation.com" autocomplete="email" required>
-      </div>
-      <div>
-        <label for="cf-org">Organisation</label>
-        <input id="cf-org" type="text" name="organisation" placeholder="Company, school or organisation" autocomplete="organization">
-      </div>
-      <div>
-        <label for="cf-type">Enquiry type</label>
-        <select id="cf-type" name="enquiry_type" required>
-          <option value="" selected disabled>Select an enquiry type</option>
-          <option>Speaking engagement</option>
-          <option>Media request</option>
-          <option>Partnership</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div>
-        <label for="cf-msg">Message</label>
-        <textarea id="cf-msg" name="message" placeholder="Tell us about your event, audience and dates" required></textarea>
-      </div>
-      <div>
-        <button class="btn" type="submit">Send Enquiry</button>
-      </div>
-    </form>
-    <aside class="contact-aside">
-      <h3 data-cms-field="pages.contact.aside_heading">Prefer email?</h3>
-      <p><a class="text-link" data-cms-mailto="settings.email" href="mailto:hello@samjohnson.co.nz">hello@samjohnson.co.nz</a></p>
-      <p>You can also connect with Sam on <a class="text-link" data-cms-href="settings.linkedin_url" href="#" rel="noopener">LinkedIn</a>.</p>
-      <p class="meta" data-cms-field="pages.contact.aside_response_time">Typical response time: 2–3 working days.</p>
-    </aside>
+<section class="contact-categories">
+  <div class="container">
+    <span class="section-label">Choose a pathway</span>
+    <h2 data-cms-field="pages.contact.categories_heading">What would you like to talk about?</h2>
+    <div class="cat-grid" id="cms-contact-categories">
+      <button type="button" class="cat-card" data-enquiry="Speaking Engagements">
+        <h3>Speaking Engagements</h3>
+        <p>Book Sam for conferences, keynotes, leadership events and workshops.</p>
+        <span class="cat-link">Start an enquiry →</span>
+      </button>
+      <button type="button" class="cat-card" data-enquiry="Governance Opportunities">
+        <h3>Governance Opportunities</h3>
+        <p>Board positions, advisory work and governance engagements.</p>
+        <span class="cat-link">Start an enquiry →</span>
+      </button>
+      <button type="button" class="cat-card" data-enquiry="Media & Interviews">
+        <h3>Media &amp; Interviews</h3>
+        <p>Podcast appearances, interviews and media enquiries.</p>
+        <span class="cat-link">Start an enquiry →</span>
+      </button>
+      <button type="button" class="cat-card" data-enquiry="Partnerships">
+        <h3>Partnerships</h3>
+        <p>Collaborations, community initiatives and strategic partnerships.</p>
+        <span class="cat-link">Start an enquiry →</span>
+      </button>
+      <button type="button" class="cat-card" data-enquiry="General Enquiries">
+        <h3>General Enquiries</h3>
+        <p>Questions and anything else — we'll point it the right way.</p>
+        <span class="cat-link">Start an enquiry →</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contactForm">
+  <div class="container">
+    <div class="form-success" id="formSuccess" hidden>
+      <strong>✓</strong>&nbsp; <span data-cms-field="pages.contact.success_message">Thanks — your enquiry is on its way. You'll hear back within 2–3 working days.</span>
+    </div>
+    <div class="contact-grid">
+      <form class="contact-form" name="contact" method="POST" action="/contact.html?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact">
+        <p style="position:absolute;left:-9999px"><label>Don't fill this in: <input name="bot-field"></label></p>
+        <h3 data-cms-field="pages.contact.form_heading">Send an enquiry</h3>
+        <div>
+          <label for="cf-name">Name</label>
+          <input id="cf-name" type="text" name="name" placeholder="Your full name" autocomplete="name" required>
+        </div>
+        <div>
+          <label for="cf-org">Organisation</label>
+          <input id="cf-org" type="text" name="organisation" placeholder="Company, school or organisation" autocomplete="organization">
+        </div>
+        <div>
+          <label for="cf-email">Email</label>
+          <input id="cf-email" type="email" name="email" placeholder="you@organisation.com" autocomplete="email" required>
+        </div>
+        <div>
+          <label for="cf-phone">Phone <span class="optional">(optional)</span></label>
+          <input id="cf-phone" type="tel" name="phone" placeholder="+64 ..." autocomplete="tel">
+        </div>
+        <div>
+          <label for="cf-type">Enquiry type</label>
+          <select id="cf-type" name="enquiry_type" required>
+            <option value="" selected disabled>Select an enquiry type</option>
+            <option>Speaking Engagements</option>
+            <option>Governance Opportunities</option>
+            <option>Media &amp; Interviews</option>
+            <option>Partnerships</option>
+            <option>General Enquiries</option>
+          </select>
+        </div>
+        <div>
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" name="message" placeholder="Tell us about your event, audience and dates" required></textarea>
+        </div>
+        <div>
+          <button class="btn btn-lg" type="submit" data-cms-field="pages.contact.submit_label">Send Enquiry</button>
+        </div>
+      </form>
+      <aside class="contact-aside">
+        <h3 data-cms-field="pages.contact.aside_heading">Prefer email?</h3>
+        <p><a class="text-link" data-cms-mailto="settings.email" href="mailto:hello@samjohnson.co.nz">hello@samjohnson.co.nz</a></p>
+        <p>You can also connect with Sam on <a class="text-link" data-cms-href="settings.linkedin_url" href="#" rel="noopener">LinkedIn</a>.</p>
+        <p class="meta" data-cms-field="pages.contact.aside_response_time">Typical response time: 2–3 working days.</p>
+      </aside>
+    </div>
   </div>
 </section>
 

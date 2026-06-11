@@ -194,12 +194,46 @@ a.press-item:hover{color:var(--vermillion)}
 .newsletter input::placeholder{color:var(--mid-grey)}
 .newsletter input:focus{outline:none;background:var(--blush);border-color:var(--vermillion)}
 
+/* Contact page — hero with enquiry bar */
+.contact-hero{position:relative;background:var(--blush-deep) repeating-linear-gradient(45deg,rgba(244,224,220,.5) 0 22px,transparent 22px 44px);background-size:cover;background-position:center;padding:190px 0 120px;overflow:hidden}
+.contact-hero::after{content:"";position:absolute;inset:0;background:var(--blush);opacity:.42;pointer-events:none}
+.contact-hero-inner{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 24px;text-align:center}
+.contact-hero .hero-photo-note{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,45,45,.5);margin-bottom:28px}
+.contact-hero h1{font-size:clamp(34px,4.5vw,54px);font-weight:700;color:var(--charcoal)}
+.contact-hero p{font-size:18px;color:var(--charcoal);margin:18px auto 44px;max-width:560px}
+.enquiry-bar{position:relative;display:flex;align-items:center;gap:10px;background:var(--white);border-radius:999px;padding:10px 10px 10px 26px;box-shadow:0 24px 48px rgba(45,45,45,.16),0 2px 8px rgba(45,45,45,.06);max-width:660px;margin:0 auto;transition:box-shadow .25s ease}
+.enquiry-bar:focus-within{box-shadow:0 24px 48px rgba(232,65,50,.18),0 0 0 3px rgba(232,65,50,.15)}
+.enquiry-bar svg{flex:none;color:var(--mid-grey)}
+.enquiry-bar input{flex:1;min-width:0;border:none;outline:none;background:none;font-family:inherit;font-size:17px;color:var(--charcoal);padding:12px 0}
+.enquiry-bar input::placeholder{color:var(--mid-grey)}
+.enquiry-bar .btn{border-radius:999px;padding:14px 30px}
+
+/* Contact page — pathway cards */
+.contact-categories{background:var(--white);padding:104px 0}
+.contact-categories h2{margin-bottom:0}
+.cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:24px;margin-top:48px}
+.cat-card{display:flex;flex-direction:column;gap:10px;text-align:left;background:var(--white);border:1px solid rgba(45,45,45,.08);border-radius:12px;padding:34px 30px;font-family:inherit;cursor:pointer;box-shadow:0 2px 8px rgba(45,45,45,.04);transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s ease,border-color .25s ease,background-color .25s ease}
+.cat-card h3{font-size:19px;font-weight:600;color:var(--charcoal);transition:color .25s ease}
+.cat-card p{font-size:14.5px;line-height:1.6;color:var(--mid-grey)}
+.cat-card .cat-link{margin-top:auto;padding-top:8px;font-size:14px;font-weight:600;color:var(--vermillion);opacity:0;transform:translateY(4px);transition:opacity .25s ease,transform .25s ease}
+.cat-card:hover{transform:translateY(-4px) scale(1.01);border-color:var(--vermillion);background:#FBEDEA;box-shadow:0 16px 36px rgba(232,65,50,.14)}
+.cat-card:hover h3{color:var(--vermillion)}
+.cat-card:hover .cat-link{opacity:1;transform:none}
+.cat-card:focus-visible{outline:3px solid var(--vermillion);outline-offset:3px}
+
+/* Contact form — premium */
+.form-success{display:flex;align-items:flex-start;gap:4px;background:#FBEDEA;border-left:3px solid var(--vermillion);border-radius:0 8px 8px 0;padding:18px 24px;margin-bottom:40px;font-weight:500}
+.form-success strong{color:var(--vermillion)}
+.contact-form h3{font-size:24px;margin-bottom:8px}
+.optional{font-weight:400;color:var(--mid-grey);font-size:13px}
+.btn-lg{padding:18px 40px;font-size:17px}
+
 /* Contact form */
 .contact-section{background:var(--white);padding:96px 0 112px}
 .contact-grid{display:grid;grid-template-columns:1.2fr 1fr;gap:80px;align-items:flex-start}
 .contact-form{display:flex;flex-direction:column;gap:22px}
-.contact-form label{font-size:14px;font-weight:600;display:block;margin-bottom:8px}
-.contact-form input,.contact-form select,.contact-form textarea{width:100%;font-family:inherit;font-size:16px;padding:14px 16px;border:1.5px solid var(--charcoal);border-radius:6px;background:var(--white);color:var(--charcoal)}
+.contact-form label{font-size:15px;font-weight:600;display:block;margin-bottom:10px}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;font-family:inherit;font-size:17px;padding:17px 20px;border:1.5px solid rgba(45,45,45,.35);border-radius:8px;background:var(--white);color:var(--charcoal)}
 .contact-form input::placeholder,.contact-form textarea::placeholder{color:var(--mid-grey)}
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{outline:none;background:var(--blush);border-color:var(--vermillion)}
 .contact-form textarea{min-height:160px;resize:vertical}
@@ -207,6 +241,19 @@ a.press-item:hover{color:var(--vermillion)}
 .contact-aside h3{font-size:20px;font-weight:600;margin-bottom:16px}
 .contact-aside p{font-size:15px;margin-bottom:14px}
 .contact-aside .meta{font-size:14px;color:var(--mid-grey)}
+
+/* Closing CTA banner — cinematic */
+.cta-banner{position:relative;overflow:hidden;background:var(--vermillion);padding:170px 24px;text-align:center}
+.cta-media{position:absolute;inset:-5%;background-size:cover;background-position:center;animation:cta-zoom 24s ease-in-out infinite alternate}
+.cta-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@keyframes cta-zoom{from{transform:scale(1)}to{transform:scale(1.07)}}
+.cta-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(45,45,45,.42) 0%,rgba(45,45,45,.62) 100%)}
+.cta-inner{position:relative;z-index:1;max-width:860px;margin:0 auto}
+.cta-banner h2{font-size:clamp(36px,5vw,58px);font-weight:700;color:var(--white);line-height:1.12}
+.cta-banner p{font-size:18px;color:rgba(255,255,255,.92);margin:22px auto 40px;max-width:580px;line-height:1.65}
+.cta-banner .btn{box-shadow:0 12px 32px rgba(0,0,0,.25)}
+.media-banner{background:var(--charcoal);padding:150px 24px}
+.media-banner .cta-overlay{background:linear-gradient(180deg,rgba(45,45,45,.35) 0%,rgba(45,45,45,.55) 100%)}
 
 /* Footer */
 .footer{background:var(--blush-deep);padding:80px 0 36px}
@@ -274,7 +321,8 @@ a,button{-webkit-tap-highlight-color:transparent}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
   html{scroll-behavior:auto}
-  .hero-video{display:none}
+  .hero-video,.cta-video{display:none}
+  .cta-media{animation:none}
 }
 
 /* Mobile — designed at 390px first */
@@ -307,6 +355,10 @@ a,button{-webkit-tap-highlight-color:transparent}
   .newsletter form{flex-direction:column;align-items:stretch}
   .newsletter input{min-width:0}
   .contact-grid{grid-template-columns:1fr;gap:48px}
+  .contact-hero{padding:140px 0 80px}
+  .enquiry-bar .btn{padding:12px 20px;font-size:15px}
+  .cta-banner{padding:110px 24px}
+  .cta-video{display:none}
   .timeline-list::before{left:20px}
   .timeline-list::after{left:20px}
   .timeline-item{grid-template-columns:1fr;gap:8px;padding-left:48px;position:relative}
