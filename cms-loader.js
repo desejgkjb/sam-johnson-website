@@ -308,8 +308,11 @@
   function renderAwards(container, awards) {
     container.innerHTML = awards.map(function (a) {
       var size = parseInt(a.logo_size, 10) || 56;
-      var bg = a.image ? ' style="background-image:url(' + esc(a.image) + ')"' : '';
-      var inner = '<div class="award-poster-overlay" aria-hidden="true"></div>'
+      var bg = a.image
+        ? '<div class="award-poster-bg" aria-hidden="true" style="background-image:url(' + esc(a.image) + ')"></div>'
+        : '';
+      var inner = bg
+        + '<div class="award-poster-overlay" aria-hidden="true"></div>'
         + '<div class="award-poster-content">'
         + (a.logo ? '<img class="award-poster-logo" src="' + esc(a.logo) + '" alt="" style="height:' + size + 'px">' : '')
         + '<h3>' + esc(a.title) + '</h3>'
@@ -318,8 +321,8 @@
         + (a.url ? '<span class="award-poster-link">Learn more →</span>' : '')
         + '</div>';
       return a.url
-        ? '<a class="award-poster" href="' + esc(a.url) + '" target="_blank" rel="noopener"' + bg + '>' + inner + '</a>'
-        : '<div class="award-poster"' + bg + '>' + inner + '</div>';
+        ? '<a class="award-poster" href="' + esc(a.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<div class="award-poster">' + inner + '</div>';
     }).join('');
   }
 

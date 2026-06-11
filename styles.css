@@ -171,9 +171,12 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
 .award-poster{position:relative;flex:0 0 320px;min-height:480px;border-radius:16px;overflow:hidden;display:flex;align-items:flex-end;scroll-snap-align:start;color:inherit;background:linear-gradient(180deg,#3A332F 0%,#201D1C 100%);background-size:cover;background-position:center;transition:transform .3s cubic-bezier(.2,.6,.2,1),box-shadow .3s ease}
 .award-poster:hover{transform:translateY(-6px);box-shadow:0 22px 44px rgba(45,45,45,.28)}
 .award-poster:focus-visible{outline:3px solid var(--vermillion);outline-offset:3px}
+.award-poster-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:filter .4s ease,transform .45s cubic-bezier(.2,.6,.2,1)}
+.award-poster:hover .award-poster-bg{filter:grayscale(1) brightness(.5);transform:scale(1.04)}
 .award-poster-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,17,.04) 35%,rgba(20,18,17,.82) 100%)}
 .award-poster-content{position:relative;z-index:1;width:100%;padding:34px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
-.award-poster-logo{width:auto;max-width:140px;object-fit:contain;margin-bottom:8px;filter:drop-shadow(0 3px 10px rgba(0,0,0,.45))}
+.award-poster-logo{width:auto;max-width:140px;object-fit:contain;margin-bottom:8px;filter:drop-shadow(0 3px 10px rgba(0,0,0,.45));transition:transform .4s cubic-bezier(.2,.6,.2,1)}
+.award-poster:hover .award-poster-logo{transform:scale(1.15)}
 .award-poster h3{color:var(--white);font-size:23px;font-weight:700;line-height:1.18}
 .award-poster p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.55}
 .award-poster-year{color:rgba(255,255,255,.6);font-size:13px;font-weight:600;letter-spacing:.12em}
