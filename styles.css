@@ -171,7 +171,7 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
 .award-poster:focus-visible{outline:3px solid var(--vermillion);outline-offset:3px}
 .award-poster-overlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,18,17,.04) 35%,rgba(20,18,17,.82) 100%)}
 .award-poster-content{position:relative;z-index:1;width:100%;padding:34px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:10px}
-.award-poster-logo{width:auto;max-width:140px;object-fit:contain;margin-bottom:8px}
+.award-poster-logo{width:auto;max-width:140px;object-fit:contain;margin-bottom:8px;filter:drop-shadow(0 3px 10px rgba(0,0,0,.45))}
 .award-poster h3{color:var(--white);font-size:23px;font-weight:700;line-height:1.18}
 .award-poster p{color:rgba(255,255,255,.85);font-size:14px;line-height:1.55}
 .award-poster-year{color:rgba(255,255,255,.6);font-size:13px;font-weight:600;letter-spacing:.12em}
