@@ -57,7 +57,7 @@
   ],
   "awards": [
     {
-      "title": "Officer of the New Zealand Order of Merit (ONZM) 2026",
+      "title": "Officer of the New Zealand Order of Merit (ONZM)",
       "description": "King's Birthday Honours — for services to the community and youth",
       "year": "2026",
       "logo": "/images/gnzm-fs-wb-01-clearcut-v2-nobg.png",
@@ -66,7 +66,25 @@
       "image": "/images/screenshot-2026-06-11-at-8.29.53 pm.png"
     },
     {
-      "title": "Young New Zealander of the Year 2023",
+      "logo_size": "56",
+      "title": "Institute of Directors Auckland Emerging Director Award",
+      "image": "/images/img_0532.jpeg",
+      "url": "https://www.iod.org.nz/news/articles/iod-recognises-student-armys-sam-johnson-with-auckland-emerging-director-award#/",
+      "description": "won the Institute of Directors’ (IoD) 2022 Auckland Emerging Director Award.",
+      "logo": "/images/institute_of_directors-nobg.png",
+      "year": "2022"
+    },
+    {
+      "logo_size": "56",
+      "title": "High Tech Award, Impact for Good (SVA)",
+      "image": "/images/sam-speaking-.jpeg",
+      "url": "https://www.customd.com/our-work/volunteering-mobile-app",
+      "description": "For using technology to make youth volunteering measurable, recognised, and scalable across New Zealand.",
+      "logo": "/images/screenshot-2026-06-11-at-10.54.21 pm.png",
+      "year": "2021"
+    },
+    {
+      "title": "Young New Zealander of the Year",
       "description": "National recognition for the SVA and youth mobilisation",
       "logo": "/images/idpsyc3rdr_logos-nobg.png",
       "logo_size": "56",
@@ -75,23 +93,7 @@
       "image": "/images/samjohnson_dmp022s-867x1300.jpg"
     },
     {
-      "logo_size": "56",
-      "title": "Institute of Directors Auckland Emerging Director Award 2022",
-      "image": "/images/img_0532.jpeg",
-      "url": "https://www.iod.org.nz/news/articles/iod-recognises-student-armys-sam-johnson-with-auckland-emerging-director-award#/",
-      "description": "Sam Johnson, who founded the Student Volunteer Army in the wake of the devastating Christchurch earthquakes, has won the Institute of Directors’ (IoD) 2022 Auckland Emerging Director Award.",
-      "logo": "/images/institute_of_directors-nobg.png"
-    },
-    {
-      "logo_size": "56",
-      "title": "High Tech Award, Impact for Good, 2021 (SVA)",
-      "image": "/images/sam-speaking-.jpeg",
-      "url": "https://www.customd.com/our-work/volunteering-mobile-app",
-      "description": "In order to engage as big a community as possible, the SVA platform gives organisers the ability to spin up activities quickly and allows volunteers to self-organise, creating activities of their own and with greater visibility of where they can best offer their time.",
-      "logo": "/images/screenshot-2026-06-11-at-10.54.21 pm.png"
-    },
-    {
-      "title": "PRINZ Communicator of the Year 2012",
+      "title": "PRINZ Communicator of the Year",
       "description": "For pioneering social media mobilisation in crisis",
       "logo": "/images/prinz_idgxkgof28_0-nobg.png",
       "logo_size": "56",
