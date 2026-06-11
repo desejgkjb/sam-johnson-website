@@ -2,12 +2,14 @@
   "copy": {
     "heading": "How can we help you connect with Sam?",
     "subheading": "Speaking, governance, media or partnership — tell us what you have in mind and you'll hear back promptly.",
-    "aside_heading": "Prefer email?",
     "aside_response_time": "Typical response time: 2–3 working days.",
-    "hero_image": "",
+    "form_heading": "Send an enquiry",
+    "success_message": "Thanks — your enquiry is on its way. You'll hear back within 2–3 working days.",
+    "submit_label": "Send Enquiry",
     "hero_position": "center",
+    "hero_image": "/images/sam-johnson-speaker-1920x960.jpg",
     "enquiry_placeholder": "Looking to book Sam for an event?",
-    "categories_heading": "What would you like to talk about?",
+    "aside_heading": "Prefer email?",
     "categories": [
       {
         "title": "Speaking Engagements",
@@ -30,8 +32,6 @@
         "description": "Questions and anything else — we'll point it the right way."
       }
     ],
-    "form_heading": "Send an enquiry",
-    "submit_label": "Send Enquiry",
-    "success_message": "Thanks — your enquiry is on its way. You'll hear back within 2–3 working days."
+    "categories_heading": "What would you like to talk about?"
   }
 }
