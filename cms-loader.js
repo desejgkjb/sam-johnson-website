@@ -325,12 +325,6 @@
     }).join('');
   }
 
-  function renderSpeakingTopics(container, topics) {
-    container.innerHTML = topics.map(function (t) {
-      return '<span class="chip">' + esc(t) + '</span>';
-    }).join('');
-  }
-
   function init(data) {
     applyFields(data);
 
@@ -401,11 +395,6 @@
     el = document.getElementById('cms-values');
     if (el && data.pages && data.pages.about && data.pages.about.values) {
       renderValues(el, data.pages.about.values);
-    }
-
-    el = document.getElementById('cms-speaking-topics');
-    if (el && data.pages && data.pages.home && data.pages.home.speaking_topics) {
-      renderSpeakingTopics(el, data.pages.home.speaking_topics);
     }
 
   }

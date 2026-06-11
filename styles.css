@@ -253,6 +253,8 @@ a.press-item:hover{color:var(--vermillion)}
 .cta-banner p{font-size:18px;color:rgba(255,255,255,.92);margin:22px auto 40px;max-width:580px;line-height:1.65}
 .cta-banner .btn{box-shadow:0 12px 32px rgba(0,0,0,.25)}
 .media-banner{background:var(--charcoal);padding:150px 24px}
+.media-banner .cta-media{background-position:top}
+.media-banner .cta-video{object-position:top}
 .banner-tall{min-height:70vh;display:flex;align-items:center;justify-content:center}
 .banner-full{min-height:92vh;display:flex;align-items:center;justify-content:center}
 .media-banner .cta-overlay{background:linear-gradient(180deg,rgba(45,45,45,.35) 0%,rgba(45,45,45,.55) 100%)}
