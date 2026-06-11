@@ -24,7 +24,7 @@
       "year": "2012 - 2015 ",
       "title": "Trustee",
       "location": "Philippines",
-      "description": "Ministry of Awesome is the starting point for people wanting to achieve new projects or ventures in Christchurch. We are an enabler, do-er and champion of and for awesome. We connect awesome ideas with the resources to turn them into reality -- people, funding, mentors, government entry points and enthusiasm, all with the aim of rippling awesome through our community to strengthen, encourage and inspire.\nwww.ministryofawesome.com",
+      "description": "Ministry of Awesome is the starting point for people wanting to achieve new projects or ventures in Christchurch. We are an enabler, do-er and champion of and for awesome. We connect awesome ideas with the resources to turn them into reality -- people, funding, mentors, government entry points and enthusiasm, all with the aim of rippling awesome through our community to strengthen, encourage and inspire.",
       "chip": ""
     },
     {
@@ -45,7 +45,7 @@
       "year": "2011 - 2018",
       "title": "Advisory Trustee",
       "location": "",
-      "description": "The Pacific Development and Conservation Trust was established by the New Zealand Government on 23 May 1989. Funding of $3.2 million was received from France in recognition of the events surrounding the destruction of the Greenpeace 'Rainbow Warrior' ship in Auckland Harbour on 10 July 1985.\n\nEvery year the Trust has approximately $250,000 to distribute as grants to groups and individuals in the South Pacific for a range of development and conservation projects.\n\nSeven Advisory Trustees are appointed by the Minister having responsibility for disarmament and arms control (as a result of changes in the composition of Ministerial portfolios announced on 12 December 2011, the Minister of Foreign Affairs is now responsible for the responsibilities formerly included in the Disarmament and Arms Control portfolio).\n\nApply here: http://www.dia.govt.nz/Services-Trust-&-Fellowship-Grants-The-Pacific-Development-and-Conservation-Trust",
+      "description": "The Pacific Development and Conservation Trust was established by the New Zealand Government on 23 May 1989. Funding of $3.2 million was received from France in recognition of the events surrounding the destruction of the Greenpeace 'Rainbow Warrior' ship in Auckland Harbour on 10 July 1985.",
       "chip": ""
     },
     {
@@ -57,7 +57,16 @@
   ],
   "awards": [
     {
-      "title": "Young New Zealander of the Year",
+      "title": "Officer of the New Zealand Order of Merit (ONZM) 2026",
+      "description": "King's Birthday Honours — for services to the community and youth",
+      "year": "2026",
+      "logo": "/images/gnzm-fs-wb-01-clearcut-v2-nobg.png",
+      "logo_size": "56",
+      "url": "https://www.dpmc.govt.nz/honours/lists/kb2026-onzm",
+      "image": "/images/screenshot-2026-06-11-at-8.29.53 pm.png"
+    },
+    {
+      "title": "Young New Zealander of the Year 2023",
       "description": "National recognition for the SVA and youth mobilisation",
       "logo": "/images/idpsyc3rdr_logos-nobg.png",
       "logo_size": "56",
@@ -66,7 +75,21 @@
       "image": "/images/samjohnson_dmp022s-867x1300.jpg"
     },
     {
-      "title": "Communicator of the Year",
+      "logo_size": "56",
+      "title": "Institute of Directors Auckland Emerging Director Award 2022",
+      "image": "/images/institute_of_directors-nobg.png",
+      "url": "https://www.iod.org.nz/news/articles/iod-recognises-student-armys-sam-johnson-with-auckland-emerging-director-award#/",
+      "description": "Sam Johnson, who founded the Student Volunteer Army in the wake of the devastating Christchurch earthquakes, has won the Institute of Directors’ (IoD) 2022 Auckland Emerging Director Award."
+    },
+    {
+      "logo_size": "56",
+      "title": "High Tech Award, Impact for Good, 2021 (SVA)",
+      "image": "/images/screenshot-2026-06-11-at-10.54.21 pm.png",
+      "url": "https://www.customd.com/our-work/volunteering-mobile-app",
+      "description": "In order to engage as big a community as possible, the SVA platform gives organisers the ability to spin up activities quickly and allows volunteers to self-organise, creating activities of their own and with greater visibility of where they can best offer their time."
+    },
+    {
+      "title": "PRINZ Communicator of the Year 2012",
       "description": "For pioneering social media mobilisation in crisis",
       "logo": "/images/prinz_idgxkgof28_0-nobg.png",
       "logo_size": "56",
@@ -75,22 +98,13 @@
       "image": "/images/4mopqc1_image_crop_107280.webp"
     },
     {
-      "title": "Sir Peter Blake Leadership Award",
+      "title": "Sir Peter Blake Leadership Awards 2011 ",
       "description": "For outstanding leadership in service of New Zealand",
       "logo": "/images/blake-trust-logo-nobg.png",
       "logo_size": "56",
       "year": "2011",
       "url": "https://gg.govt.nz/image-galleries/2011-sir-peter-blake-leadership-awards",
       "image": "/images/ptnz.jpg"
-    },
-    {
-      "title": "Officer of the New Zealand Order of Merit (ONZM)",
-      "description": "King's Birthday Honours — for services to the community and youth",
-      "year": "2026",
-      "logo": "/images/gnzm-fs-wb-01-clearcut-v2-nobg.png",
-      "logo_size": "56",
-      "url": "https://www.dpmc.govt.nz/honours/lists/kb2026-onzm",
-      "image": "/images/screenshot-2026-06-11-at-8.29.53 pm.png"
     }
   ],
   "copy": {
