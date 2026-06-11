@@ -54,6 +54,8 @@ h2{font-size:36px;font-weight:600}
 .about-hero-content{display:flex;flex-direction:column;align-items:flex-start;gap:26px;max-width:680px}
 .about-hero-content h1{color:var(--white);font-size:clamp(40px,4.6vw,68px);font-weight:700;line-height:1.06;letter-spacing:-.015em}
 .about-hero-content p{color:rgba(255,255,255,.88);font-size:18px;line-height:1.7;max-width:520px}
+.about-hero .hero-attribution{color:rgba(255,255,255,.75);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;margin-top:8px}
+.home-hero .hero-video{z-index:0}
 
 /* Home hero */
 .hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--blush-deep);background-image:repeating-linear-gradient(45deg,rgba(244,224,220,.5) 0 22px,transparent 22px 44px);background-size:cover;background-position:center}

@@ -85,7 +85,7 @@
     });
 
     // Hero background photo (fit / crop focus / section height from CMS)
-    var heroSection = document.querySelector('.hero');
+    var heroSection = document.querySelector('.home-hero');
     if (heroSection && data.hero && data.hero.photo) {
       heroSection.style.backgroundImage = 'url(' + data.hero.photo + ')';
       heroSection.style.backgroundSize = data.hero.photo_fit === 'contain' ? 'contain' : 'cover';
