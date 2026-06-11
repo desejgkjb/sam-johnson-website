@@ -262,6 +262,11 @@
     "projects_heading": "Projects that matter",
     "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
     "projects_intro": "Hands-on work in the field — from the Christchurch 2011 earthquake to STILL 100.",
-    "cta_button_label": "Connect with Sam on LinkedIn"
+    "cta_button_label": "Connect with Sam on LinkedIn",
+    "cta_media": {
+      "video": "",
+      "image": "",
+      "media_position": "center"
+    }
   }
 }

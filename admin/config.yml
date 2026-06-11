@@ -445,6 +445,22 @@ collections:
               - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
               - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
               - { label: "Bottom CTA — button label", name: "cta_button_label", widget: "string", required: false, hint: "Links to the LinkedIn URL set in ⚙️ Site settings" }
+              - label: "Bottom CTA — background media"
+                name: "cta_media"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Background video (optional)", name: "video", widget: "file", required: false, hint: "Short MP4 under ~20 MB. Plays muted on loop behind the text." }
+                  - { label: "Fallback image (optional)", name: "image", widget: "image", required: false, hint: "Shown while the video loads and on slow connections. Without either, a deep vermillion background is used." }
+                  - label: "Media — crop focus"
+                    name: "media_position"
+                    widget: "select"
+                    required: false
+                    default: "center"
+                    options:
+                      - { label: "Top (keep faces in frame)", value: "top" }
+                      - { label: "Centre", value: "center" }
+                      - { label: "Bottom", value: "bottom" }
 
   # ════════════════════════════════════════════════════════
   # 📅 EXPERIENCE PAGE
