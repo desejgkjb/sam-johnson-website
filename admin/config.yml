@@ -47,6 +47,10 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
+              - { label: "Hero video (optional)", name: "video", widget: "file", required: false, hint: "MP4 video, ideally under 20 MB. When set, it plays as the hero background; the hero photo stays as the fallback for slow connections. Remove the file to go back to the photo." }
+              - { label: "Video autoplays", name: "video_autoplay", widget: "boolean", required: false, default: true, hint: "Autoplaying videos are always muted (browser rule)" }
+              - { label: "Video loops", name: "video_loop", widget: "boolean", required: false, default: true }
+              - { label: "Video muted", name: "video_muted", widget: "boolean", required: false, default: true }
               - label: "Hero section height"
                 name: "photo_height"
                 widget: "select"
@@ -268,6 +272,41 @@ collections:
             fields:
               - { label: "Award name", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "string" }
+
+          # ─── RECOGNITION STRIP (homepage "Recognised by") ─────
+          - label: "🎖 Recognition strip"
+            name: "recognition"
+            widget: "list"
+            collapsed: true
+            label_singular: "Recognition"
+            hint: "The award/organisation logos under the hero. Drag to reorder."
+            fields:
+              - { label: "Recognition title", name: "title", widget: "string", hint: "e.g. Young New Zealander of the Year" }
+              - { label: "Organisation / award logo", name: "logo", widget: "image", required: false, hint: "PNG or SVG with transparent background works best. Shown at a consistent height." }
+              - { label: "Short description (optional)", name: "description", widget: "string", required: false }
+              - { label: "Link (optional)", name: "url", widget: "string", required: false, hint: "e.g. the award or organisation website" }
+
+          # ─── FEATURED IN (media logos) ────────────────────────
+          - label: "📰 Featured in (media)"
+            name: "press"
+            widget: "list"
+            collapsed: true
+            label_singular: "Media feature"
+            hint: "Media outlets that have featured Sam. Drag to reorder."
+            fields:
+              - { label: "Outlet name", name: "name", widget: "string" }
+              - { label: "Outlet logo", name: "logo", widget: "image", required: false, hint: "Shown greyscale, full colour on hover. Without a logo the name shows as text." }
+              - { label: "Show name next to logo", name: "show_name", widget: "boolean", required: false, default: false }
+              - label: "Logo size"
+                name: "logo_height"
+                widget: "select"
+                required: false
+                default: "36"
+                options:
+                  - { label: "Small (28px)", value: "28" }
+                  - { label: "Medium (36px)", value: "36" }
+                  - { label: "Large (48px)", value: "48" }
+              - { label: "Link to article / feature (optional)", name: "url", widget: "string", required: false }
 
           # ─── PAGE COPY ────────────────────────────────────────
           - label: "📄 Page copy"

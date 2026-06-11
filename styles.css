@@ -46,7 +46,8 @@ h2{font-size:36px;font-weight:600}
 .page-hero p{font-size:18px;max-width:640px;margin-top:18px}
 
 /* Home hero */
-.hero{position:relative;min-height:88vh;display:flex;align-items:center;background:var(--blush-deep);background-image:repeating-linear-gradient(45deg,rgba(244,224,220,.5) 0 22px,transparent 22px 44px)}
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;overflow:hidden;background:var(--blush-deep);background-image:repeating-linear-gradient(45deg,rgba(244,224,220,.5) 0 22px,transparent 22px 44px);background-size:cover;background-position:center}
+.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 .hero::after{content:"";position:absolute;inset:0;background:var(--blush);opacity:.4;pointer-events:none}
 .hero-inner{position:relative;z-index:1;max-width:1320px;margin:0 auto;padding:170px 32px 120px;width:100%}
 .hero-photo-note{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,45,45,.5);margin-bottom:36px}
@@ -58,8 +59,13 @@ h2{font-size:36px;font-weight:600}
 .credentials{background:var(--white);padding:56px 0;text-align:center}
 .strip-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid-grey);margin-bottom:28px}
 .badge-row{display:flex;justify-content:center;align-items:center;gap:64px;flex-wrap:wrap}
-.badge{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:600;color:var(--charcoal)}
+.badge{display:flex;align-items:center;gap:14px;font-size:15px;font-weight:600;color:var(--charcoal);transition:transform .25s cubic-bezier(.2,.6,.2,1),color .2s ease}
 .badge i{width:28px;height:28px;border-radius:50%;background:var(--blush-deep);flex-shrink:0}
+.badge-logo{height:44px;width:auto;max-width:130px;object-fit:contain;flex-shrink:0}
+.badge-text{display:flex;flex-direction:column;text-align:left;line-height:1.35}
+.badge-text small{font-weight:400;font-size:12.5px;color:var(--mid-grey)}
+a.badge:hover{transform:translateY(-3px);color:var(--vermillion)}
+a.badge:hover .badge-text strong{color:var(--vermillion)}
 
 /* Pull-quote band */
 .quote-band{background:var(--blush);padding:96px 0;text-align:center}
@@ -149,6 +155,10 @@ h2{font-size:36px;font-weight:600}
 .press .strip-label{color:var(--charcoal);opacity:.6}
 .press-row{display:flex;justify-content:center;align-items:center;gap:64px;flex-wrap:wrap}
 .press-logo{font-size:19px;font-weight:700;color:var(--charcoal);opacity:.45;letter-spacing:.02em}
+.press-item{display:inline-flex;align-items:center;gap:12px;font-size:19px;font-weight:700;color:var(--charcoal);opacity:.55;letter-spacing:.02em;filter:grayscale(1);transition:opacity .25s ease,filter .25s ease,transform .25s cubic-bezier(.2,.6,.2,1),color .2s ease}
+.press-item img{width:auto;object-fit:contain;display:block}
+.press-item:hover{opacity:1;filter:grayscale(0);transform:translateY(-3px)}
+a.press-item:hover{color:var(--vermillion)}
 
 /* Speaking band (homepage) */
 .speaking{background:var(--white);padding:112px 0;text-align:center}
@@ -192,12 +202,14 @@ h2{font-size:36px;font-weight:600}
 .footer-bottom{border-top:1px solid rgba(45,45,45,.15);padding-top:28px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:13px;color:#55504E}
 
 /* ─── Interaction design system ─────────────────────────── */
-/* Cards: lift + deeper shadow + border highlight */
-.card,.timeline-card,.value-card,.award,.testimonial,.contact-aside{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .25s ease}
-.card:hover,.value-card:hover,.award:hover,.testimonial:hover,.contact-aside:hover{transform:translateY(-4px);box-shadow:0 14px 32px rgba(45,45,45,.10)}
+/* Cards: red-accent hover — warm wash + vermillion border + lift + subtle scale */
+.card,.timeline-card,.value-card,.award,.testimonial,.contact-aside{transition:transform .25s cubic-bezier(.2,.6,.2,1),box-shadow .25s cubic-bezier(.2,.6,.2,1),border-color .25s ease,background-color .25s ease}
+.card h3,.value-card h3,.award h3,.timeline-card h3,.testimonial cite strong{transition:color .25s ease}
+.card:hover,.value-card:hover,.award:hover,.testimonial:hover,.contact-aside:hover{transform:translateY(-4px) scale(1.012);box-shadow:0 16px 36px rgba(232,65,50,.16);background:#FBEDEA}
 .value-card,.award,.testimonial{border:1px solid transparent}
-.value-card:hover,.award:hover,.testimonial:hover{border-color:var(--blush-deep)}
-.timeline-card:hover{transform:translateX(4px);box-shadow:0 10px 24px rgba(45,45,45,.08)}
+.value-card:hover,.award:hover,.testimonial:hover{border-color:var(--vermillion)}
+.card:hover h3,.award:hover h3,.timeline-card:hover h3{color:var(--vermillion)}
+.timeline-card:hover{transform:translateX(5px);box-shadow:0 10px 24px rgba(232,65,50,.12);background:#FBEDEA}
 
 /* Images: smooth zoom inside a clipped frame */
 .img-frame{overflow:hidden;border-radius:6px}
@@ -235,6 +247,7 @@ a,button{-webkit-tap-highlight-color:transparent}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{transition-duration:.01ms!important;animation-duration:.01ms!important}
   html{scroll-behavior:auto}
+  .hero-video{display:none}
 }
 
 /* Mobile — designed at 390px first */

@@ -125,7 +125,9 @@
       "cta_heading": "Want Sam's story at your event?",
       "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities.",
       "governance_heading": "11",
-      "projects_heading": "11"
+      "projects_heading": "11",
+      "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
+      "projects_intro": "Hands-on work in the field — from Christchurch to disaster zones around the world."
     },
     "experience": {
       "heading": "Fifteen years of mobilising people.",
@@ -226,6 +228,10 @@
     "heading": "Civic Entrepreneurr",
     "subheading": "Project Director at STILL.",
     "photo": "/images/sam-johnson-speaker-1920x960.jpg",
+    "video": "",
+    "video_autoplay": true,
+    "video_loop": true,
+    "video_muted": true,
     "photo_fit": "cover",
     "photo_position": "center",
     "photo_height": "88vh",
@@ -243,6 +249,91 @@
     {
       "number": "1",
       "label": "Movement — the Student Volunteer Army"
+    }
+  ],
+  "recognition": [
+    {
+      "title": "Young New Zealander of the Year",
+      "logo": "",
+      "description": "",
+      "url": ""
+    },
+    {
+      "title": "Communicator of the Year",
+      "logo": "",
+      "description": "",
+      "url": ""
+    },
+    {
+      "title": "Sir Peter Blake Leadership Award",
+      "logo": "",
+      "description": "",
+      "url": ""
+    },
+    {
+      "title": "Student Volunteer Army — Founder",
+      "logo": "",
+      "description": "",
+      "url": ""
+    }
+  ],
+  "press": [
+    {
+      "name": "NZ Herald",
+      "logo": "",
+      "show_name": false,
+      "logo_height": "36",
+      "url": ""
+    },
+    {
+      "name": "Stuff",
+      "logo": "",
+      "show_name": false,
+      "logo_height": "36",
+      "url": ""
+    },
+    {
+      "name": "RNZ",
+      "logo": "",
+      "show_name": false,
+      "logo_height": "36",
+      "url": ""
+    },
+    {
+      "name": "TVNZ",
+      "logo": "",
+      "show_name": false,
+      "logo_height": "36",
+      "url": ""
+    },
+    {
+      "name": "The Press",
+      "logo": "",
+      "show_name": false,
+      "logo_height": "36",
+      "url": ""
+    }
+  ],
+  "governance": [
+    {
+      "title": "Placeholder — Board / governance role",
+      "meta": "Organisation · Years",
+      "description": "Placeholder governance entry — to be replaced with Sam's actual board positions, advisory roles and committee involvement via the CMS.",
+      "chip": "Governance",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Placeholder — Advisory role",
+      "meta": "Organisation · Years",
+      "description": "Placeholder governance entry — to be replaced with Sam's actual advisory work via the CMS.",
+      "chip": "Advisory",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
     }
   ]
 }

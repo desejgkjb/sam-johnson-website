@@ -76,6 +76,30 @@
       if (note) note.style.display = 'none';
     }
 
+    // Hero background video (photo above remains the fallback/poster)
+    if (heroSection && data.hero && data.hero.video) {
+      var vid = document.createElement('video');
+      vid.className = 'hero-video';
+      vid.src = data.hero.video;
+      if (data.hero.photo) vid.poster = data.hero.photo;
+      var autoplay = data.hero.video_autoplay !== false;
+      vid.loop = data.hero.video_loop !== false;
+      vid.muted = autoplay ? true : data.hero.video_muted !== false; // autoplay requires mute
+      vid.playsInline = true;
+      vid.setAttribute('playsinline', '');
+      if (vid.muted) vid.setAttribute('muted', '');
+      vid.preload = 'metadata';
+      vid.setAttribute('aria-hidden', 'true');
+      vid.tabIndex = -1;
+      heroSection.prepend(vid);
+      var noteV = heroSection.querySelector('.hero-photo-note');
+      if (noteV) noteV.style.display = 'none';
+      if (autoplay) {
+        var p = vid.play();
+        if (p && p.catch) p.catch(function () { vid.remove(); }); // photo fallback
+      }
+    }
+
     // Portrait photos (about page & homepage teaser) with shape / fit / crop focus
     document.querySelectorAll('[data-cms-portrait]').forEach(function (el) {
       var path = el.dataset.cmsPortrait;
@@ -126,6 +150,33 @@
         + '<p>' + esc(p.description) + '</p>'
         + '<span class="chip">' + esc(p.chip) + '</span>'
         + '</article>';
+    }).join('');
+  }
+
+  function renderRecognition(container, items) {
+    container.innerHTML = items.map(function (r) {
+      var inner = (r.logo
+          ? '<img class="badge-logo" src="' + esc(r.logo) + '" alt="' + esc(r.title) + ' logo">'
+          : '<i aria-hidden="true"></i>')
+        + '<span class="badge-text"><strong>' + esc(r.title) + '</strong>'
+        + (r.description ? '<small>' + esc(r.description) + '</small>' : '')
+        + '</span>';
+      return r.url
+        ? '<a class="badge" href="' + esc(r.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<span class="badge">' + inner + '</span>';
+    }).join('');
+  }
+
+  function renderPress(container, items) {
+    container.innerHTML = items.map(function (p) {
+      var h = parseInt(p.logo_height, 10) || 36;
+      var inner = p.logo
+        ? '<img src="' + esc(p.logo) + '" alt="' + esc(p.name) + '" style="height:' + h + 'px">'
+          + (p.show_name ? '<span>' + esc(p.name) + '</span>' : '')
+        : '<span>' + esc(p.name) + '</span>';
+      return p.url
+        ? '<a class="press-item" href="' + esc(p.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+        : '<span class="press-item">' + inner + '</span>';
     }).join('');
   }
 
@@ -209,6 +260,12 @@
 
     el = document.getElementById('cms-projects-page');
     if (el && data.projects) renderProjectsPage(el, data.projects);
+
+    el = document.getElementById('cms-awards-strip');
+    if (el && data.recognition && data.recognition.length) renderRecognition(el, data.recognition);
+
+    el = document.getElementById('cms-press');
+    if (el && data.press && data.press.length) renderPress(el, data.press);
 
     el = document.getElementById('cms-governance');
     if (el && data.governance) renderGovernance(el, data.governance);
