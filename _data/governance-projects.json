@@ -256,17 +256,17 @@
   "copy": {
     "heading": "Strategic Leadership",
     "subheading": "Guiding organisations through growth, transformation, and the challenges of an increasingly complex world.",
-    "cta_heading": "Want Sam's story at your event?",
-    "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities.",
     "governance_heading": "Around the Board Table",
-    "projects_heading": "Projects that matter",
-    "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
     "projects_intro": "Hands-on work in the field — from the Christchurch 2011 earthquake to STILL 100.",
-    "cta_button_label": "Connect with Sam on LinkedIn",
+    "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
+    "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities.",
+    "cta_heading": "Want Sam's story at your event?",
     "cta_media": {
-      "video": "",
+      "video": "/images/6月11日-2-1-.mp4",
       "image": "",
       "media_position": "center"
-    }
+    },
+    "cta_button_label": "Connect with Sam on LinkedIn",
+    "projects_heading": "Projects that matter"
   }
 }
