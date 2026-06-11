@@ -14,7 +14,7 @@
   },
   "recognition": [
     {
-      "title": "Officer of New Zealand Order of Merit",
+      "title": "Officer of New Zealand Order of Merit 2026",
       "logo": "/images/gnzm-fs-wb-01-clearcut-v2-nobg.png",
       "url": "https://www.dpmc.govt.nz/honours/lists/kb2026-onzm"
     },
@@ -24,14 +24,18 @@
       "url": "https://www.beehive.govt.nz/release/young-new-zealander-year-congratulated?utm_source=chatgpt.com"
     },
     {
-      "title": "Special Leadership Award 2011",
-      "logo": "/images/blake-trust-logo-nobg.png",
-      "url": "https://gg.govt.nz/image-galleries/2011-sir-peter-blake-leadership-awards?utm_source=chatgpt.com"
-    },
-    {
       "title": "Institute of Directors Auckland Emerging Director Award 2022",
       "url": "https://www.iod.org.nz/news/articles/iod-recognises-student-armys-sam-johnson-with-auckland-emerging-director-award#/",
       "logo": "/images/institute_of_directors-nobg.png"
+    },
+    {
+      "title": "High Tech Award, Impact for Good, 2021 (SVA)",
+      "logo": "/images/screenshot-2026-06-11-at-10.54.21 pm.png"
+    },
+    {
+      "title": "Special Leadership Award 2011",
+      "logo": "/images/blake-trust-logo-nobg.png",
+      "url": "https://gg.govt.nz/image-galleries/2011-sir-peter-blake-leadership-awards?utm_source=chatgpt.com"
     },
     {
       "title": "PRINZ Communicator of the Year 2012",
@@ -42,7 +46,7 @@
   "about_teaser": {
     "heading": "Doing good projects with good people",
     "body": "Sam brings people together and makes great things happen, and has started and scaled a mix of charities, businesses and ideas to that end. He loves working with smart people and can intuitively see opportunities to help others make their vision come true.\n\nFor the last ten years, he has worked to create stronger social infrastructure and resilience through an organisation he founded called SVA (Student Volunteer Army). As Chief Executive, he grew the team, funding and programmes to impact thousands of young people’s lives and designed community responses to many major crises and disasters that earned his team several awards.",
-    "portrait": "/images/276308981_340424168107214_662444525038177238_n.jpg",
+    "portrait": "/images/sam-on-benc.jpg",
     "portrait_aspect": "4/5",
     "portrait_fit": "cover",
     "portrait_position": "center"
