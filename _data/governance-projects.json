@@ -18,7 +18,7 @@
       "image": "/images/images.jpeg",
       "image_aspect": "16/10",
       "image_fit": "cover",
-      "image_position": "center"
+      "image_position": "top"
     },
     {
       "title": "Chairperson — Metro Media Group",
@@ -28,7 +28,7 @@
       "image": "/images/screenshot-2026-06-11-at-1.45.23 pm.png",
       "image_aspect": "16/10",
       "image_fit": "cover",
-      "image_position": "center"
+      "image_position": "top"
     },
     {
       "title": "Director — Consult Recruitment",
@@ -38,7 +38,7 @@
       "image": "/images/screenshot-2026-06-11-at-1.46.53 pm.png",
       "image_aspect": "16/10",
       "image_fit": "cover",
-      "image_position": "center"
+      "image_position": "top"
     },
     {
       "title": "Chair — DDMMYY",
@@ -258,6 +258,7 @@
     "subheading": "Guiding organisations through growth, transformation, and the challenges of an increasingly complex world.",
     "governance_heading": "Around the Board Table",
     "projects_intro": "Hands-on work in the field — from the Christchurch 2011 earthquake to STILL 100.",
+    "hero_position": "center",
     "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
     "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities.",
     "cta_heading": "Want Sam's story at your event?",
@@ -266,9 +267,8 @@
       "image": "",
       "media_position": "center"
     },
+    "hero_image": "/images/screenshot-2026-06-11-at-9.18.03 pm.png",
     "cta_button_label": "Connect with Sam on LinkedIn",
-    "projects_heading": "Projects that matter",
-    "hero_image": "",
-    "hero_position": "center"
+    "projects_heading": "Projects that matter"
   }
 }
