@@ -367,8 +367,12 @@
       var cb = get(data, sec.dataset.cmsMedia);
       var media = sec.querySelector('.cta-media');
       if (!cb || !media) return;
+      var pos = cb.media_position || 'center';
+      if (cb.section_height === 'tall') sec.classList.add('banner-tall');
+      if (cb.section_height === 'full') sec.classList.add('banner-full');
       if (cb.image) {
         media.style.backgroundImage = 'url(' + cb.image + ')';
+        media.style.backgroundPosition = pos;
       }
       if (cb.video) {
         var bv = document.createElement('video');
@@ -378,6 +382,7 @@
         bv.muted = true; bv.loop = true; bv.autoplay = true;
         bv.playsInline = true; bv.setAttribute('playsinline', ''); bv.setAttribute('muted', '');
         bv.preload = 'metadata'; bv.setAttribute('aria-hidden', 'true'); bv.tabIndex = -1;
+        bv.style.objectPosition = pos;
         media.appendChild(bv);
         var bp = bv.play();
         if (bp && bp.catch) bp.catch(function () { bv.remove(); });

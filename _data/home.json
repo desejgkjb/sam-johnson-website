@@ -98,12 +98,17 @@
     "body": "T",
     "button_label": "T",
     "video": "/images/6月11日-1-.mp4",
-    "button_url": "T"
+    "button_url": "T",
+    "media_position": "top",
+    "section_height": "tall",
+    "image": ""
   },
   "cta_banner": {
     "heading": "T",
     "body": "T",
     "button_label": "T",
-    "button_url": "T"
+    "button_url": "T",
+    "media_position": "center",
+    "section_height": "standard"
   }
 }

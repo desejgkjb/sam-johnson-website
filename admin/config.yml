@@ -148,6 +148,26 @@ collections:
               - { label: "Button link", name: "button_url", widget: "string", hint: "e.g. contact.html, or a YouTube link" }
               - { label: "Fallback image", name: "image", widget: "image", required: false, hint: "Shown while the video loads, and on slow connections / reduced-motion devices." }
               - { label: "Background video", name: "video", widget: "file", required: false, hint: "MP4 under ~20 MB. Plays muted on loop behind the text. Remove to use the image only." }
+              - label: "Media — crop focus"
+                name: "media_position"
+                widget: "select"
+                required: false
+                default: "center"
+                hint: "Which part of the video/image stays visible when cropped. Choose Top to keep faces in frame."
+                options:
+                  - { label: "Top (keep faces in frame)", value: "top" }
+                  - { label: "Centre", value: "center" }
+                  - { label: "Bottom", value: "bottom" }
+              - label: "Section height"
+                name: "section_height"
+                widget: "select"
+                required: false
+                default: "standard"
+                hint: "Taller sections show more of the video and crop less."
+                options:
+                  - { label: "Standard", value: "standard" }
+                  - { label: "Tall (≈70% of screen)", value: "tall" }
+                  - { label: "Full screen", value: "full" }
 
           - label: "6 · Closing CTA banner (cinematic section above the footer)"
             name: "cta_banner"
@@ -160,6 +180,26 @@ collections:
               - { label: "Button link", name: "button_url", widget: "string", hint: "e.g. contact.html" }
               - { label: "Background image", name: "image", widget: "image", required: false, hint: "Cinematic photo of Sam in action. Also used as the video fallback." }
               - { label: "Background video (optional)", name: "video", widget: "file", required: false, hint: "MP4 under ~20 MB. Plays muted on loop. The image above is the fallback." }
+              - label: "Media — crop focus"
+                name: "media_position"
+                widget: "select"
+                required: false
+                default: "center"
+                hint: "Which part of the video/image stays visible when cropped. Choose Top to keep faces in frame."
+                options:
+                  - { label: "Top (keep faces in frame)", value: "top" }
+                  - { label: "Centre", value: "center" }
+                  - { label: "Bottom", value: "bottom" }
+              - label: "Section height"
+                name: "section_height"
+                widget: "select"
+                required: false
+                default: "standard"
+                hint: "Taller sections show more of the video and crop less."
+                options:
+                  - { label: "Standard", value: "standard" }
+                  - { label: "Tall (≈70% of screen)", value: "tall" }
+                  - { label: "Full screen", value: "full" }
 
           - label: "7 · Section headings & copy (rest of the homepage)"
             name: "copy"
