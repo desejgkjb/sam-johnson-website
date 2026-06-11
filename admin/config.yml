@@ -325,16 +325,7 @@ collections:
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
 
-          - label: "3 · Stat band (numbers strip)"
-            name: "stats"
-            widget: "list"
-            collapsed: true
-            label_singular: "Stat"
-            fields:
-              - { label: "Number", name: "number", widget: "string" }
-              - { label: "Label", name: "label", widget: "string" }
-
-          - label: "4 · Page headings & copy"
+          - label: "3 · Page headings & copy"
             name: "copy"
             widget: "object"
             collapsed: true

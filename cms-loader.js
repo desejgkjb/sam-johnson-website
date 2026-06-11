@@ -259,13 +259,6 @@
       + '</ol>';
   }
 
-  function renderStats(container, stats) {
-    container.innerHTML = stats.map(function (s) {
-      return '<div><span class="stat-num">' + esc(s.number) + '</span>'
-        + '<span class="stat-label">' + esc(s.label) + '</span></div>';
-    }).join('');
-  }
-
   function renderAwards(container, awards) {
     container.innerHTML = '<div class="awards-grid">'
       + awards.map(function (a) {
@@ -332,9 +325,6 @@
 
     el = document.getElementById('cms-timeline');
     if (el && data.timeline) renderTimeline(el, data.timeline);
-
-    el = document.getElementById('cms-stats');
-    if (el && data.stats) renderStats(el, data.stats);
 
     el = document.getElementById('cms-awards');
     if (el && data.awards) renderAwards(el, data.awards);

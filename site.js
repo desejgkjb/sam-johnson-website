@@ -11,6 +11,25 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', 'false');
 }));
 
+/* Scroll reveal — elements with [data-reveal] fade and lift in */
+(function () {
+  if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const els = document.querySelectorAll('[data-reveal]');
+  if (!els.length || !('IntersectionObserver' in window)) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (en.isIntersecting) {
+        en.target.classList.add('reveal-in');
+        io.unobserve(en.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  els.forEach((el) => {
+    el.classList.add('reveal-init');
+    io.observe(el);
+  });
+})();
+
 /* Experience timeline — dots light up and the line fills as you scroll */
 (function () {
   const container = document.getElementById('cms-timeline');
@@ -103,6 +122,7 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     next.disabled = track.scrollLeft >= max - 2;
     const cur = Math.min(currentPage(), dots.length - 1);
     dots.forEach((d, i) => d.classList.toggle('active', i === cur));
+    slides().forEach((s, i) => s.classList.toggle('is-current', i === cur));
   }
 
   prev.addEventListener('click', () => track.scrollBy({ left: -pageStep(), behavior: 'smooth' }));

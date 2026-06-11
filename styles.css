@@ -141,24 +141,32 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
 .award-year{margin-top:auto;padding-top:18px;font-size:13px;font-weight:600;letter-spacing:.1em;color:var(--mid-grey)}
 .award-link{display:inline-block;margin-top:10px;font-size:14px;font-weight:600;color:var(--vermillion)}
 
-/* Testimonials — horizontal carousel */
-.testimonials{background:var(--off-white);padding:112px 0}
-.carousel{display:flex;align-items:stretch;gap:16px;margin-top:48px}
-.carousel-track{display:flex;gap:28px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding:4px;flex:1;min-width:0}
+/* Testimonials — editorial showcase */
+.testimonials{background:linear-gradient(180deg,#FCF4F2 0%,#F7E6E2 100%);padding:128px 0;overflow:hidden}
+.testimonials .container{max-width:1320px}
+.testimonials .section-label,.testimonials h2{text-align:center}
+.carousel{display:flex;align-items:center;gap:8px;margin-top:56px}
+.carousel-track{display:flex;gap:40px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;scrollbar-width:none;flex:1;min-width:0;padding:24px calc((100% - min(860px, 94%)) / 2) 36px}
 .carousel-track::-webkit-scrollbar{display:none}
-.carousel-track:focus-visible{outline:3px solid var(--vermillion);outline-offset:2px;border-radius:8px}
-.testimonial{position:relative;flex:0 0 calc((100% - 28px)/2);scroll-snap-align:start;background:var(--white);border-radius:8px;padding:72px 36px 36px;box-shadow:0 1px 3px rgba(45,45,45,.06);display:flex;flex-direction:column}
-.testimonial::before{content:"\201C";position:absolute;left:32px;top:18px;font-size:72px;font-weight:700;color:var(--vermillion);line-height:1}
-.testimonial blockquote{font-size:18px;margin-bottom:18px}
-.testimonial cite{font-style:normal;font-size:14px;color:var(--mid-grey);margin-top:auto}
-.testimonial cite strong{display:block;color:var(--charcoal);font-size:15px}
-.carousel-arrow{flex:0 0 44px;width:44px;height:44px;align-self:center;border-radius:50%;border:1.5px solid var(--blush-deep);background:var(--white);color:var(--charcoal);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:background .2s ease,color .2s ease,border-color .2s ease}
-.carousel-arrow:hover{background:var(--vermillion);border-color:var(--vermillion);color:var(--white)}
+.carousel-track:focus-visible{outline:3px solid var(--vermillion);outline-offset:2px;border-radius:16px}
+.testimonial{position:relative;flex:0 0 min(860px, 94%);scroll-snap-align:center;background:var(--white);border-radius:16px;padding:96px 72px 64px;box-shadow:0 30px 60px rgba(45,45,45,.08),0 2px 8px rgba(45,45,45,.04);display:flex;flex-direction:column;text-align:center;opacity:.35;transform:scale(.96);transition:opacity .45s ease,transform .55s cubic-bezier(.2,.6,.2,1)}
+.testimonial.is-current{opacity:1;transform:none}
+.testimonial::before{content:"\201C";position:absolute;left:50%;top:-12px;transform:translateX(-50%);font-size:220px;font-weight:700;color:var(--vermillion);opacity:.07;line-height:1;pointer-events:none}
+.testimonial blockquote{position:relative;font-size:clamp(21px,2.4vw,30px);font-weight:500;line-height:1.5;color:var(--charcoal);max-width:680px;margin:0 auto 32px}
+.testimonial cite{position:relative;font-style:normal;font-size:14px;color:var(--mid-grey);margin-top:auto}
+.testimonial cite strong{display:block;color:var(--charcoal);font-size:16px;font-weight:600;margin-bottom:2px}
+.carousel-arrow{flex:0 0 48px;width:48px;height:48px;align-self:center;border-radius:50%;border:none;background:var(--white);color:var(--charcoal);cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(45,45,45,.10);transition:color .2s ease,transform .2s cubic-bezier(.2,.6,.2,1),box-shadow .2s ease}
+.carousel-arrow:hover{color:var(--vermillion);transform:translateY(-2px);box-shadow:0 8px 22px rgba(45,45,45,.14)}
+.carousel-arrow:active{transform:scale(.92)}
 .carousel-arrow:focus-visible{outline:3px solid var(--charcoal);outline-offset:2px}
-.carousel-arrow[disabled]{opacity:.35;cursor:default;pointer-events:none}
-.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:28px}
+.carousel-arrow[disabled]{opacity:0;cursor:default;pointer-events:none}
+.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:8px}
 .carousel-dots button{width:9px;height:9px;border-radius:50%;border:none;padding:0;background:var(--blush-deep);cursor:pointer;transition:background .2s ease,transform .2s ease}
 .carousel-dots button.active{background:var(--vermillion);transform:scale(1.25)}
+
+/* Scroll reveal (used on the testimonials stage) */
+.reveal-init{opacity:0;transform:translateY(28px)}
+.reveal-in{opacity:1;transform:none;transition:opacity .7s ease,transform .7s cubic-bezier(.2,.6,.2,1)}
 
 /* Press strip */
 .press{background:var(--blush);padding:64px 0;text-align:center}
@@ -289,7 +297,10 @@ a,button{-webkit-tap-highlight-color:transparent}
   .card.featured{grid-template-columns:1fr}
   .carousel{gap:0}
   .carousel-arrow{display:none}
-  .testimonial{flex:0 0 100%}
+  .carousel-track{gap:20px;padding:16px 8px 28px}
+  .testimonial{flex:0 0 100%;padding:72px 28px 44px}
+  .testimonial::before{font-size:150px;top:-8px}
+  .testimonials{padding:88px 0}
   .badge-row{gap:24px;flex-direction:column;align-items:flex-start;max-width:340px;margin:0 auto}
   .press-row{gap:28px}
   .footer-grid{grid-template-columns:1fr;gap:36px}
