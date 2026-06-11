@@ -11,6 +11,47 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', 'false');
 }));
 
+/* Experience timeline — dots light up and the line fills as you scroll */
+(function () {
+  const container = document.getElementById('cms-timeline');
+  if (!container) return;
+
+  function update() {
+    const list = container.querySelector('.timeline-list');
+    if (!list) return;
+    const items = Array.from(list.querySelectorAll('.timeline-item'));
+    if (!items.length) return;
+
+    // The "reading line" sits a little above the middle of the screen
+    const marker = window.innerHeight * 0.55;
+
+    let activeIdx = -1;
+    items.forEach(function (item, i) {
+      if (item.getBoundingClientRect().top < marker) activeIdx = i;
+    });
+    items.forEach(function (item, i) {
+      item.classList.toggle('is-passed', i < activeIdx);
+      item.classList.toggle('is-active', i === activeIdx);
+    });
+
+    const rect = list.getBoundingClientRect();
+    const progress = Math.min(1, Math.max(0, (marker - rect.top) / rect.height));
+    list.style.setProperty('--tl-progress', progress.toFixed(4));
+  }
+
+  let tlRaf;
+  function queueUpdate() {
+    cancelAnimationFrame(tlRaf);
+    tlRaf = requestAnimationFrame(update);
+  }
+
+  addEventListener('scroll', queueUpdate, { passive: true });
+  addEventListener('resize', queueUpdate);
+  // Re-run once the CMS loader replaces the timeline content
+  new MutationObserver(queueUpdate).observe(container, { childList: true, subtree: true });
+  queueUpdate();
+})();
+
 /* Testimonials carousel */
 (function () {
   const track = document.getElementById('cms-testimonials');

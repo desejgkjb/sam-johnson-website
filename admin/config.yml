@@ -244,9 +244,10 @@ collections:
             widget: "list"
             collapsed: false
             label_singular: "Governance entry"
-            hint: "Board positions, advisory roles, committees. Drag entries to reorder them."
+            hint: "Board positions, advisory roles, committees. Drag entries to reorder them. The top 4 show by default — the rest sit behind a 'View all governance' button."
             fields:
               - { label: "Role / Title", name: "title", widget: "string", hint: "e.g. Board Member, Trustee, Chair" }
+              - { label: "Featured (show in the top group)", name: "featured", widget: "boolean", required: false, default: false, hint: "Featured entries float to the top of the list. The first 4 are visible before 'View all'." }
               - { label: "Organisation / Years", name: "meta", widget: "string", hint: "e.g. Organisation name · 2020 – present" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag", name: "chip", widget: "string", required: false, hint: "e.g. Governance, Advisory, Current" }
@@ -286,9 +287,10 @@ collections:
             widget: "list"
             collapsed: true
             label_singular: "Project"
-            hint: "The first project is the large featured card. The first three projects also appear on the homepage. Drag to reorder."
+            hint: "The first project is the large featured card; the first three also appear on the homepage. The top 5 show by default — the rest sit behind a 'View all projects' button. Drag to reorder."
             fields:
               - { label: "Title", name: "title", widget: "string" }
+              - { label: "Featured (show in the top group)", name: "featured", widget: "boolean", required: false, default: false, hint: "Featured projects float to the top of the list. The first 5 are visible before 'View all'." }
               - { label: "Date / Location", name: "meta", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag", name: "chip", widget: "string" }
@@ -372,14 +374,27 @@ collections:
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag (optional)", name: "chip", widget: "string", required: false }
 
-          - label: "2 · Awards band"
+          - label: "2 · Recognition & awards showcase"
             name: "awards"
             widget: "list"
             collapsed: true
-            label_singular: "Award"
+            label_singular: "Recognition"
+            hint: "Premium recognition cards. Drag to reorder. Upload the official organisation logo for each award — PNG/SVG with transparent background works best."
             fields:
               - { label: "Award name", name: "title", widget: "string" }
+              - { label: "Organisation logo", name: "logo", widget: "image", required: false, hint: "Official logo of the awarding organisation. Shown above the award name." }
+              - label: "Logo size"
+                name: "logo_size"
+                widget: "select"
+                required: false
+                default: "56"
+                options:
+                  - { label: "Small (40px)", value: "40" }
+                  - { label: "Medium (56px)", value: "56" }
+                  - { label: "Large (72px)", value: "72" }
               - { label: "Description", name: "description", widget: "string" }
+              - { label: "Year received", name: "year", widget: "string", required: false, hint: "e.g. 2012 — leave blank if unconfirmed" }
+              - { label: "Link (optional)", name: "url", widget: "string", required: false, hint: "Award page or announcement — adds a 'Learn more' to the card" }
 
           - label: "3 · Page headings & copy"
             name: "copy"

@@ -58,19 +58,35 @@
   "awards": [
     {
       "title": "Young New Zealander of the Year",
-      "description": "National recognition for the SVA and youth mobilisation"
+      "description": "National recognition for the SVA and youth mobilisation",
+      "logo": "",
+      "logo_size": "56",
+      "year": "2012",
+      "url": ""
     },
     {
       "title": "Communicator of the Year",
-      "description": "For pioneering social media mobilisation in crisis"
+      "description": "For pioneering social media mobilisation in crisis",
+      "logo": "",
+      "logo_size": "56",
+      "year": "2012",
+      "url": ""
     },
     {
       "title": "Sir Peter Blake Leadership Award",
-      "description": "For outstanding leadership in service of New Zealand"
+      "description": "For outstanding leadership in service of New Zealand",
+      "logo": "",
+      "logo_size": "56",
+      "year": "",
+      "url": ""
     },
     {
-      "title": "Offer for New Zealand Order of Merit",
-      "description": "For services to the community and youth"
+      "title": "Officer of the New Zealand Order of Merit (ONZM)",
+      "description": "King's Birthday Honours — for services to the community and youth",
+      "year": "2026",
+      "logo": "",
+      "logo_size": "56",
+      "url": ""
     }
   ],
   "copy": {

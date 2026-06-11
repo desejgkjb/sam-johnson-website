@@ -131,6 +131,7 @@
   }
 
   function renderProjectsPage(container, projects) {
+    projects = sortFeatured(projects);
     container.innerHTML = projects.map(function (p, i) {
       if (i === 0) {
         return '<article class="card featured">'
@@ -151,6 +152,45 @@
         + '<span class="chip">' + esc(p.chip) + '</span>'
         + '</article>';
     }).join('');
+  }
+
+  // Featured items float to the top (stable — CMS order kept within each group)
+  function sortFeatured(items) {
+    return items.slice().sort(function (a, b) {
+      return (b.featured === true) - (a.featured === true);
+    });
+  }
+
+  // Show the first `count` cards; tuck the rest behind a "View all" button
+  function applyShowMore(container, count, labelAll) {
+    var old = container.parentNode.querySelector('.section-more');
+    if (old) old.remove();
+    var cards = Array.prototype.slice.call(container.children);
+    var extra = cards.slice(count);
+    if (!extra.length) return;
+    extra.forEach(function (c) { c.classList.add('extra-hidden'); });
+
+    var btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'section-more';
+    var expanded = false;
+    function setLabel() {
+      btn.innerHTML = expanded
+        ? 'Show less'
+        : labelAll + ' (' + extra.length + ' more) <span aria-hidden="true">&nbsp;→</span>';
+      btn.setAttribute('aria-expanded', expanded);
+    }
+    setLabel();
+    btn.addEventListener('click', function () {
+      expanded = !expanded;
+      extra.forEach(function (c) {
+        c.classList.toggle('extra-hidden', !expanded);
+        if (expanded) c.classList.add('extra-revealed');
+      });
+      setLabel();
+      if (!expanded) container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
+    container.insertAdjacentElement('afterend', btn);
   }
 
   function renderRecognition(container, items) {
@@ -181,6 +221,7 @@
   }
 
   function renderGovernance(container, entries) {
+    entries = sortFeatured(entries);
     container.innerHTML = entries.map(function (g) {
       return '<article class="card">'
         + (g.image ? imgOrPlaceholder(g.image, g.title, imgSettings(g)) : '')
@@ -228,8 +269,18 @@
   function renderAwards(container, awards) {
     container.innerHTML = '<div class="awards-grid">'
       + awards.map(function (a) {
-        return '<div class="award"><h3>' + esc(a.title) + '</h3>'
-          + '<p class="meta">' + esc(a.description) + '</p></div>';
+        var size = parseInt(a.logo_size, 10) || 56;
+        var logo = a.logo
+          ? '<div class="award-logo" style="height:' + size + 'px"><img src="' + esc(a.logo) + '" alt="' + esc(a.title) + ' logo"></div>'
+          : '<div class="award-logo award-logo-empty" aria-hidden="true"><span></span></div>';
+        var inner = logo
+          + '<h3>' + esc(a.title) + '</h3>'
+          + '<p class="award-desc">' + esc(a.description) + '</p>'
+          + (a.year ? '<p class="award-year">' + esc(a.year) + '</p>' : '')
+          + (a.url ? '<span class="award-link">Learn more →</span>' : '');
+        return a.url
+          ? '<a class="award" href="' + esc(a.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
+          : '<div class="award">' + inner + '</div>';
       }).join('')
       + '</div>';
   }
@@ -259,7 +310,10 @@
     if (el && data.projects) renderProjects(el, data.projects);
 
     el = document.getElementById('cms-projects-page');
-    if (el && data.projects) renderProjectsPage(el, data.projects);
+    if (el && data.projects) {
+      renderProjectsPage(el, data.projects);
+      applyShowMore(el, 5, 'View all projects');
+    }
 
     el = document.getElementById('cms-awards-strip');
     if (el && data.recognition && data.recognition.length) renderRecognition(el, data.recognition);
@@ -268,7 +322,10 @@
     if (el && data.press && data.press.length) renderPress(el, data.press);
 
     el = document.getElementById('cms-governance');
-    if (el && data.governance) renderGovernance(el, data.governance);
+    if (el && data.governance) {
+      renderGovernance(el, data.governance);
+      applyShowMore(el, 4, 'View all governance');
+    }
 
     el = document.getElementById('cms-testimonials');
     if (el && data.testimonials) renderTestimonials(el, data.testimonials);
