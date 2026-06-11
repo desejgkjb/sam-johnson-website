@@ -47,9 +47,10 @@
     <form class="enquiry-bar" id="enquiryBar">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       <label for="enquiryInput" style="position:absolute;left:-9999px">What would you like to discuss?</label>
-      <input id="enquiryInput" type="text" data-cms-placeholder="pages.contact.enquiry_placeholder" placeholder="Looking to book Sam for an event?">
+      <input id="enquiryInput" type="text" autocomplete="off" data-cms-placeholder="pages.contact.enquiry_placeholder" placeholder="Looking to book Sam for an event?" aria-label="Search the site or describe your enquiry">
       <button class="btn" type="submit">Start</button>
     </form>
+    <div class="search-results" id="searchResults" hidden></div>
   </div>
 </section>
 

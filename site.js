@@ -11,6 +11,114 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   toggle.setAttribute('aria-expanded', 'false');
 }));
 
+/* Contact page — site search in the enquiry bar */
+(function () {
+  const input = document.getElementById('enquiryInput');
+  const panel = document.getElementById('searchResults');
+  const bar = document.getElementById('enquiryBar');
+  if (!input || !panel || !bar) return;
+
+  let index = [];
+
+  function esc(s) {
+    return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  }
+
+  function buildIndex(d) {
+    const ix = [];
+    (d.news || []).forEach(n => ix.push({ type: 'News', title: n.title, text: [n.summary, n.source, n.date].join(' '), meta: [n.source, n.date].filter(Boolean).join(' · '), url: n.url, external: true }));
+    (d.faqs || []).forEach(f => ix.push({ type: 'FAQ', title: f.question, text: f.answer, answer: f.answer }));
+    (d.projects || []).forEach(p => ix.push({ type: 'Project', title: p.title, text: [p.description, p.meta, p.chip].join(' '), meta: p.meta, url: 'projects.html' }));
+    (d.governance || []).forEach(g => ix.push({ type: 'Governance', title: g.title, text: [g.description, g.meta, g.chip].join(' '), meta: g.meta, url: 'projects.html' }));
+    (d.timeline || []).forEach(t => ix.push({ type: 'Experience', title: t.title, text: [t.description, t.year, t.location].join(' '), meta: t.year, url: 'experience.html' }));
+    (d.awards || []).forEach(a => ix.push({ type: 'Award', title: a.title, text: [a.description, a.year].join(' '), meta: a.year, url: a.url || 'experience.html', external: !!a.url }));
+    (d.recognition || []).forEach(r => ix.push({ type: 'Recognition', title: r.title, text: r.description || '', url: r.url || 'index.html', external: !!r.url }));
+    return ix;
+  }
+
+  document.addEventListener('cms:data', function () {
+    index = buildIndex(window.__cmsData || {});
+  });
+
+  function search(q) {
+    const terms = q.toLowerCase().split(/\s+/).filter(t => t.length > 1);
+    if (!terms.length) return [];
+    return index.map(function (item) {
+      const title = (item.title || '').toLowerCase();
+      const text = (item.text || '').toLowerCase();
+      let score = 0;
+      terms.forEach(function (t) {
+        if (title.includes(t)) score += 3;
+        if (text.includes(t)) score += 1;
+      });
+      return { item: item, score: score };
+    }).filter(r => r.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 7)
+      .map(r => r.item);
+  }
+
+  function snippet(item, q) {
+    const text = item.text || '';
+    const t = q.toLowerCase().split(/\s+/).filter(x => x.length > 1)[0] || '';
+    const pos = text.toLowerCase().indexOf(t);
+    let out = pos > 40 ? '…' + text.slice(pos - 30, pos + 70) : text.slice(0, 100);
+    return out.trim() + (text.length > 100 ? '…' : '');
+  }
+
+  function render(q) {
+    const results = search(q);
+    let html = results.map(function (item, i) {
+      const head = '<span class="sr-type">' + item.type + '</span>'
+        + '<span class="sr-body"><strong>' + esc(item.title) + '</strong>'
+        + '<small>' + esc(item.meta || snippet(item, q)) + '</small>'
+        + (item.answer ? '<span class="sr-answer">' + esc(item.answer) + '</span>' : '')
+        + '</span>';
+      if (item.answer) {
+        return '<button type="button" class="sr-row sr-faq" data-i="' + i + '">' + head + '</button>';
+      }
+      return '<a class="sr-row" href="' + esc(item.url) + '"' + (item.external ? ' target="_blank" rel="noopener"' : '') + '>' + head + '</a>';
+    }).join('');
+    html += '<button type="button" class="sr-row sr-fallback" id="srEnquiry">'
+      + '<span class="sr-type sr-type-red">Enquiry</span>'
+      + '<span class="sr-body"><strong>Can’t find it? Send us a message</strong>'
+      + '<small>We’ll point your question the right way</small></span></button>';
+    panel.innerHTML = html;
+    panel.hidden = false;
+  }
+
+  input.addEventListener('input', function () {
+    const q = input.value.trim();
+    if (q.length < 2) { panel.hidden = true; return; }
+    render(q);
+  });
+
+  bar.addEventListener('submit', function () {
+    const q = input.value.trim();
+    if (q.length >= 2) render(q);
+  });
+
+  panel.addEventListener('click', function (e) {
+    const faq = e.target.closest('.sr-faq');
+    if (faq) { faq.classList.toggle('open'); return; }
+    if (e.target.closest('#srEnquiry')) {
+      const formSec = document.getElementById('contactForm');
+      const msg = document.getElementById('cf-msg');
+      if (msg && !msg.value) msg.value = input.value.trim();
+      panel.hidden = true;
+      if (formSec) formSec.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+  document.addEventListener('click', function (e) {
+    if (!e.target.closest('.enquiry-bar') && !e.target.closest('.search-results')) panel.hidden = true;
+  });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') panel.hidden = true;
+  });
+})();
+
 /* Contact page — enquiry bar and pathway cards feed the form */
 (function () {
   const formSec = document.getElementById('contactForm');
@@ -18,17 +126,8 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 
   const bar = document.getElementById('enquiryBar');
   if (bar) {
-    bar.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const v = document.getElementById('enquiryInput').value.trim();
-      const msg = document.getElementById('cf-msg');
-      if (v && msg && !msg.value) msg.value = v;
-      formSec.scrollIntoView({ behavior: 'smooth' });
-      setTimeout(function () {
-        const target = document.getElementById('cf-name');
-        if (target) target.focus({ preventScroll: true });
-      }, 650);
-    });
+    // The search module renders results on submit; just stop the page reload here.
+    bar.addEventListener('submit', function (e) { e.preventDefault(); });
   }
 
   const cats = document.getElementById('cms-contact-categories');

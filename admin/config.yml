@@ -637,6 +637,42 @@ collections:
               - { label: "Featured (show first)", name: "featured", widget: "boolean", required: false, default: false }
 
   # ════════════════════════════════════════════════════════
+  # 🔎 SEARCH LIBRARY (news & FAQs — searchable on Contact)
+  # ════════════════════════════════════════════════════════
+  - name: "library"
+    label: "🔎 Search library (news & FAQs)"
+    description: "Content people can find through the search bar on the Contact page. The search also covers projects, governance roles, the timeline and awards automatically."
+    files:
+      - name: "library"
+        label: "News & FAQs"
+        file: "_data/library.json"
+        format: json
+        fields:
+
+          - label: "1 · News & articles about Sam"
+            name: "news"
+            widget: "list"
+            collapsed: false
+            label_singular: "Article"
+            hint: "Media coverage, announcements and links. Drag to reorder."
+            fields:
+              - { label: "Headline", name: "title", widget: "string" }
+              - { label: "Source / outlet", name: "source", widget: "string", required: false, hint: "e.g. NZ Herald" }
+              - { label: "Year", name: "date", widget: "string", required: false }
+              - { label: "Link to the article", name: "url", widget: "string" }
+              - { label: "One-line summary", name: "summary", widget: "text", required: false, hint: "Helps the search find it and shows under the headline" }
+
+          - label: "2 · FAQs"
+            name: "faqs"
+            widget: "list"
+            collapsed: true
+            label_singular: "FAQ"
+            hint: "Answers show directly inside the search results."
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+  # ════════════════════════════════════════════════════════
   # ⚙️ SITE SETTINGS (name, contact, links — used everywhere)
   # ════════════════════════════════════════════════════════
   - name: "settings"

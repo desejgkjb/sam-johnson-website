@@ -437,7 +437,8 @@
     { file: '/_data/governance-projects.json', page: 'projects' },
     { file: '/_data/experience.json', page: 'experience' },
     { file: '/_data/contact.json', page: 'contact' },
-    { file: '/_data/testimonials.json' }
+    { file: '/_data/testimonials.json' },
+    { file: '/_data/library.json' }
   ];
 
   function load() {
@@ -459,7 +460,12 @@
           }
         });
       });
-      if (loaded) init(data);
+      if (loaded) {
+        init(data);
+        // Expose merged content for the site search
+        window.__cmsData = data;
+        document.dispatchEvent(new CustomEvent('cms:data'));
+      }
     }).catch(function () { /* fail silently — static fallback text remains */ });
   }
 
