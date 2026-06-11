@@ -7,7 +7,7 @@
     "portrait_fit": "cover",
     "quote_cite": "Sam Johnson",
     "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart — and watching thousands of young people being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p><p>Eleven thousand volunteers answered. The Student Volunteer Army was born — proof that young people, given trust and a practical task, will show up in extraordinary numbers.</p><p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p><p>His vision remains the same as it was in 2011: to catalyse a revolution in youth leadership.</p>",
-    "portrait": "",
+    "portrait": "/images/68ed75be-8b16-46a2-8db9-8de1847d3c0a.jpg",
     "portrait_aspect": "4/5",
     "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now."
   },
@@ -141,14 +141,19 @@
   },
   "testimonials": [
     {
-      "quote": "Placeholder testimonial — event organiser quote to be supplied and approved by Sam. Two to three sentences on impact and audience response.",
-      "author": "Name Surname",
-      "title": "Title, Organisation"
+      "quote": "\"This young man mobilised the Student Army… and made a huge impression on New Zealand.\"",
+      "author": "Paula Bennett",
+      "title": "NZ Youth Affairs Minister"
     },
     {
-      "quote": "Placeholder testimonial — partner or media quote to be supplied and approved by Sam. Two to three sentences on working with Sam.",
-      "author": "Name Surname",
-      "title": "Title, Organisation"
+      "quote": "\"Sam Johnson demonstrates incredible strength and leadership capabilities well beyond age.\"",
+      "author": "BLAKE",
+      "title": "Sir Peter Blake Trust"
+    },
+    {
+      "quote": "“Just hours after the September 2010 earthquake… Sam Johnson put out a Facebook plea for volunteers.”",
+      "author": "Sally Blundell",
+      "title": "New Zealand Geographic"
     }
   ],
   "awards": [
@@ -187,7 +192,7 @@
       "image_fit": "cover",
       "image_position": "center",
       "featured": false,
-      "title": "Tōhoku earthquake & tsunami response",
+      "title": "abc",
       "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
       "image_aspect": "16/10",
       "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand."
