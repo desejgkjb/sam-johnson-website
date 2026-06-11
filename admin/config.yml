@@ -305,8 +305,32 @@ collections:
                 fields:
                   - { label: "Title", name: "title", widget: "string" }
                   - { label: "Body text", name: "body", widget: "text" }
-              - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
-              - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
+              - { label: "Explore card 1 (Timeline) — heading", name: "hub_timeline_heading", widget: "string", required: false }
+              - { label: "Explore card 1 (Timeline) — description", name: "hub_timeline_body", widget: "text", required: false }
+              - { label: "Explore card 1 (Timeline) — button label", name: "hub_timeline_button", widget: "string", required: false }
+              - { label: "Explore card 1 (Timeline) — background photo", name: "hub_timeline_image", widget: "image", required: false, hint: "Career-journey photo. Fills the card behind the text." }
+              - label: "Explore card 1 — crop focus"
+                name: "hub_timeline_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+              - { label: "Explore card 2 (Projects) — heading", name: "hub_projects_heading", widget: "string", required: false }
+              - { label: "Explore card 2 (Projects) — description", name: "hub_projects_body", widget: "text", required: false }
+              - { label: "Explore card 2 (Projects) — button label", name: "hub_projects_button", widget: "string", required: false }
+              - { label: "Explore card 2 (Projects) — background photo", name: "hub_projects_image", widget: "image", required: false, hint: "Work-and-impact photo. Fills the card behind the text." }
+              - label: "Explore card 2 — crop focus"
+                name: "hub_projects_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
 
   # ════════════════════════════════════════════════════════
   # 🏛 GOVERNANCE / PROJECTS PAGE

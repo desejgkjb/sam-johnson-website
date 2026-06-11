@@ -33,7 +33,15 @@
         "body": "Young people are not a future asset to be developed — they are a present force to be mobilised, in disasters and in everyday civic life."
       }
     ],
-    "cta_heading": "Want the full journey?",
-    "cta_body": "Explore the timeline of Sam's career, or see the projects in depth."
+    "hub_timeline_heading": "The full journey",
+    "hub_timeline_body": "Fifteen years of milestones — from a Facebook post in a broken city to global advisory work.",
+    "hub_timeline_button": "View the timeline",
+    "hub_timeline_image": "",
+    "hub_timeline_image_position": "center",
+    "hub_projects_heading": "The work, in depth",
+    "hub_projects_body": "Governance roles and projects with real outcomes — from the SVA to disaster zones around the world.",
+    "hub_projects_button": "Explore projects",
+    "hub_projects_image": "",
+    "hub_projects_image_position": "center"
   }
 }

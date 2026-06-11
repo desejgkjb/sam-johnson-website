@@ -282,6 +282,23 @@ a.press-item:hover{color:var(--vermillion)}
 .banner-full{min-height:92vh;display:flex;align-items:center;justify-content:center}
 .media-banner .cta-overlay{background:linear-gradient(180deg,rgba(45,45,45,.35) 0%,rgba(45,45,45,.55) 100%)}
 
+/* About page — explore hub (image destination cards) */
+.explore-hub{background:#201D1C;padding:96px 32px}
+.explore-grid{display:grid;grid-template-columns:1fr 1fr;gap:32px;max-width:1320px;margin:0 auto}
+.explore-card{position:relative;display:flex;align-items:flex-end;min-height:520px;border-radius:20px;overflow:hidden;color:inherit;background:var(--blush-deep) repeating-linear-gradient(45deg,rgba(244,224,220,.5) 0 22px,transparent 22px 44px);background-size:cover;background-position:center;transition:transform .35s cubic-bezier(.2,.6,.2,1),box-shadow .35s ease}
+.explore-card .hero-photo-note{position:absolute;top:36px;left:0;right:0;text-align:center;z-index:1;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,45,45,.5)}
+.explore-overlay{position:absolute;inset:0;background:linear-gradient(200deg,rgba(20,18,17,.05) 30%,rgba(20,18,17,.8) 100%);transition:background .35s ease}
+.explore-content{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;gap:14px;padding:48px}
+.explore-card h2{color:var(--white);font-size:clamp(28px,2.8vw,42px);font-weight:700;line-height:1.1}
+.explore-card>div p,.explore-content p{color:rgba(255,255,255,.88);font-size:16px;line-height:1.6;max-width:430px}
+.explore-card .btn-light{margin-top:10px}
+.explore-card:hover{transform:translateY(-6px);box-shadow:0 26px 52px rgba(0,0,0,.4)}
+.explore-card:hover .explore-overlay{background:linear-gradient(200deg,rgba(20,18,17,.12) 30%,rgba(20,18,17,.86) 100%)}
+.explore-card:hover .btn-light{background:var(--vermillion);color:var(--white)}
+.explore-card:focus-visible{outline:3px solid var(--vermillion);outline-offset:4px}
+.btn-light{background:var(--white);color:var(--charcoal)}
+.btn-light:hover{background:var(--vermillion);color:var(--white)}
+
 /* Footer */
 .footer{background:var(--blush-deep);padding:80px 0 36px}
 .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:64px}
@@ -385,6 +402,10 @@ a,button{-webkit-tap-highlight-color:transparent}
   .newsletter form{flex-direction:column;align-items:stretch}
   .newsletter input{min-width:0}
   .contact-grid{grid-template-columns:1fr;gap:48px}
+  .explore-hub{padding:64px 20px}
+  .explore-grid{grid-template-columns:1fr;gap:24px}
+  .explore-card{min-height:420px}
+  .explore-content{padding:32px}
   .contact-hero{padding:140px 0 80px}
   .enquiry-bar .btn{padding:12px 20px;font-size:15px}
   .cta-banner{padding:110px 24px}
