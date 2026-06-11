@@ -267,6 +267,8 @@
       "media_position": "center"
     },
     "cta_button_label": "Connect with Sam on LinkedIn",
-    "projects_heading": "Projects that matter"
+    "projects_heading": "Projects that matter",
+    "hero_image": "",
+    "hero_position": "center"
   }
 }
