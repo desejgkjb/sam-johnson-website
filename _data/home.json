@@ -51,25 +51,29 @@
       "show_name": false,
       "logo_height": "36",
       "name": "TVNZ",
-      "logo": "/images/tvnz_idj5yla7fw_0.png"
+      "logo": "/images/tvnz_idj5yla7fw_0.png",
+      "url": "https://www.tvnz.co.nz/player/newsclip/educators-film-makers-recognised-in-2026-kings-birthday-honours"
     },
     {
       "show_name": false,
       "logo_height": "36",
       "name": "The Stuff",
-      "logo": "/images/stuff-co-nz_idj71mhwdy_0.png"
+      "logo": "/images/stuff-co-nz_idj71mhwdy_0.png",
+      "url": "https://www.stuff.co.nz/society/360483342/full-disclosure-podcast-profound-advice-sam-johnson-received-about-being-gay"
     },
     {
       "show_name": false,
       "logo_height": "36",
       "name": "New Zealand Herald",
-      "logo": "/images/nzherald_idftidsmb2_0.jpeg"
+      "logo": "/images/nzherald_idftidsmb2_0.jpeg",
+      "url": "https://www.nzherald.co.nz/the-listener/new-zealand/the-hewitson-profile-sam-johnson/6S7MA5HHLJB3LMO472IB4PMUZU/"
     },
     {
       "show_name": false,
       "logo_height": "36",
       "name": "1 News",
-      "logo": "/images/screenshot-2026-06-11-at-1.16.01 pm.png"
+      "logo": "/images/screenshot-2026-06-11-at-1.16.01 pm.png",
+      "url": "https://www.1news.co.nz/2026/06/01/former-top-athlete-entrepreneur-recognised-in-2026-kings-birthday-honours/"
     }
   ],
   "copy": {
@@ -79,13 +83,13 @@
       "Youth leadership",
       "Disaster response & community resilience",
       "Entrepreneurship",
-      "Personal Growth"
+      "Youth Employment"
     ],
-    "speaking_heading": "Stories from the rubble. Lessons for every leader.",
+    "speaking_heading": "Ideas That Move People",
     "quote_band_text": "One of New Zealand's most inspiring young citizens.",
-    "testimonials_heading": "Trusted by audiences and organisers alike.",
-    "newsletter_heading": "Follow the movement.",
-    "projects_heading": "Start here — the projects that define Sam's story.",
+    "testimonials_heading": "What People Are Saying",
+    "newsletter_heading": "Join the movement",
+    "projects_heading": "Start here: the projects that define Sam's story.",
     "quote_band_cite": "Young New Zealander of the Year citation"
   }
 }
