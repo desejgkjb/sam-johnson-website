@@ -92,5 +92,18 @@
     "newsletter_heading": "Join the movement",
     "projects_heading": "Start here: the projects that define Sam's story.",
     "quote_band_cite": "Young New Zealander of the Year citation"
+  },
+  "media_banner": {
+    "heading": "Test",
+    "body": "T",
+    "button_label": "T",
+    "video": "/images/6月11日-1-.mp4",
+    "button_url": "T"
+  },
+  "cta_banner": {
+    "heading": "T",
+    "body": "T",
+    "button_label": "T",
+    "button_url": "T"
   }
 }
