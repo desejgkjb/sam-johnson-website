@@ -78,18 +78,8 @@
     }
   ],
   "copy": {
-    "newsletter_body": "Occasional updates on Sam's projects, speaking dates and the SVA. ",
-    "speaking_body": "Sam speaks to schools, companies, conferences and governments about mobilising people, leading through crisis, and trusting young people with real responsibility.",
-    "speaking_topics": [
-      "Youth leadership",
-      "Disaster response & community resilience",
-      "Entrepreneurship",
-      "Youth Employment"
-    ],
-    "speaking_heading": "Ideas That Move People",
     "quote_band_text": "One of New Zealand's most inspiring young citizens.",
     "testimonials_heading": "A Reputation Built One Action at a Time.",
-    "newsletter_heading": "Join the movement",
     "projects_heading": "Start here: the projects that define Sam's story.",
     "quote_band_cite": "Young New Zealander of the Year citation"
   },

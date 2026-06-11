@@ -3,17 +3,29 @@
     {
       "quote": "\"This young man mobilised the Student Army… and made a huge impression on New Zealand.\"",
       "author": "Paula Bennett",
-      "title": "NZ Youth Affairs Minister"
+      "title": "NZ Youth Affairs Minister",
+      "organisation": "",
+      "photo": "",
+      "prominent": false,
+      "featured": false
     },
     {
       "quote": "\"Sam Johnson demonstrates incredible strength and leadership capabilities well beyond age.\"",
       "author": "BLAKE",
-      "title": "Sir Peter Blake Trust"
+      "title": "Sir Peter Blake Trust",
+      "organisation": "",
+      "photo": "",
+      "prominent": false,
+      "featured": false
     },
     {
       "quote": "“Just hours after the September 2010 earthquake… Sam Johnson put out a Facebook plea for volunteers.”",
       "author": "Sally Blundell",
-      "title": "New Zealand Geographic"
+      "title": "New Zealand Geographic",
+      "organisation": "",
+      "photo": "",
+      "prominent": false,
+      "featured": false
     }
   ]
 }

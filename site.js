@@ -116,73 +116,40 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   queueUpdate();
 })();
 
-/* Testimonials carousel */
+/* Endorsement wall — profile row drives the hero quote */
 (function () {
-  const track = document.getElementById('cms-testimonials');
-  const prev = document.getElementById('carouselPrev');
-  const next = document.getElementById('carouselNext');
-  const dotsWrap = document.getElementById('carouselDots');
-  if (!track || !prev || !next || !dotsWrap) return;
+  const quote = document.getElementById('endorseQuote');
+  const row = document.getElementById('cms-testimonials');
+  if (!quote || !row) return;
 
-  let dots = [];
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  function slides() { return Array.from(track.children); }
-
-  function pageCount() {
-    const max = track.scrollWidth - track.clientWidth;
-    if (max <= 1) return 1;
-    return Math.round(max / pageStep()) + 1;
+  function activate(btn, instant) {
+    row.querySelectorAll('.endorse-profile').forEach(function (b) {
+      b.classList.toggle('active', b === btn);
+    });
+    const text = btn.dataset.quote || '';
+    const apply = function () {
+      // Show curly quotes unless the quote already includes its own
+      quote.textContent = /^["“]/.test(text.trim()) ? text : '“' + text + '”';
+      quote.classList.remove('quote-fade');
+    };
+    if (instant || reduced) { apply(); return; }
+    quote.classList.add('quote-fade');
+    setTimeout(apply, 260);
   }
 
-  function pageStep() {
-    const s = slides()[0];
-    if (!s) return track.clientWidth;
-    const gap = parseFloat(getComputedStyle(track).columnGap || getComputedStyle(track).gap) || 0;
-    return s.getBoundingClientRect().width + gap;
+  row.addEventListener('click', function (e) {
+    const btn = e.target.closest('.endorse-profile');
+    if (btn && !btn.classList.contains('active')) activate(btn);
+  });
+
+  function initFirst() {
+    const first = row.querySelector('.endorse-profile');
+    if (first) activate(first, true);
   }
 
-  function currentPage() {
-    return Math.round(track.scrollLeft / pageStep());
-  }
-
-  function buildDots() {
-    const n = pageCount();
-    dotsWrap.innerHTML = '';
-    dots = [];
-    for (let i = 0; i < n; i++) {
-      const b = document.createElement('button');
-      b.type = 'button';
-      b.addEventListener('click', () => {
-        track.scrollTo({ left: i * pageStep(), behavior: 'smooth' });
-      });
-      dotsWrap.appendChild(b);
-      dots.push(b);
-    }
-    update();
-  }
-
-  function update() {
-    const max = track.scrollWidth - track.clientWidth;
-    prev.disabled = track.scrollLeft <= 2;
-    next.disabled = track.scrollLeft >= max - 2;
-    const cur = Math.min(currentPage(), dots.length - 1);
-    dots.forEach((d, i) => d.classList.toggle('active', i === cur));
-    slides().forEach((s, i) => s.classList.toggle('is-current', i === cur));
-  }
-
-  prev.addEventListener('click', () => track.scrollBy({ left: -pageStep(), behavior: 'smooth' }));
-  next.addEventListener('click', () => track.scrollBy({ left: pageStep(), behavior: 'smooth' }));
-
-  let raf;
-  track.addEventListener('scroll', () => {
-    cancelAnimationFrame(raf);
-    raf = requestAnimationFrame(update);
-  }, { passive: true });
-
-  window.addEventListener('resize', buildDots);
-
-  // Rebuild when the CMS loader replaces the slides
-  new MutationObserver(buildDots).observe(track, { childList: true });
-
-  buildDots();
+  // Re-initialise when the CMS loader replaces the profiles
+  new MutationObserver(initFirst).observe(row, { childList: true });
+  initFirst();
 })();

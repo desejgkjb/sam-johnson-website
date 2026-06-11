@@ -116,34 +116,28 @@
   </div>
 </section>
 
-<!-- 09 / Testimonials -->
+<!-- 09 / Testimonials — endorsement wall -->
 <section class="testimonials" aria-label="Testimonials">
-  <div class="container">
-    <span class="section-label">What people say</span>
-    <h2 data-cms-field="pages.home.testimonials_heading">Trusted by audiences and organisers alike.</h2>
-    <div class="carousel" aria-roledescription="carousel" aria-label="Testimonials" data-reveal>
-      <button class="carousel-arrow" id="carouselPrev" type="button" aria-label="Previous testimonials">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+  <div class="container" data-reveal>
+    <span class="section-label" data-cms-field="pages.home.testimonials_heading">What people say</span>
+    <blockquote class="endorse-quote" id="endorseQuote" aria-live="polite">&ldquo;This young man mobilised the Student Army… and made a huge impression on New Zealand.&rdquo;</blockquote>
+    <div class="endorse-profiles" id="cms-testimonials">
+      <button type="button" class="endorse-profile active" data-quote="&quot;This young man mobilised the Student Army… and made a huge impression on New Zealand.&quot;">
+        <span class="endorse-avatar" aria-hidden="true">P</span>
+        <strong>Paula Bennett</strong>
+        <span class="endorse-title">NZ Youth Affairs Minister</span>
       </button>
-      <div class="carousel-track" id="cms-testimonials" tabindex="0">
-        <div class="testimonial">
-          <blockquote>Placeholder testimonial — event organiser quote to be supplied and approved by Sam. Two to three sentences on impact and audience response.</blockquote>
-          <cite><strong>Name Surname</strong>Title, Organisation</cite>
-        </div>
-        <div class="testimonial">
-          <blockquote>Placeholder testimonial — partner or media quote to be supplied and approved by Sam. Two to three sentences on working with Sam.</blockquote>
-          <cite><strong>Name Surname</strong>Title, Organisation</cite>
-        </div>
-        <div class="testimonial">
-          <blockquote>Placeholder testimonial — client or audience-member quote to be supplied and approved by Sam. Two to three sentences on what changed after the talk.</blockquote>
-          <cite><strong>Name Surname</strong>Title, Organisation</cite>
-        </div>
-      </div>
-      <button class="carousel-arrow" id="carouselNext" type="button" aria-label="Next testimonials">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+      <button type="button" class="endorse-profile" data-quote="&quot;Sam Johnson demonstrates incredible strength and leadership capabilities well beyond age.&quot;">
+        <span class="endorse-avatar" aria-hidden="true">B</span>
+        <strong>BLAKE</strong>
+        <span class="endorse-title">Sir Peter Blake Trust</span>
+      </button>
+      <button type="button" class="endorse-profile" data-quote="&quot;Just hours after the September 2010 earthquake… Sam Johnson put out a Facebook plea for volunteers.&quot;">
+        <span class="endorse-avatar" aria-hidden="true">S</span>
+        <strong>Sally Blundell</strong>
+        <span class="endorse-title">New Zealand Geographic</span>
       </button>
     </div>
-    <div class="carousel-dots" id="carouselDots" aria-hidden="true"></div>
   </div>
 </section>
 
@@ -158,22 +152,6 @@
       <span class="press-logo">TVNZ</span>
       <span class="press-logo">The Press</span>
     </div>
-  </div>
-</section>
-
-<!-- 11 / Newsletter -->
-<section class="newsletter">
-  <div class="container">
-    <span class="section-label">Stay updated</span>
-    <h2 data-cms-field="pages.home.newsletter_heading">Follow the movement.</h2>
-    <p data-cms-field="pages.home.newsletter_body">Occasional updates on Sam's projects, speaking dates and the SVA — no noise.</p>
-    <form action="#" method="post">
-      <label for="nl-name" style="position:absolute;left:-9999px">Name</label>
-      <input id="nl-name" type="text" name="name" placeholder="Your name" autocomplete="name">
-      <label for="nl-email" style="position:absolute;left:-9999px">Email</label>
-      <input id="nl-email" type="email" name="email" placeholder="Email address" autocomplete="email" required>
-      <button class="btn" type="submit">Subscribe</button>
-    </form>
   </div>
 </section>
 

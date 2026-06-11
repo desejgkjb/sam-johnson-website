@@ -271,11 +271,19 @@
   }
 
   function renderTestimonials(container, testimonials) {
-    container.innerHTML = testimonials.map(function (t) {
-      return '<div class="testimonial">'
-        + '<blockquote>' + esc(t.quote) + '</blockquote>'
-        + '<cite><strong>' + esc(t.author) + '</strong>' + esc(t.title) + '</cite>'
-        + '</div>';
+    testimonials = sortFeatured(testimonials);
+    container.innerHTML = testimonials.map(function (t, i) {
+      var initial = (t.author || '?').charAt(0).toUpperCase();
+      return '<button type="button" class="endorse-profile'
+        + (t.prominent ? ' prominent' : '') + (i === 0 ? ' active' : '')
+        + '" data-quote="' + esc(t.quote) + '">'
+        + (t.photo
+            ? '<img src="' + esc(t.photo) + '" alt="">'
+            : '<span class="endorse-avatar" aria-hidden="true">' + esc(initial) + '</span>')
+        + '<strong>' + esc(t.author) + '</strong>'
+        + '<span class="endorse-title">' + esc(t.title) + '</span>'
+        + (t.organisation ? '<span class="endorse-org">' + esc(t.organisation) + '</span>' : '')
+        + '</button>';
     }).join('');
   }
 

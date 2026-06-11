@@ -210,8 +210,6 @@ collections:
               - { label: "Pull-quote band — attribution", name: "quote_band_cite", widget: "string" }
               - { label: "Featured work — section heading", name: "projects_heading", widget: "string", hint: "The project cards themselves are edited under 🏛 Governance / Projects page" }
               - { label: "Testimonials — section heading", name: "testimonials_heading", widget: "string", hint: "The testimonials themselves are edited under 💬 Testimonials" }
-              - { label: "Newsletter — heading", name: "newsletter_heading", widget: "string" }
-              - { label: "Newsletter — body", name: "newsletter_body", widget: "text" }
 
   # ════════════════════════════════════════════════════════
   # 📖 ABOUT PAGE
@@ -519,11 +517,16 @@ collections:
             name: "testimonials"
             widget: "list"
             collapsed: false
-            label_singular: "Testimonial"
+            label_singular: "Endorsement"
+            hint: "The endorsement wall on the homepage. Drag to reorder the profile row — the first endorsement's quote shows when the page loads (Featured floats to the front)."
             fields:
-              - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Author name", name: "author", widget: "string" }
-              - { label: "Title & Organisation", name: "title", widget: "string" }
+              - { label: "Quote", name: "quote", widget: "text", hint: "Keep it punchy — the quote displays at large editorial size" }
+              - { label: "Name", name: "author", widget: "string" }
+              - { label: "Title / role", name: "title", widget: "string", hint: "e.g. Former Prime Minister of New Zealand" }
+              - { label: "Organisation (optional)", name: "organisation", widget: "string", required: false }
+              - { label: "Profile photo", name: "photo", widget: "image", required: false, hint: "Square headshot works best — shown as a circle. Without one, initials show instead." }
+              - { label: "Prominent (larger profile)", name: "prominent", widget: "boolean", required: false, default: false, hint: "For especially senior endorsers — shows a larger portrait" }
+              - { label: "Featured (show first)", name: "featured", widget: "boolean", required: false, default: false }
 
   # ════════════════════════════════════════════════════════
   # ⚙️ SITE SETTINGS (name, contact, links — used everywhere)
