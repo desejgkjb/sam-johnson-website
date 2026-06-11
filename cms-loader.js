@@ -306,22 +306,21 @@
   }
 
   function renderAwards(container, awards) {
-    container.innerHTML = '<div class="awards-grid">'
-      + awards.map(function (a) {
-        var size = parseInt(a.logo_size, 10) || 56;
-        var logo = a.logo
-          ? '<div class="award-logo" style="height:' + size + 'px"><img src="' + esc(a.logo) + '" alt="' + esc(a.title) + ' logo"></div>'
-          : '<div class="award-logo award-logo-empty" aria-hidden="true"><span></span></div>';
-        var inner = logo
-          + '<h3>' + esc(a.title) + '</h3>'
-          + '<p class="award-desc">' + esc(a.description) + '</p>'
-          + (a.year ? '<p class="award-year">' + esc(a.year) + '</p>' : '')
-          + (a.url ? '<span class="award-link">Learn more →</span>' : '');
-        return a.url
-          ? '<a class="award" href="' + esc(a.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
-          : '<div class="award">' + inner + '</div>';
-      }).join('')
-      + '</div>';
+    container.innerHTML = awards.map(function (a) {
+      var size = parseInt(a.logo_size, 10) || 56;
+      var bg = a.image ? ' style="background-image:url(' + esc(a.image) + ')"' : '';
+      var inner = '<div class="award-poster-overlay" aria-hidden="true"></div>'
+        + '<div class="award-poster-content">'
+        + (a.logo ? '<img class="award-poster-logo" src="' + esc(a.logo) + '" alt="" style="height:' + size + 'px">' : '')
+        + '<h3>' + esc(a.title) + '</h3>'
+        + '<p>' + esc(a.description) + '</p>'
+        + (a.year ? '<span class="award-poster-year">' + esc(a.year) + '</span>' : '')
+        + (a.url ? '<span class="award-poster-link">Learn more →</span>' : '')
+        + '</div>';
+      return a.url
+        ? '<a class="award-poster" href="' + esc(a.url) + '" target="_blank" rel="noopener"' + bg + '>' + inner + '</a>'
+        : '<div class="award-poster"' + bg + '>' + inner + '</div>';
+    }).join('');
   }
 
   function renderValues(container, values) {

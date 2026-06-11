@@ -39,11 +39,16 @@
   </div>
 </header>
 
-<section class="page-hero">
-  <div class="container">
-    <span class="section-label">Experience</span>
-    <h1 data-cms-field="pages.experience.heading">Fifteen years of mobilising people.</h1>
-    <p data-cms-field="pages.experience.subheading">From a Facebook post in a broken city to advisory work across five countries — the milestones of Sam's career so far.</p>
+<section class="about-hero" data-cms-bg="pages.experience.hero_image" data-cms-bg-pos="pages.experience.hero_position">
+  <p class="hero-photo-note">Image placeholder — photo of Sam in action · upload via CMS</p>
+  <div class="about-hero-overlay" aria-hidden="true"></div>
+  <div class="about-hero-inner">
+    <div class="about-hero-content" data-reveal>
+      <span class="section-label">Experience</span>
+      <h1 data-cms-field="pages.experience.heading">Fifteen years of mobilising people.</h1>
+      <p data-cms-field="pages.experience.subheading">From a Facebook post in a broken city to advisory work across five countries — the milestones of Sam's career so far.</p>
+      <a class="btn" href="contact.html" data-cms-field="settings.cta_label">Book Sam to Speak</a>
+    </div>
   </div>
 </section>
 
@@ -68,43 +73,64 @@
 
 <section class="awards-band">
   <div class="container">
-    <span class="section-label">Recognition</span>
-    <h2 data-cms-field="pages.experience.awards_heading">Awards along the way.</h2>
-    <div id="cms-awards">
-      <div class="awards-grid">
-        <div class="award">
-          <div class="award-logo award-logo-empty" aria-hidden="true"><span></span></div>
+    <div class="awards-head">
+      <div>
+        <span class="section-label">Recognition</span>
+        <h2 data-cms-field="pages.experience.awards_heading">Awards along the way.</h2>
+      </div>
+      <div class="awards-nav">
+        <button class="awards-arrow" id="awardsPrev" type="button" aria-label="Previous awards">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+        </button>
+        <button class="awards-arrow" id="awardsNext" type="button" aria-label="Next awards">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="awards-track" id="cms-awards" tabindex="0">
+      <div class="award-poster">
+        <div class="award-poster-overlay" aria-hidden="true"></div>
+        <div class="award-poster-content">
           <h3>Young New Zealander of the Year</h3>
-          <p class="award-desc">National recognition for the SVA and youth mobilisation</p>
-          <p class="award-year">2012</p>
+          <p>National recognition for the SVA and youth mobilisation</p>
+          <span class="award-poster-year">2012</span>
         </div>
-        <div class="award">
-          <div class="award-logo award-logo-empty" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="award-poster">
+        <div class="award-poster-overlay" aria-hidden="true"></div>
+        <div class="award-poster-content">
           <h3>Communicator of the Year</h3>
-          <p class="award-desc">For pioneering social media mobilisation in crisis</p>
-          <p class="award-year">2012</p>
+          <p>For pioneering social media mobilisation in crisis</p>
+          <span class="award-poster-year">2012</span>
         </div>
-        <div class="award">
-          <div class="award-logo award-logo-empty" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="award-poster">
+        <div class="award-poster-overlay" aria-hidden="true"></div>
+        <div class="award-poster-content">
           <h3>Sir Peter Blake Leadership Award</h3>
-          <p class="award-desc">For outstanding leadership in service of New Zealand</p>
+          <p>For outstanding leadership in service of New Zealand</p>
+          <span class="award-poster-year">2011</span>
         </div>
-        <div class="award">
-          <div class="award-logo award-logo-empty" aria-hidden="true"><span></span></div>
+      </div>
+      <div class="award-poster">
+        <div class="award-poster-overlay" aria-hidden="true"></div>
+        <div class="award-poster-content">
           <h3>Officer of the New Zealand Order of Merit (ONZM)</h3>
-          <p class="award-desc">King's Birthday Honours — for services to the community and youth</p>
-          <p class="award-year">2026</p>
+          <p>King's Birthday Honours — for services to the community and youth</p>
+          <span class="award-poster-year">2026</span>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section class="speaking">
-  <div class="container">
+<section class="cta-banner" data-cms-media="pages.experience.cta_media" aria-label="Explore the projects">
+  <div class="cta-media" aria-hidden="true"></div>
+  <div class="cta-overlay" aria-hidden="true"></div>
+  <div class="cta-inner" data-reveal>
     <h2 data-cms-field="pages.experience.cta_heading">See the work in depth.</h2>
     <p data-cms-field="pages.experience.cta_body">Each chapter of this timeline is a project with its own story and impact.</p>
-    <a class="btn" href="projects.html">Explore the projects</a>
+    <a class="btn btn-lg" href="projects.html">Explore the projects</a>
   </div>
 </section>
 

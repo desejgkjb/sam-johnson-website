@@ -56,6 +56,32 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   }
 })();
 
+/* Awards rail — arrow-driven horizontal scroller */
+(function () {
+  const track = document.getElementById('cms-awards');
+  const prev = document.getElementById('awardsPrev');
+  const next = document.getElementById('awardsNext');
+  if (!track || !prev || !next) return;
+
+  function step() {
+    const c = track.firstElementChild;
+    if (!c) return track.clientWidth;
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 24;
+    return c.getBoundingClientRect().width + gap;
+  }
+  function update() {
+    const max = track.scrollWidth - track.clientWidth;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+  }
+  prev.addEventListener('click', function () { track.scrollBy({ left: -step(), behavior: 'smooth' }); });
+  next.addEventListener('click', function () { track.scrollBy({ left: step(), behavior: 'smooth' }); });
+  track.addEventListener('scroll', function () { requestAnimationFrame(update); }, { passive: true });
+  addEventListener('resize', update);
+  new MutationObserver(update).observe(track, { childList: true });
+  update();
+})();
+
 /* Scroll reveal — elements with [data-reveal] fade and lift in */
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;

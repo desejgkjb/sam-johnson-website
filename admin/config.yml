@@ -480,6 +480,7 @@ collections:
             hint: "Premium recognition cards. Drag to reorder. Upload the official organisation logo for each award — PNG/SVG with transparent background works best."
             fields:
               - { label: "Award name", name: "title", widget: "string" }
+              - { label: "Card background photo (optional)", name: "image", widget: "image", required: false, hint: "Tall photo behind the card (e.g. from the award ceremony). Without one, a premium dark background is used." }
               - { label: "Organisation logo", name: "logo", widget: "image", required: false, hint: "Official logo of the awarding organisation. Shown above the award name." }
               - label: "Logo size"
                 name: "logo_size"
@@ -499,11 +500,39 @@ collections:
             widget: "object"
             collapsed: true
             fields:
-              - { label: "Page heading", name: "heading", widget: "string" }
-              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Hero — headline", name: "heading", widget: "string" }
+              - { label: "Hero — supporting text", name: "subheading", widget: "text" }
+              - { label: "Hero — background photo", name: "hero_image", widget: "image", required: false, hint: "Full-width photo behind the page header. Text sits over a dark gradient on the left." }
+              - label: "Hero image — crop focus"
+                name: "hero_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
               - { label: "Awards — section heading", name: "awards_heading", widget: "string" }
               - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
               - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
+              - label: "Bottom CTA — background media"
+                name: "cta_media"
+                widget: "object"
+                collapsed: true
+                fields:
+                  - { label: "Background video (optional)", name: "video", widget: "file", required: false, hint: "Short MP4 under ~20 MB. Plays muted on loop behind the text." }
+                  - { label: "Fallback image (optional)", name: "image", widget: "image", required: false, hint: "Shown while the video loads and on slow connections. Without either, a deep vermillion background is used." }
+                  - label: "Media — crop focus"
+                    name: "media_position"
+                    widget: "select"
+                    required: false
+                    default: "center"
+                    options:
+                      - { label: "Top (keep faces in frame)", value: "top" }
+                      - { label: "Centre", value: "center" }
+                      - { label: "Bottom", value: "bottom" }
 
   # ════════════════════════════════════════════════════════
   # ✉️ CONTACT PAGE
