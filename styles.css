@@ -250,6 +250,8 @@ a.press-item:hover{color:var(--vermillion)}
 .media-banner{background:var(--charcoal);padding:150px 24px}
 .media-banner .cta-media{background-position:top}
 .media-banner .cta-video{object-position:top}
+.banner-fitted{padding:48px 24px;display:flex;align-items:center;justify-content:center}
+.banner-fitted .cta-media{inset:0;animation:none}
 .banner-tall{min-height:70vh;display:flex;align-items:center;justify-content:center}
 .banner-full{min-height:92vh;display:flex;align-items:center;justify-content:center}
 .media-banner .cta-overlay{background:linear-gradient(180deg,rgba(45,45,45,.35) 0%,rgba(45,45,45,.55) 100%)}

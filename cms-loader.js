@@ -369,7 +369,8 @@
       var cb = get(data, sec.dataset.cmsMedia);
       var media = sec.querySelector('.cta-media');
       if (!cb || !media) return;
-      var pos = cb.media_position || 'center';
+      // Default crop focus: TOP for the media spotlight (keeps faces in frame), centre elsewhere
+      var pos = cb.media_position || (sec.classList.contains('media-banner') ? 'top' : 'center');
       if (cb.section_height === 'tall') sec.classList.add('banner-tall');
       if (cb.section_height === 'full') sec.classList.add('banner-full');
       if (cb.image) {
@@ -386,6 +387,23 @@
         bv.preload = 'metadata'; bv.setAttribute('aria-hidden', 'true'); bv.tabIndex = -1;
         bv.style.objectPosition = pos;
         media.appendChild(bv);
+        // Media spotlight: size the section to the video's own shape so the
+        // picture is never meaningfully cropped, whatever the CMS settings.
+        if (sec.classList.contains('media-banner')) {
+          bv.addEventListener('loadedmetadata', function () {
+            if (!bv.videoWidth || !bv.videoHeight) return;
+            sec.classList.add('banner-fitted');
+            var fit = function () {
+              var h = Math.min(
+                sec.clientWidth * bv.videoHeight / bv.videoWidth,
+                window.innerHeight * 0.92
+              );
+              sec.style.minHeight = Math.round(h) + 'px';
+            };
+            fit();
+            window.addEventListener('resize', fit);
+          });
+        }
         var bp = bv.play();
         if (bp && bp.catch) bp.catch(function () { bv.remove(); });
       }

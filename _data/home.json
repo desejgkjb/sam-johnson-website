@@ -88,7 +88,9 @@
     "body": "Ideas That Move People",
     "button_label": "Book Sam to speak",
     "video": "/images/6月11日-1-.mp4",
-    "button_url": "Testing"
+    "button_url": "Testing",
+    "media_position": "top",
+    "section_height": "tall"
   },
   "cta_banner": {
     "heading": "Ready to do good media projects with Sam?",
