@@ -88,25 +88,22 @@
     ],
     "speaking_heading": "Ideas That Move People",
     "quote_band_text": "One of New Zealand's most inspiring young citizens.",
-    "testimonials_heading": "What People Are Saying",
+    "testimonials_heading": "A Reputation Built One Action at a Time.",
     "newsletter_heading": "Join the movement",
     "projects_heading": "Start here: the projects that define Sam's story.",
     "quote_band_cite": "Young New Zealander of the Year citation"
   },
-  "cta_banner": {
-    "heading": "Ready to mobilise your community?",
-    "body": "Sam has spoken to audiences across New Zealand and internationally on leadership, community mobilisation, resilience and social impact.",
-    "button_label": "Book Sam to Speak",
-    "button_url": "contact.html",
-    "image": "",
-    "video": ""
-  },
   "media_banner": {
-    "heading": "See Sam in action.",
-    "body": "Moments from Sam's speaking, community leadership and mobilisation work.",
-    "button_label": "See Sam Speak",
-    "button_url": "contact.html",
-    "image": "",
-    "video": ""
+    "heading": "Test",
+    "body": "T",
+    "button_label": "T",
+    "video": "/images/6月11日-1-.mp4",
+    "button_url": "T"
+  },
+  "cta_banner": {
+    "heading": "T",
+    "body": "T",
+    "button_label": "T",
+    "button_url": "T"
   }
 }
