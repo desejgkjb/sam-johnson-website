@@ -89,6 +89,24 @@
       "logo_height": "36",
       "name": "TVNZ",
       "logo": "/images/tvnz_idj5yla7fw_0.png"
+    },
+    {
+      "show_name": false,
+      "logo_height": "36",
+      "name": "The Stuff",
+      "logo": "/images/stuff-co-nz_idj71mhwdy_0.png"
+    },
+    {
+      "show_name": false,
+      "logo_height": "36",
+      "name": "New Zealand Herald",
+      "logo": "/images/nzherald_idftidsmb2_0.jpeg"
+    },
+    {
+      "show_name": false,
+      "logo_height": "36",
+      "name": "1 News",
+      "logo": "/images/screenshot-2026-06-11-at-1.16.01 pm.png"
     }
   ],
   "pages": {
