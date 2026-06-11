@@ -229,12 +229,38 @@ collections:
             widget: "object"
             collapsed: false
             fields:
-              - { label: "Page heading", name: "heading", widget: "string" }
-              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Hero — headline", name: "heading", widget: "string", hint: "Large editorial headline on the left of the hero" }
+              - { label: "Hero — supporting intro", name: "subheading", widget: "text" }
+              - { label: "Hero — large image (right side)", name: "hero_image", widget: "image", required: false, hint: "Editorial portrait or action shot of Sam. The dominant visual on the page." }
+              - label: "Hero image — crop focus"
+                name: "hero_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep face in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
               - { label: "Origin story heading", name: "origin_heading", widget: "string" }
               - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
-              - { label: "Pull quote", name: "quote", widget: "string" }
-              - { label: "Quote attribution", name: "quote_cite", widget: "string" }
+              - { label: "Quote section — quote text", name: "quote", widget: "text", hint: "Displays at huge cinematic scale over the photo — keep it tight. Quote marks are added automatically." }
+              - { label: "Quote section — name", name: "quote_cite", widget: "string" }
+              - { label: "Quote section — title / role", name: "quote_role", widget: "string", required: false, hint: "e.g. Founder, Student Volunteer Army" }
+              - { label: "Quote section — background photo", name: "quote_image", widget: "image", required: false, hint: "Large photo of Sam (speaking, volunteering or strong portrait). Fills the screen behind the quote." }
+              - label: "Quote background — crop focus"
+                name: "quote_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - { label: "Quote section — small profile photo", name: "quote_avatar", widget: "image", required: false, hint: "Circular headshot under the quote" }
               - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
               - label: "Portrait — shape / size"
                 name: "portrait_aspect"
@@ -394,6 +420,7 @@ collections:
               - { label: "Projects — section intro", name: "projects_intro", widget: "text", required: false }
               - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
               - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
+              - { label: "Bottom CTA — button label", name: "cta_button_label", widget: "string", required: false, hint: "Links to the LinkedIn URL set in ⚙️ Site settings" }
 
   # ════════════════════════════════════════════════════════
   # 📅 EXPERIENCE PAGE

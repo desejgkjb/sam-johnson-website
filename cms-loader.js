@@ -43,6 +43,7 @@
         if (el.tagName === 'IMG') {
           el.src = val;
           el.style.display = '';
+          el.classList.add('has-img');
         } else {
           el.innerHTML = val;
         }
