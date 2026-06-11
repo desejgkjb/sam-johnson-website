@@ -6,7 +6,7 @@
     "portrait_position": "center",
     "portrait_fit": "cover",
     "quote_cite": "Sam Johnson",
-    "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart — and watching thousands of young people being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p><p>Eleven thousand volunteers answered. The Student Volunteer Army was born — proof that young people, given trust and a practical task, will show up in extraordinary numbers.</p><p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p><p>His vision remains the same as it was in 2011: to catalyse a revolution in youth leadership.</p>",
+    "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart while thousands of young people were being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p>\n\n\n\n<p>Eleven thousand volunteers answered. The Student Volunteer Army was born, proving that young people, when given trust and a practical task, will show up in extraordinary numbers.</p>\n\n\n\n<p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia and Brazil. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p>\n\n\n\n<p>His vision remains the same as it was in 2011: to catalyse a revolution in youth leadership.</p>",
     "portrait": "/images/68ed75be-8b16-46a2-8db9-8de1847d3c0a.jpg",
     "portrait_aspect": "4/5",
     "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now."
@@ -65,6 +65,26 @@
       "title": "Director of Projects",
       "location": "Auckland, New Zealand",
       "description": "Sam is the Projects Director for STILL. He is responsible for managing STILL's internal projects, startups and ideas that contribute to the STILL 100.\n\n"
+    }
+  ],
+  "governance": [
+    {
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
+      "title": "Chairperson",
+      "meta": "Metro Media Group",
+      "image": "/images/screenshot-2026-06-11-at-1.45.23 pm.png",
+      "description": "Sam served as the chair of Metro media Group"
+    },
+    {
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
+      "title": "Director",
+      "meta": "Consult Recruitment",
+      "image": "/images/screenshot-2026-06-11-at-1.46.53 pm.png",
+      "description": "Sam served as the director for Consult Recruitment"
     }
   ],
   "about_teaser": {
@@ -230,7 +250,7 @@
       "image_fit": "cover",
       "image_position": "center",
       "featured": false,
-      "title": "abc",
+      "title": "2011 Tōhoku earthquake and tsunami",
       "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
       "image_aspect": "16/10",
       "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand."
@@ -259,7 +279,7 @@
     }
   ],
   "hero": {
-    "heading": "Civic Entrepreneurr",
+    "heading": "Civic Entrepreneur",
     "subheading": "Project Director at STILL.",
     "photo_fit": "cover",
     "video_muted": true,
@@ -272,16 +292,16 @@
   },
   "stats": [
     {
-      "number": "11,000",
+      "number": "80,000+",
       "label": "Volunteers mobilised"
     },
     {
-      "number": "5",
-      "label": "Countries — disaster recovery missions"
+      "number": "3,500,000",
+      "label": "Hours Logged"
     },
     {
-      "number": "1",
-      "label": "Movement — the Student Volunteer Army"
+      "number": "5",
+      "label": "Countries"
     }
   ]
 }
