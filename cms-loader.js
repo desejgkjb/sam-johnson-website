@@ -22,11 +22,11 @@
     s = s || {};
     var aspect = s.aspect || '16/10';
     if (src) {
-      var st = 'width:100%;display:block;border-radius:6px'
-        + ';aspect-ratio:' + aspect
+      var st = 'width:100%;height:100%;display:block'
         + ';object-fit:' + (s.fit || 'cover')
         + ';object-position:' + (s.position || 'center');
-      return '<img src="' + esc(src) + '" alt="' + esc(alt) + '" style="' + st + '">';
+      return '<div class="img-frame" style="aspect-ratio:' + aspect + '">'
+        + '<img src="' + esc(src) + '" alt="' + esc(alt) + '" style="' + st + '"></div>';
     }
     return '<div class="img-placeholder" style="aspect-ratio:' + aspect + ';border-radius:6px" role="img" aria-label="' + esc(alt) + ' — placeholder"><span>' + esc(alt) + '</span></div>';
   }
@@ -82,11 +82,11 @@
       var src = get(data, path);
       if (src) {
         var parent = get(data, path.split('.').slice(0, -1).join('.')) || {};
-        var st = 'width:100%;display:block;border-radius:8px'
-          + ';aspect-ratio:' + (parent.portrait_aspect || '4/5')
+        var st = 'width:100%;height:100%;display:block'
           + ';object-fit:' + (parent.portrait_fit || 'cover')
           + ';object-position:' + (parent.portrait_position || 'center');
-        el.innerHTML = '<img src="' + esc(src) + '" alt="Portrait of Sam Johnson" style="' + st + '">';
+        el.innerHTML = '<div class="img-frame" style="border-radius:8px;aspect-ratio:' + (parent.portrait_aspect || '4/5') + '">'
+          + '<img src="' + esc(src) + '" alt="Portrait of Sam Johnson" style="' + st + '"></div>';
         el.classList.remove('img-placeholder');
         el.style.aspectRatio = 'auto';
         el.style.background = 'none';
