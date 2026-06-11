@@ -9,8 +9,8 @@
     "photo": "/images/sam-johnson-speaker-1920x960.jpg",
     "photo_height": "88vh",
     "photo_position": "center",
-    "attribution": "Officer of New Zealand Order of Merit",
-    "video": ""
+    "video": "",
+    "attribution": "Officer of New Zealand Order of Merit"
   },
   "recognition": [
     {
@@ -19,7 +19,11 @@
     },
     {
       "title": "Young New Zealand of the Year 2023",
-      "logo": "/images/idpsyc3rdr_logos.png"
+      "logo": "/images/idpsyc3rdr_logos.png",
+      "url": "https://nzawards.org.nz/winners/sam-johnson/#:~:text=Sam%20Johnson%20is%20a%20visionary,into%20a%20nationwide%20volunteering%20movement."
+    },
+    {
+      "title": "Special Leadership Award 2011"
     }
   ],
   "about_teaser": {
