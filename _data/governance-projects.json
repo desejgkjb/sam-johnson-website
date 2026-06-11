@@ -1,68 +1,256 @@
 {
   "governance": [
     {
+      "title": "Director — Student Volunteer Army",
+      "meta": "SVA · Current",
+      "description": "Founder and former Chief Executive of the SVA, Sam now serves on its board — supporting the national volunteering organisation he started after the Christchurch earthquakes.",
+      "chip": "Board · Current",
+      "image": "",
       "image_aspect": "16/10",
       "image_fit": "cover",
-      "image_position": "center",
-      "title": "Chairperson",
-      "meta": "Metro Media Group",
-      "image": "/images/screenshot-2026-06-11-at-1.45.23 pm.png",
-      "description": "Sam served as the chair of Metro media Group"
+      "image_position": "center"
     },
     {
+      "title": "Director — Isaac Theatre Royal",
+      "meta": "Christchurch · 2021 – present",
+      "description": "Board member of Christchurch's historic Isaac Theatre Royal, one of New Zealand's finest heritage theatres.",
+      "chip": "Arts & Culture · Current",
+      "image": "",
       "image_aspect": "16/10",
       "image_fit": "cover",
-      "image_position": "center",
-      "title": "Director",
-      "meta": "Consult Recruitment",
-      "image": "/images/screenshot-2026-06-11-at-1.46.53 pm.png",
-      "description": "Sam served as the director for Consult Recruitment"
+      "image_position": "center"
+    },
+    {
+      "title": "Chairperson — Metro Media Group",
+      "meta": "Metro magazine · Current",
+      "description": "Chair of the media company behind Auckland's Metro magazine, guiding the iconic title through new ownership and a refreshed editorial model.",
+      "chip": "Media · Current",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Director — Consult Recruitment",
+      "meta": "STILL portfolio · Current",
+      "description": "Director of Consult Recruitment, an Auckland accounting, finance and business-support recruitment agency within the STILL family of companies.",
+      "chip": "Board · Current",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Chair — DDMMYY",
+      "meta": "STILL portfolio · Current",
+      "description": "Chair of DDMMYY, the design and brand studio acquired by STILL as part of its programme of backing New Zealand creative companies.",
+      "chip": "Board · Current",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Chair — No More Boring",
+      "meta": "Details to verify",
+      "description": "Creative venture chaired by Sam within the STILL portfolio. Description and dates to be confirmed by Sam's team.",
+      "chip": "Board · To verify",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Chartered Member — Institute of Directors NZ",
+      "meta": "MInstD · Current",
+      "description": "Chartered Member of the Institute of Directors in New Zealand, and winner of the IoD's 2022 Auckland Emerging Director Award.",
+      "chip": "Professional",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Adjunct Fellow — University of Canterbury",
+      "meta": "School of Leadership and Education · Current",
+      "description": "Adjunct Fellow recognising Sam's contribution to leadership education and the university where the Student Volunteer Army began.",
+      "chip": "Academic",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Emerging Leaders Co-Chair — Australia New Zealand Leadership Forum",
+      "meta": "Inaugural co-chair · Dates to verify",
+      "description": "Inaugural co-chair of the Forum's Emerging Leaders programme, connecting the next generation of trans-Tasman business and civic leaders.",
+      "chip": "Advisory",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Elected Member — Christchurch City Council Community Board",
+      "meta": "Christchurch · 2010 – 2013",
+      "description": "Elected to a local community board as a university student, helping the city navigate planning, infrastructure and disaster-recovery decisions through the earthquake years.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Advisory Trustee — Pacific Development and Conservation Trust",
+      "meta": "2011 – 2018",
+      "description": "Advisory trustee of the government-established trust funding development and conservation projects across the South Pacific.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Trustee — Ministry of Awesome",
+      "meta": "Christchurch · 2012 – 2015",
+      "description": "Founding-era trustee of the Christchurch startup hub that connects new ideas with the people, funding and support to make them real.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Trustee — Plunket Foundation",
+      "meta": "2014 – 2016",
+      "description": "Trustee of the philanthropic foundation building an endowment to help New Zealand communities grow great kids.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Director — International Association for Volunteer Effort",
+      "meta": "Washington, DC · Former",
+      "description": "Former director of the global network championing volunteering, based in Washington, DC.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Member — Westpac Sustainability Panel",
+      "meta": "Dates to verify",
+      "description": "Former member of Westpac New Zealand's external sustainability advisory panel.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Director — Prince's Trust New Zealand",
+      "meta": "Dates to verify",
+      "description": "Former director of the New Zealand arm of the Prince's Trust, supporting young people into education, training and enterprise.",
+      "chip": "Former",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
     }
   ],
   "projects": [
     {
-      "meta": "2011 – present · Christchurch & nationwide",
-      "chip": "11,000 volunteers mobilised",
-      "image_fit": "cover",
-      "image_position": "center",
-      "featured": true,
       "title": "Student Volunteer Army",
+      "meta": "Founder · 2010 – present · Christchurch & nationwide",
+      "description": "Founded after the Christchurch earthquakes, the SVA mobilised 11,000 students through social media and grew into a national volunteering organisation — operating in 258 secondary schools and six universities, with programmes in Tasmania and South Australia and a partnership with IHC recognising volunteers with intellectual disabilities. Sam served as Chief Executive until 2023 and remains on the board.",
+      "chip": "11,000 volunteers mobilised",
       "image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
       "image_aspect": "16/10",
-      "description": "When the Christchurch earthquakes struck, Sam used Facebook to mobilise students into a coordinated volunteer force, clearing thousands of tonnes of liquefaction silt from the city's streets and homes. The SVA has since grown into a national movement with school, tertiary and community programmes that put young people at the heart of civic service."
+      "image_fit": "cover",
+      "image_position": "center"
     },
     {
-      "meta": "2011 · Japan",
-      "chip": "First international mission",
-      "image_fit": "cover",
-      "image_position": "center",
-      "featured": false,
-      "title": "2011 Tōhoku earthquake and tsunami",
-      "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
-      "image_aspect": "16/10",
-      "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand."
-    },
-    {
-      "meta": "2015 · Vanuatu · Nepal",
-      "chip": "2 major deployments",
-      "image_fit": "cover",
-      "image_position": "center",
-      "featured": false,
-      "title": "Cyclone Pam & Nepal earthquake responses",
-      "image": "/images/ecdc5d01-e93f-4cb9-bcf4-da0f87620f10.jpg",
-      "image_aspect": "16/10",
-      "description": "Back-to-back disaster deployments focused on volunteer mobilisation and community resilience in two very different contexts."
-    },
-    {
-      "meta": "2016 – present · Pacific · Saudi Arabia · Brazil",
-      "chip": "3 continents",
-      "image_fit": "cover",
-      "image_position": "center",
-      "featured": false,
-      "title": "Global youth leadership advocacy",
+      "title": "Paererewā — The 1,000-Year Bench Project",
+      "meta": "General Manager · 2025 – present",
+      "description": "A charitable project creating 1,000 places to sit and reflect across Aotearoa, each designed to endure for 1,000 years. Launched at the Aotearoa Art Fair in 2025 in partnership with Hideaki Fukutake and Derek Handley's Aera Foundation.",
+      "chip": "Arts & Culture · Current",
       "image": "",
       "image_aspect": "16/10",
-      "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents."
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "STILL & the STILL 100",
+      "meta": "Projects Director · 2023 – present",
+      "description": "Sam leads projects at STILL, the family office founded by Hideaki Fukutake that backs long-term ventures amplifying people, nature, arts and culture in New Zealand — including a programme of acquiring and growing 100 Kiwi companies.",
+      "chip": "Venture · Current",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "SVA COVID-19 Response",
+      "meta": "2020 – 2022 · Nationwide",
+      "description": "During the COVID-19 lockdowns the SVA built a national grocery delivery service with New World, mobilising volunteers across the country to shop for older and vulnerable New Zealanders — one of more than 20 domestic disaster responses Sam led as Chief Executive.",
+      "chip": "Disaster Response",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "SVA in Schools & the Service Award",
+      "meta": "2017 – present · Nationwide",
+      "description": "The SVA's education programmes teach volunteering from primary to tertiary level — over 25,000 primary students have taken part in SVA Kids — while the SVA Service Award gives secondary students a nationally recognised record of their volunteer hours.",
+      "chip": "Youth Leadership",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "WeVisit & Mycare",
+      "meta": "Co-founder · 2016 – 2018",
+      "description": "A social enterprise matching young visitors with older New Zealanders living alone, founded with Dr Tyler Brummer to combat loneliness. WeVisit joined forces with home-care platform Mycare in 2017, where Sam became Head of Community Innovation.",
+      "chip": "Social Enterprise",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Tōhoku Earthquake Response",
+      "meta": "2011 · Japan",
+      "description": "Sam's first international deployment — supporting volunteer coordination after the Tōhoku earthquake and tsunami, and testing the SVA model beyond New Zealand.",
+      "chip": "Disaster Response",
+      "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Cyclone Pam & Nepal Earthquake Responses",
+      "meta": "2015 · Vanuatu · Nepal",
+      "description": "Back-to-back disaster deployments focused on volunteer mobilisation and community resilience in two very different contexts.",
+      "chip": "Disaster Response",
+      "image": "/images/ecdc5d01-e93f-4cb9-bcf4-da0f87620f10.jpg",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Global Youth Leadership Advocacy",
+      "meta": "2016 – present · Pacific · Saudi Arabia · Brazil",
+      "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents.",
+      "chip": "Youth Leadership",
+      "image": "",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
     }
   ],
   "stats": [

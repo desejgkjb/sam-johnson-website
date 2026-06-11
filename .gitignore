@@ -8,3 +8,4 @@ wp-theme/
 .netlify
 push-now.command
 push-cms-update.command
+CONTENT-SOURCES.md
