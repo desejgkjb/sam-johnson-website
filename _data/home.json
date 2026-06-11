@@ -1,7 +1,7 @@
 {
   "hero": {
-    "heading": "Civic Entrepreneur",
-    "subheading": "Project Director at STILL.",
+    "heading": "Ordinary People. Extraordinary Things.",
+    "subheading": "For more than a decade, Sam Johnson has shown what becomes possible when people are trusted to lead, serve, and act.",
     "photo_fit": "cover",
     "video_muted": true,
     "video_autoplay": true,
@@ -30,7 +30,8 @@
     },
     {
       "title": "High Tech Award, Impact for Good, 2021 (SVA)",
-      "logo": "/images/screenshot-2026-06-11-at-10.54.21 pm.png"
+      "logo": "/images/screenshot-2026-06-11-at-10.54.21 pm.png",
+      "url": "customd.com/work/project/volunteering-mobile-app"
     },
     {
       "title": "Special Leadership Award 2011",
