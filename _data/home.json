@@ -94,21 +94,16 @@
     "quote_band_cite": "Young New Zealander of the Year citation"
   },
   "media_banner": {
-    "heading": "Test",
-    "body": "T",
-    "button_label": "T",
+    "heading": "Speaking",
+    "body": "Ideas That Move People",
+    "button_label": "Book Sam to speak",
     "video": "/images/6月11日-1-.mp4",
-    "button_url": "T",
-    "media_position": "top",
-    "section_height": "tall",
-    "image": ""
+    "button_url": "Testing"
   },
   "cta_banner": {
     "heading": "T",
     "body": "T",
     "button_label": "T",
-    "button_url": "T",
-    "media_position": "center",
-    "section_height": "standard"
+    "button_url": "T"
   }
 }
