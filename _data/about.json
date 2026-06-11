@@ -16,7 +16,7 @@
     "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now."
   },
   "copy": {
-    "values_heading": "The Principles That Guide Me",
+    "hub_projects_image": "/images/sj-profile-2.jpg",
     "values": [
       {
         "title": "Practical leadership",
@@ -31,9 +31,13 @@
         "body": "Young people are not a future asset to be developed — they are a present force to be mobilised, in disasters and in everyday civic life."
       }
     ],
-    "cta_heading": "Want to know Sam's full journey?",
-    "cta_body": "Explore the timeline of Sam's career, or see the projects. ",
+    "values_heading": "The Principles That Guide Me",
     "hub_timeline_image": "/images/33rqkcmwnbzp2o2bwp565ziqfq.jpg",
-    "hub_projects_image": "/images/sj-profile-2.jpg"
+    "hub_projects_heading": "The work, in action",
+    "hub_timeline_heading": "The full journey",
+    "cta_body": "Explore the timeline of Sam's career, or see the projects. ",
+    "cta_heading": "Want to know Sam's full journey?",
+    "hub_timeline_body": "Fifteen years of service - From a single Facebook post in Christchurch to STILL.",
+    "hub_projects_body": "Governance work and projects that matter - from the SVA to governance work on the global stage."
   }
 }
