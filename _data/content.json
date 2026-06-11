@@ -1,7 +1,7 @@
 {
   "about_full": {
     "heading": "Who is Sam Johnson?",
-    "subheading": "Sam brings people together and makes great things happen, and has started and scaled a mix of charities, businesses and ideas to that end. He loves working with smart people and can intuitively see opportunities to help others make their vision come true.\n\nFor the last ten years, he has worked to create stronger social infrastructure and resilience through an organisation he founded called SVA (Student Volunteer Army). As Chief Executive, he grew the team, funding and programmes to impact thousands of young people’s lives and designed community responses to many major crises and disasters that earned his team several awards.\n\nHe is Projects Director at STILL, a family office entrepreneurial venture founded by Hideaki Fukutake that pursues projects that amplify the fundamentals of human nature, focusing on people, nature, arts and culture.\n\nHe is a Chartered Member of the Institute of Directors. He serves in property, tourism and arts governance roles in his day job and is a director of Christchurch’s Isaac Theatre Royal and the Student Volunteer Army. He is a former director of Prince’s Trust New Zealand, Ministry of Awesome, Plunket Foundation, Westpac’s Sustainability Panel and the International Association of Volunteer Effort in Washington, DC. He is an Adjunct Fellow in the School of Leadership and Education at the University of Canterbury.",
+    "subheading": "Sam Johnson is a Civic Entrepreneur - a career focused on identifying opportunities that create value for society and enhance common well-being. ",
     "origin_heading": "The origin story",
     "portrait_position": "center",
     "portrait_fit": "cover",
@@ -125,9 +125,7 @@
       "cta_heading": "Want Sam's story at your event?",
       "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities.",
       "governance_heading": "11",
-      "projects_heading": "11",
-      "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
-      "projects_intro": "Hands-on work in the field — from Christchurch to disaster zones around the world."
+      "projects_heading": "11"
     },
     "experience": {
       "heading": "Fifteen years of mobilising people.",
@@ -228,10 +226,6 @@
     "heading": "Civic Entrepreneurr",
     "subheading": "Project Director at STILL.",
     "photo": "/images/sam-johnson-speaker-1920x960.jpg",
-    "video": "",
-    "video_autoplay": true,
-    "video_loop": true,
-    "video_muted": true,
     "photo_fit": "cover",
     "photo_position": "center",
     "photo_height": "88vh",
@@ -249,91 +243,6 @@
     {
       "number": "1",
       "label": "Movement — the Student Volunteer Army"
-    }
-  ],
-  "recognition": [
-    {
-      "title": "Young New Zealander of the Year",
-      "logo": "",
-      "description": "",
-      "url": ""
-    },
-    {
-      "title": "Communicator of the Year",
-      "logo": "",
-      "description": "",
-      "url": ""
-    },
-    {
-      "title": "Sir Peter Blake Leadership Award",
-      "logo": "",
-      "description": "",
-      "url": ""
-    },
-    {
-      "title": "Student Volunteer Army — Founder",
-      "logo": "",
-      "description": "",
-      "url": ""
-    }
-  ],
-  "press": [
-    {
-      "name": "NZ Herald",
-      "logo": "",
-      "show_name": false,
-      "logo_height": "36",
-      "url": ""
-    },
-    {
-      "name": "Stuff",
-      "logo": "",
-      "show_name": false,
-      "logo_height": "36",
-      "url": ""
-    },
-    {
-      "name": "RNZ",
-      "logo": "",
-      "show_name": false,
-      "logo_height": "36",
-      "url": ""
-    },
-    {
-      "name": "TVNZ",
-      "logo": "",
-      "show_name": false,
-      "logo_height": "36",
-      "url": ""
-    },
-    {
-      "name": "The Press",
-      "logo": "",
-      "show_name": false,
-      "logo_height": "36",
-      "url": ""
-    }
-  ],
-  "governance": [
-    {
-      "title": "Placeholder — Board / governance role",
-      "meta": "Organisation · Years",
-      "description": "Placeholder governance entry — to be replaced with Sam's actual board positions, advisory roles and committee involvement via the CMS.",
-      "chip": "Governance",
-      "image": "",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
-    },
-    {
-      "title": "Placeholder — Advisory role",
-      "meta": "Organisation · Years",
-      "description": "Placeholder governance entry — to be replaced with Sam's actual advisory work via the CMS.",
-      "chip": "Advisory",
-      "image": "",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
     }
   ]
 }
