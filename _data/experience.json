@@ -59,15 +59,15 @@
     {
       "title": "Young New Zealander of the Year",
       "description": "National recognition for the SVA and youth mobilisation",
-      "logo": "",
+      "logo": "/images/idpsyc3rdr_logos.png",
       "logo_size": "56",
       "year": "2012",
-      "url": ""
+      "url": "https://nzawards.org.nz/winners/sam-johnson/#:~:text=Sam%20Johnson%20is%20a%20visionary,into%20a%20nationwide%20volunteering%20movement."
     },
     {
       "title": "Communicator of the Year",
       "description": "For pioneering social media mobilisation in crisis",
-      "logo": "",
+      "logo": "/images/prinz_idgxkgof28_0.png",
       "logo_size": "56",
       "year": "2012",
       "url": ""
@@ -75,18 +75,18 @@
     {
       "title": "Sir Peter Blake Leadership Award",
       "description": "For outstanding leadership in service of New Zealand",
-      "logo": "",
+      "logo": "/images/screenshot-2026-06-11-at-2.19.19 pm.png",
       "logo_size": "56",
       "year": "",
-      "url": ""
+      "url": "https://gg.govt.nz/image-galleries/2011-sir-peter-blake-leadership-awards"
     },
     {
       "title": "Officer of the New Zealand Order of Merit (ONZM)",
       "description": "King's Birthday Honours — for services to the community and youth",
       "year": "2026",
-      "logo": "",
+      "logo": "/images/gnzm-fs-wb-01-clearcut-v2.jpg",
       "logo_size": "56",
-      "url": ""
+      "url": "https://www.dpmc.govt.nz/honours/lists/kb2026-onzm"
     }
   ],
   "copy": {
