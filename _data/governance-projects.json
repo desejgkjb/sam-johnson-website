@@ -1,0 +1,92 @@
+{
+  "governance": [
+    {
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
+      "title": "Chairperson",
+      "meta": "Metro Media Group",
+      "image": "/images/screenshot-2026-06-11-at-1.45.23 pm.png",
+      "description": "Sam served as the chair of Metro media Group"
+    },
+    {
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center",
+      "title": "Director",
+      "meta": "Consult Recruitment",
+      "image": "/images/screenshot-2026-06-11-at-1.46.53 pm.png",
+      "description": "Sam served as the director for Consult Recruitment"
+    }
+  ],
+  "projects": [
+    {
+      "meta": "2011 – present · Christchurch & nationwide",
+      "chip": "11,000 volunteers mobilised",
+      "image_fit": "cover",
+      "image_position": "center",
+      "featured": true,
+      "title": "Student Volunteer Army",
+      "image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
+      "image_aspect": "16/10",
+      "description": "When the Christchurch earthquakes struck, Sam used Facebook to mobilise students into a coordinated volunteer force, clearing thousands of tonnes of liquefaction silt from the city's streets and homes. The SVA has since grown into a national movement with school, tertiary and community programmes that put young people at the heart of civic service."
+    },
+    {
+      "meta": "2011 · Japan",
+      "chip": "First international mission",
+      "image_fit": "cover",
+      "image_position": "center",
+      "featured": false,
+      "title": "2011 Tōhoku earthquake and tsunami",
+      "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
+      "image_aspect": "16/10",
+      "description": "Sam's first international deployment — supporting volunteer coordination in the aftermath of the Tōhoku disaster and testing the SVA model beyond New Zealand."
+    },
+    {
+      "meta": "2015 · Vanuatu · Nepal",
+      "chip": "2 major deployments",
+      "image_fit": "cover",
+      "image_position": "center",
+      "featured": false,
+      "title": "Cyclone Pam & Nepal earthquake responses",
+      "image": "/images/ecdc5d01-e93f-4cb9-bcf4-da0f87620f10.jpg",
+      "image_aspect": "16/10",
+      "description": "Back-to-back disaster deployments focused on volunteer mobilisation and community resilience in two very different contexts."
+    },
+    {
+      "meta": "2016 – present · Pacific · Saudi Arabia · Brazil",
+      "chip": "3 continents",
+      "image_fit": "cover",
+      "image_position": "center",
+      "featured": false,
+      "title": "Global youth leadership advocacy",
+      "image": "",
+      "image_aspect": "16/10",
+      "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents."
+    }
+  ],
+  "stats": [
+    {
+      "number": "80,000+",
+      "label": "Volunteers mobilised"
+    },
+    {
+      "number": "3,500,000",
+      "label": "Hours Logged"
+    },
+    {
+      "number": "5",
+      "label": "Countries"
+    }
+  ],
+  "copy": {
+    "heading": "Strategic Leadership",
+    "subheading": "Real projects, real outcomes — from a city-wide volunteer movement to recovery missions across five countries.",
+    "cta_heading": "Want Sam's story at your event?",
+    "cta_body": "These projects are the backbone of Sam's keynotes on youth leadership, crisis response and mobilising communities.",
+    "governance_heading": "11",
+    "projects_heading": "11",
+    "governance_intro": "Where Sam contributes around the table — governance, strategy and oversight.",
+    "projects_intro": "Hands-on work in the field — from Christchurch to disaster zones around the world."
+  }
+}

@@ -9,17 +9,21 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-  - name: "content"
-    label: "Website Content"
+
+  # ════════════════════════════════════════════════════════
+  # 🏠 HOME PAGE — everything on the homepage, top to bottom
+  # ════════════════════════════════════════════════════════
+  - name: "home"
+    label: "🏠 Home page"
+    description: "Everything on the homepage, in the order it appears on the page. Testimonials have their own section in the sidebar."
     files:
-      - name: "main"
-        label: "All Content"
-        file: "_data/content.json"
+      - name: "home"
+        label: "Home page content"
+        file: "_data/home.json"
         format: json
         fields:
 
-          # ─── HERO ────────────────────────────────────────────
-          - label: "⭐ Hero Section"
+          - label: "1 · Hero (top banner)"
             name: "hero"
             widget: "object"
             collapsed: false
@@ -27,6 +31,10 @@ collections:
               - { label: "Main heading", name: "heading", widget: "string" }
               - { label: "Subheading", name: "subheading", widget: "text" }
               - { label: "Hero photo", name: "photo", widget: "image", required: false, hint: "Full-bleed action photo of Sam. Upload a new file or pick from the media library to replace." }
+              - { label: "Hero video (optional)", name: "video", widget: "file", required: false, hint: "MP4 video, ideally under 20 MB. When set, it plays as the hero background; the hero photo stays as the fallback for slow connections. Remove the file to go back to the photo." }
+              - { label: "Video autoplays", name: "video_autoplay", widget: "boolean", required: false, default: true, hint: "Autoplaying videos are always muted (browser rule)" }
+              - { label: "Video loops", name: "video_loop", widget: "boolean", required: false, default: true }
+              - { label: "Video muted", name: "video_muted", widget: "boolean", required: false, default: true }
               - label: "Hero photo — fit"
                 name: "photo_fit"
                 widget: "select"
@@ -47,10 +55,6 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
-              - { label: "Hero video (optional)", name: "video", widget: "file", required: false, hint: "MP4 video, ideally under 20 MB. When set, it plays as the hero background; the hero photo stays as the fallback for slow connections. Remove the file to go back to the photo." }
-              - { label: "Video autoplays", name: "video_autoplay", widget: "boolean", required: false, default: true, hint: "Autoplaying videos are always muted (browser rule)" }
-              - { label: "Video loops", name: "video_loop", widget: "boolean", required: false, default: true }
-              - { label: "Video muted", name: "video_muted", widget: "boolean", required: false, default: true }
               - label: "Hero section height"
                 name: "photo_height"
                 widget: "select"
@@ -60,55 +64,27 @@ collections:
                   - { label: "Standard (88% of screen)", value: "88vh" }
                   - { label: "Full screen", value: "100vh" }
                   - { label: "Compact (70% of screen)", value: "70vh" }
-              - { label: "Attribution line", name: "attribution", widget: "string" }
+              - { label: "Attribution line (under the button)", name: "attribution", widget: "string" }
 
-          # ─── ABOUT (HOMEPAGE TEASER) ──────────────────────────
-          - label: "📖 About (Homepage teaser)"
+          - label: "2 · Recognised by (award logos strip)"
+            name: "recognition"
+            widget: "list"
+            collapsed: true
+            label_singular: "Recognition"
+            hint: "The award/organisation logos under the hero. Drag to reorder."
+            fields:
+              - { label: "Recognition title", name: "title", widget: "string", hint: "e.g. Young New Zealander of the Year" }
+              - { label: "Organisation / award logo", name: "logo", widget: "image", required: false, hint: "PNG or SVG with transparent background works best. Shown at a consistent height." }
+              - { label: "Short description (optional)", name: "description", widget: "string", required: false }
+              - { label: "Link (optional)", name: "url", widget: "string", required: false, hint: "e.g. the award or organisation website" }
+
+          - label: "3 · About teaser (short intro + portrait)"
             name: "about_teaser"
             widget: "object"
             collapsed: true
             fields:
               - { label: "Heading", name: "heading", widget: "string" }
               - { label: "Body text", name: "body", widget: "text" }
-              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Natural light, warm grading. Upload or pick from media library to replace." }
-              - label: "Portrait — shape / size"
-                name: "portrait_aspect"
-                widget: "select"
-                required: false
-                default: "4/5"
-                options:
-                  - { label: "Portrait 4:5 (default)", value: "4/5" }
-                  - { label: "Square 1:1", value: "1/1" }
-                  - { label: "Portrait 3:4", value: "3/4" }
-                  - { label: "Landscape 16:10", value: "16/10" }
-              - label: "Portrait — fit"
-                name: "portrait_fit"
-                widget: "select"
-                required: false
-                default: "cover"
-                options:
-                  - { label: "Fill the frame (crops edges)", value: "cover" }
-                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
-              - label: "Portrait — crop focus"
-                name: "portrait_position"
-                widget: "select"
-                required: false
-                default: "center"
-                options:
-                  - { label: "Centre", value: "center" }
-                  - { label: "Top (keep head in frame)", value: "top" }
-                  - { label: "Bottom", value: "bottom" }
-                  - { label: "Left", value: "left" }
-                  - { label: "Right", value: "right" }
-
-          # ─── ABOUT (FULL PAGE) ────────────────────────────────
-          - label: "📖 About (Full page)"
-            name: "about_full"
-            widget: "object"
-            collapsed: true
-            fields:
-              - { label: "Page heading", name: "heading", widget: "string" }
-              - { label: "Page subheading", name: "subheading", widget: "text" }
               - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
               - label: "Portrait — shape / size"
                 name: "portrait_aspect"
@@ -139,155 +115,8 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
-              - { label: "Origin story heading", name: "origin_heading", widget: "string" }
-              - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
-              - { label: "Pull quote", name: "quote", widget: "string" }
-              - { label: "Quote attribution", name: "quote_cite", widget: "string" }
 
-          # ─── STATS ────────────────────────────────────────────
-          - label: "📊 Stats"
-            name: "stats"
-            widget: "list"
-            collapsed: true
-            label_singular: "Stat"
-            fields:
-              - { label: "Number", name: "number", widget: "string" }
-              - { label: "Label", name: "label", widget: "string" }
-
-          # ─── PROJECTS ─────────────────────────────────────────
-          - label: "🗂 Projects"
-            name: "projects"
-            widget: "list"
-            collapsed: true
-            label_singular: "Project"
-            fields:
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Date / Location", name: "meta", widget: "string" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Tag", name: "chip", widget: "string" }
-              - { label: "Photo", name: "image", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
-              - label: "Photo — shape / size"
-                name: "image_aspect"
-                widget: "select"
-                required: false
-                default: "16/10"
-                options:
-                  - { label: "Landscape 16:10 (default)", value: "16/10" }
-                  - { label: "Landscape 4:3", value: "4/3" }
-                  - { label: "Widescreen 16:9", value: "16/9" }
-                  - { label: "Square 1:1", value: "1/1" }
-              - label: "Photo — fit"
-                name: "image_fit"
-                widget: "select"
-                required: false
-                default: "cover"
-                options:
-                  - { label: "Fill the frame (crops edges)", value: "cover" }
-                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
-              - label: "Photo — crop focus"
-                name: "image_position"
-                widget: "select"
-                required: false
-                default: "center"
-                options:
-                  - { label: "Centre", value: "center" }
-                  - { label: "Top", value: "top" }
-                  - { label: "Bottom", value: "bottom" }
-                  - { label: "Left", value: "left" }
-                  - { label: "Right", value: "right" }
-
-          # ─── GOVERNANCE ───────────────────────────────────────
-          - label: "🏛 Governance"
-            name: "governance"
-            widget: "list"
-            collapsed: true
-            label_singular: "Governance entry"
-            hint: "Board positions, advisory roles, committees. Drag entries to reorder them."
-            fields:
-              - { label: "Role / Title", name: "title", widget: "string", hint: "e.g. Board Member, Trustee, Chair" }
-              - { label: "Organisation / Years", name: "meta", widget: "string", hint: "e.g. Organisation name · 2020 – present" }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Tag", name: "chip", widget: "string", required: false, hint: "e.g. Governance, Advisory, Current" }
-              - { label: "Photo (optional)", name: "image", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
-              - label: "Photo — shape / size"
-                name: "image_aspect"
-                widget: "select"
-                required: false
-                default: "16/10"
-                options:
-                  - { label: "Landscape 16:10 (default)", value: "16/10" }
-                  - { label: "Landscape 4:3", value: "4/3" }
-                  - { label: "Widescreen 16:9", value: "16/9" }
-                  - { label: "Square 1:1", value: "1/1" }
-              - label: "Photo — fit"
-                name: "image_fit"
-                widget: "select"
-                required: false
-                default: "cover"
-                options:
-                  - { label: "Fill the frame (crops edges)", value: "cover" }
-                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
-              - label: "Photo — crop focus"
-                name: "image_position"
-                widget: "select"
-                required: false
-                default: "center"
-                options:
-                  - { label: "Centre", value: "center" }
-                  - { label: "Top", value: "top" }
-                  - { label: "Bottom", value: "bottom" }
-                  - { label: "Left", value: "left" }
-                  - { label: "Right", value: "right" }
-
-          # ─── TIMELINE ─────────────────────────────────────────
-          - label: "📅 Timeline"
-            name: "timeline"
-            widget: "list"
-            collapsed: true
-            label_singular: "Timeline item"
-            fields:
-              - { label: "Year", name: "year", widget: "string" }
-              - { label: "Title", name: "title", widget: "string" }
-              - { label: "Location", name: "location", widget: "string", required: false }
-              - { label: "Description", name: "description", widget: "text" }
-              - { label: "Tag (optional)", name: "chip", widget: "string", required: false }
-
-          # ─── TESTIMONIALS ─────────────────────────────────────
-          - label: "💬 Testimonials"
-            name: "testimonials"
-            widget: "list"
-            collapsed: true
-            label_singular: "Testimonial"
-            fields:
-              - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Author name", name: "author", widget: "string" }
-              - { label: "Title & Organisation", name: "title", widget: "string" }
-
-          # ─── AWARDS ───────────────────────────────────────────
-          - label: "🏆 Awards"
-            name: "awards"
-            widget: "list"
-            collapsed: true
-            label_singular: "Award"
-            fields:
-              - { label: "Award name", name: "title", widget: "string" }
-              - { label: "Description", name: "description", widget: "string" }
-
-          # ─── RECOGNITION STRIP (homepage "Recognised by") ─────
-          - label: "🎖 Recognition strip"
-            name: "recognition"
-            widget: "list"
-            collapsed: true
-            label_singular: "Recognition"
-            hint: "The award/organisation logos under the hero. Drag to reorder."
-            fields:
-              - { label: "Recognition title", name: "title", widget: "string", hint: "e.g. Young New Zealander of the Year" }
-              - { label: "Organisation / award logo", name: "logo", widget: "image", required: false, hint: "PNG or SVG with transparent background works best. Shown at a consistent height." }
-              - { label: "Short description (optional)", name: "description", widget: "string", required: false }
-              - { label: "Link (optional)", name: "url", widget: "string", required: false, hint: "e.g. the award or organisation website" }
-
-          # ─── FEATURED IN (media logos) ────────────────────────
-          - label: "📰 Featured in (media)"
+          - label: "4 · Featured in (media logos strip)"
             name: "press"
             widget: "list"
             collapsed: true
@@ -308,91 +137,325 @@ collections:
                   - { label: "Large (48px)", value: "48" }
               - { label: "Link to article / feature (optional)", name: "url", widget: "string", required: false }
 
-          # ─── PAGE COPY ────────────────────────────────────────
-          - label: "📄 Page copy"
-            name: "pages"
+          - label: "5 · Section headings & copy (rest of the homepage)"
+            name: "copy"
             widget: "object"
             collapsed: true
             fields:
+              - { label: "Pull-quote band — quote", name: "quote_band_text", widget: "string" }
+              - { label: "Pull-quote band — attribution", name: "quote_band_cite", widget: "string" }
+              - { label: "Featured work — section heading", name: "projects_heading", widget: "string", hint: "The project cards themselves are edited under 🏛 Governance / Projects page" }
+              - { label: "Speaking — heading", name: "speaking_heading", widget: "string" }
+              - { label: "Speaking — body", name: "speaking_body", widget: "text" }
+              - label: "Speaking — topic chips"
+                name: "speaking_topics"
+                widget: "list"
+                field: { label: "Topic", name: "item", widget: "string" }
+              - { label: "Testimonials — section heading", name: "testimonials_heading", widget: "string", hint: "The testimonials themselves are edited under 💬 Testimonials" }
+              - { label: "Newsletter — heading", name: "newsletter_heading", widget: "string" }
+              - { label: "Newsletter — body", name: "newsletter_body", widget: "text" }
 
-              - label: "Home page"
-                name: "home"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Pull-quote text", name: "quote_band_text", widget: "string" }
-                  - { label: "Pull-quote attribution", name: "quote_band_cite", widget: "string" }
-                  - { label: "Projects section heading", name: "projects_heading", widget: "string" }
-                  - { label: "Speaking section heading", name: "speaking_heading", widget: "string" }
-                  - { label: "Speaking section body", name: "speaking_body", widget: "text" }
-                  - label: "Speaking topics (chips)"
-                    name: "speaking_topics"
-                    widget: "list"
-                    field: { label: "Topic", name: "item", widget: "string" }
-                  - { label: "Testimonials section heading", name: "testimonials_heading", widget: "string" }
-                  - { label: "Newsletter heading", name: "newsletter_heading", widget: "string" }
-                  - { label: "Newsletter body", name: "newsletter_body", widget: "text" }
+  # ════════════════════════════════════════════════════════
+  # 📖 ABOUT PAGE
+  # ════════════════════════════════════════════════════════
+  - name: "about"
+    label: "📖 About page"
+    description: "Everything on the About page: heading, bio, portrait, quote and the three value cards."
+    files:
+      - name: "about"
+        label: "About page content"
+        file: "_data/about.json"
+        format: json
+        fields:
 
-              - label: "About page"
-                name: "about"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Values section heading", name: "values_heading", widget: "string" }
-                  - label: "Values (belief cards)"
-                    name: "values"
-                    widget: "list"
-                    label_singular: "Value"
-                    fields:
-                      - { label: "Title", name: "title", widget: "string" }
-                      - { label: "Body text", name: "body", widget: "text" }
-                  - { label: "CTA heading", name: "cta_heading", widget: "string" }
-                  - { label: "CTA body", name: "cta_body", widget: "text" }
+          - label: "1 · Page header, bio & portrait"
+            name: "about_full"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Page heading", name: "heading", widget: "string" }
+              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Origin story heading", name: "origin_heading", widget: "string" }
+              - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
+              - { label: "Pull quote", name: "quote", widget: "string" }
+              - { label: "Quote attribution", name: "quote_cite", widget: "string" }
+              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
+              - label: "Portrait — shape / size"
+                name: "portrait_aspect"
+                widget: "select"
+                required: false
+                default: "4/5"
+                options:
+                  - { label: "Portrait 4:5 (default)", value: "4/5" }
+                  - { label: "Square 1:1", value: "1/1" }
+                  - { label: "Portrait 3:4", value: "3/4" }
+                  - { label: "Landscape 16:10", value: "16/10" }
+              - label: "Portrait — fit"
+                name: "portrait_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Portrait — crop focus"
+                name: "portrait_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep head in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
 
-              - label: "Governance / Projects page"
-                name: "projects"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Page heading", name: "heading", widget: "string" }
-                  - { label: "Page subheading", name: "subheading", widget: "text" }
-                  - { label: "Governance section heading", name: "governance_heading", widget: "string" }
-                  - { label: "Governance section intro", name: "governance_intro", widget: "text", required: false }
-                  - { label: "Projects section heading", name: "projects_heading", widget: "string" }
-                  - { label: "Projects section intro", name: "projects_intro", widget: "text", required: false }
-                  - { label: "CTA heading", name: "cta_heading", widget: "string" }
-                  - { label: "CTA body", name: "cta_body", widget: "text" }
-
-              - label: "Experience page"
-                name: "experience"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Page heading", name: "heading", widget: "string" }
-                  - { label: "Page subheading", name: "subheading", widget: "text" }
-                  - { label: "Awards section heading", name: "awards_heading", widget: "string" }
-                  - { label: "CTA heading", name: "cta_heading", widget: "string" }
-                  - { label: "CTA body", name: "cta_body", widget: "text" }
-
-              - label: "Contact page"
-                name: "contact"
-                widget: "object"
-                collapsed: true
-                fields:
-                  - { label: "Page heading", name: "heading", widget: "string" }
-                  - { label: "Page subheading", name: "subheading", widget: "text" }
-                  - { label: "Aside heading", name: "aside_heading", widget: "string" }
-                  - { label: "Response time note", name: "aside_response_time", widget: "string" }
-
-          # ─── SETTINGS ─────────────────────────────────────────
-          - label: "⚙️ Settings"
-            name: "settings"
+          - label: "2 · Values section & page CTA"
+            name: "copy"
             widget: "object"
             collapsed: true
+            fields:
+              - { label: "Values — section heading", name: "values_heading", widget: "string" }
+              - label: "Values — belief cards"
+                name: "values"
+                widget: "list"
+                label_singular: "Value"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Body text", name: "body", widget: "text" }
+              - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
+              - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
+
+  # ════════════════════════════════════════════════════════
+  # 🏛 GOVERNANCE / PROJECTS PAGE
+  # ════════════════════════════════════════════════════════
+  - name: "governance_projects"
+    label: "🏛 Governance / Projects page"
+    description: "The Governance / Projects page: governance entries, project cards (the first three also appear on the homepage), stat band and page copy."
+    files:
+      - name: "governance_projects"
+        label: "Governance / Projects content"
+        file: "_data/governance-projects.json"
+        format: json
+        fields:
+
+          - label: "1 · Governance entries"
+            name: "governance"
+            widget: "list"
+            collapsed: false
+            label_singular: "Governance entry"
+            hint: "Board positions, advisory roles, committees. Drag entries to reorder them."
+            fields:
+              - { label: "Role / Title", name: "title", widget: "string", hint: "e.g. Board Member, Trustee, Chair" }
+              - { label: "Organisation / Years", name: "meta", widget: "string", hint: "e.g. Organisation name · 2020 – present" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag", name: "chip", widget: "string", required: false, hint: "e.g. Governance, Advisory, Current" }
+              - { label: "Photo (optional)", name: "image", widget: "image", required: false }
+              - label: "Photo — shape / size"
+                name: "image_aspect"
+                widget: "select"
+                required: false
+                default: "16/10"
+                options:
+                  - { label: "Landscape 16:10 (default)", value: "16/10" }
+                  - { label: "Landscape 4:3", value: "4/3" }
+                  - { label: "Widescreen 16:9", value: "16/9" }
+                  - { label: "Square 1:1", value: "1/1" }
+              - label: "Photo — fit"
+                name: "image_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Photo — crop focus"
+                name: "image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+
+          - label: "2 · Project cards"
+            name: "projects"
+            widget: "list"
+            collapsed: true
+            label_singular: "Project"
+            hint: "The first project is the large featured card. The first three projects also appear on the homepage. Drag to reorder."
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Date / Location", name: "meta", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag", name: "chip", widget: "string" }
+              - { label: "Photo", name: "image", widget: "image", required: false }
+              - label: "Photo — shape / size"
+                name: "image_aspect"
+                widget: "select"
+                required: false
+                default: "16/10"
+                options:
+                  - { label: "Landscape 16:10 (default)", value: "16/10" }
+                  - { label: "Landscape 4:3", value: "4/3" }
+                  - { label: "Widescreen 16:9", value: "16/9" }
+                  - { label: "Square 1:1", value: "1/1" }
+              - label: "Photo — fit"
+                name: "image_fit"
+                widget: "select"
+                required: false
+                default: "cover"
+                options:
+                  - { label: "Fill the frame (crops edges)", value: "cover" }
+                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
+              - label: "Photo — crop focus"
+                name: "image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+
+          - label: "3 · Stat band (numbers strip)"
+            name: "stats"
+            widget: "list"
+            collapsed: true
+            label_singular: "Stat"
+            fields:
+              - { label: "Number", name: "number", widget: "string" }
+              - { label: "Label", name: "label", widget: "string" }
+
+          - label: "4 · Page headings & copy"
+            name: "copy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page heading", name: "heading", widget: "string" }
+              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Governance — section heading", name: "governance_heading", widget: "string" }
+              - { label: "Governance — section intro", name: "governance_intro", widget: "text", required: false }
+              - { label: "Projects — section heading", name: "projects_heading", widget: "string" }
+              - { label: "Projects — section intro", name: "projects_intro", widget: "text", required: false }
+              - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
+              - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
+
+  # ════════════════════════════════════════════════════════
+  # 📅 EXPERIENCE PAGE
+  # ════════════════════════════════════════════════════════
+  - name: "experience"
+    label: "📅 Experience page"
+    description: "The Experience page: career timeline, awards band and page copy."
+    files:
+      - name: "experience"
+        label: "Experience page content"
+        file: "_data/experience.json"
+        format: json
+        fields:
+
+          - label: "1 · Career timeline"
+            name: "timeline"
+            widget: "list"
+            collapsed: false
+            label_singular: "Timeline item"
+            hint: "Drag items to reorder them on the timeline."
+            fields:
+              - { label: "Year", name: "year", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Location", name: "location", widget: "string", required: false }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Tag (optional)", name: "chip", widget: "string", required: false }
+
+          - label: "2 · Awards band"
+            name: "awards"
+            widget: "list"
+            collapsed: true
+            label_singular: "Award"
+            fields:
+              - { label: "Award name", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "string" }
+
+          - label: "3 · Page headings & copy"
+            name: "copy"
+            widget: "object"
+            collapsed: true
+            fields:
+              - { label: "Page heading", name: "heading", widget: "string" }
+              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Awards — section heading", name: "awards_heading", widget: "string" }
+              - { label: "Bottom CTA — heading", name: "cta_heading", widget: "string" }
+              - { label: "Bottom CTA — body", name: "cta_body", widget: "text" }
+
+  # ════════════════════════════════════════════════════════
+  # ✉️ CONTACT PAGE
+  # ════════════════════════════════════════════════════════
+  - name: "contact"
+    label: "✉️ Contact page"
+    description: "The Contact page headings and side panel. The email address itself lives in ⚙️ Site settings."
+    files:
+      - name: "contact"
+        label: "Contact page content"
+        file: "_data/contact.json"
+        format: json
+        fields:
+          - label: "Page headings & copy"
+            name: "copy"
+            widget: "object"
+            collapsed: false
+            fields:
+              - { label: "Page heading", name: "heading", widget: "string" }
+              - { label: "Page subheading", name: "subheading", widget: "text" }
+              - { label: "Side panel — heading", name: "aside_heading", widget: "string" }
+              - { label: "Side panel — response time note", name: "aside_response_time", widget: "string" }
+
+  # ════════════════════════════════════════════════════════
+  # 💬 TESTIMONIALS (homepage carousel)
+  # ════════════════════════════════════════════════════════
+  - name: "testimonials"
+    label: "💬 Testimonials"
+    description: "The testimonial carousel on the homepage. Add as many as you like — drag to reorder."
+    files:
+      - name: "testimonials"
+        label: "Testimonials"
+        file: "_data/testimonials.json"
+        format: json
+        fields:
+          - label: "Testimonials"
+            name: "testimonials"
+            widget: "list"
+            collapsed: false
+            label_singular: "Testimonial"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author name", name: "author", widget: "string" }
+              - { label: "Title & Organisation", name: "title", widget: "string" }
+
+  # ════════════════════════════════════════════════════════
+  # ⚙️ SITE SETTINGS (name, contact, links — used everywhere)
+  # ════════════════════════════════════════════════════════
+  - name: "settings"
+    label: "⚙️ Site settings"
+    description: "Site-wide details used on every page: name, button label, email and social links."
+    files:
+      - name: "settings"
+        label: "Site settings"
+        file: "_data/settings.json"
+        format: json
+        fields:
+          - label: "Settings"
+            name: "settings"
+            widget: "object"
+            collapsed: false
             fields:
               - { label: "Your name (site-wide)", name: "name", widget: "string" }
               - { label: "CTA button label", name: "cta_label", widget: "string", hint: "e.g. Book Sam to Speak — appears on all CTA buttons site-wide" }
-              - { label: "Contact email", name: "email", widget: "string", hint: "Shown in footer and contact page. Include domain only, e.g. hello@samjohnson.co.nz" }
+              - { label: "Contact email", name: "email", widget: "string", hint: "Shown in footer and contact page" }
               - { label: "LinkedIn URL", name: "linkedin_url", widget: "string" }
               - { label: "SVA Website URL", name: "sva_url", widget: "string" }
               - { label: "Footer tagline", name: "footer_tagline", widget: "string" }

@@ -294,11 +294,39 @@
 
   }
 
+  // Content is split into one file per CMS section (matches the admin sidebar).
+  // Each file's "copy" key maps to pages.<page>; everything else merges top-level.
+  var SOURCES = [
+    { file: '/_data/settings.json' },
+    { file: '/_data/home.json', page: 'home' },
+    { file: '/_data/about.json', page: 'about' },
+    { file: '/_data/governance-projects.json', page: 'projects' },
+    { file: '/_data/experience.json', page: 'experience' },
+    { file: '/_data/contact.json', page: 'contact' },
+    { file: '/_data/testimonials.json' }
+  ];
+
   function load() {
-    fetch('/_data/content.json')
-      .then(function (r) { return r.ok ? r.json() : null; })
-      .then(function (data) { if (data) init(data); })
-      .catch(function () { /* fail silently — static fallback text remains */ });
+    Promise.all(SOURCES.map(function (s) {
+      return fetch(s.file)
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .catch(function () { return null; });
+    })).then(function (parts) {
+      var data = { pages: {} };
+      var loaded = false;
+      parts.forEach(function (p, i) {
+        if (!p) return;
+        loaded = true;
+        Object.keys(p).forEach(function (k) {
+          if (k === 'copy' && SOURCES[i].page) {
+            data.pages[SOURCES[i].page] = p.copy;
+          } else {
+            data[k] = p[k];
+          }
+        });
+      });
+      if (loaded) init(data);
+    }).catch(function () { /* fail silently — static fallback text remains */ });
   }
 
   if (document.readyState === 'loading') {
