@@ -1,14 +1,35 @@
 {
   "governance": [
     {
-      "title": "Chairperson — Student Volunteer Army",
       "meta": "SVA · Current",
-      "description": "Founder and former Chief Executive of the SVA, Sam now serves on its board — supporting the national volunteering organisation he started after the Christchurch earthquakes.",
       "chip": "Board · Current",
-      "image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
+      "image_fit": "cover",
+      "image_position": "center",
+      "featured": true,
+      "title": "Chairperson — Student Volunteer Army",
+      "image": "/images/screenshot-2026-06-12-at-6.09.32 am.png",
+      "image_aspect": "16/10",
+      "description": "Founder and former Chief Executive of the SVA, Sam now serves on its board — supporting the national volunteering organisation he started after the Christchurch earthquakes."
+    },
+    {
+      "featured": false,
       "image_aspect": "16/10",
       "image_fit": "cover",
-      "image_position": "center"
+      "image_position": "center",
+      "title": "Chair — Kings Plant Barn",
+      "meta": "Auckland · 2026 – present",
+      "description": "Chair of Kings Plant Barn, one of New Zealand’s leading garden centre businesses within the STILL family of companies.",
+      "image": "/images/screenshot-2026-06-12-at-6.13.55 am.png"
+    },
+    {
+      "title": "Director — Consult Recruitment",
+      "meta": "STILL portfolio · Current",
+      "description": "Director of Consult Recruitment, an Auckland accounting, finance and business-support recruitment agency within the STILL family of companies.",
+      "chip": "Board · Current",
+      "image": "/images/screenshot-2026-06-11-at-1.46.53 pm.png",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "top"
     },
     {
       "title": "Director — Isaac Theatre Royal",
@@ -24,18 +45,8 @@
       "title": "Chairperson — Metro Media Group",
       "meta": "Metro magazine · Current",
       "description": "Chair of the media company behind Auckland's Metro magazine, guiding the iconic title through new ownership and a refreshed editorial model.",
-      "chip": "Media · Current",
+      "chip": "Media · Former",
       "image": "/images/screenshot-2026-06-11-at-1.45.23 pm.png",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "top"
-    },
-    {
-      "title": "Director — Consult Recruitment",
-      "meta": "STILL portfolio · Current",
-      "description": "Director of Consult Recruitment, an Auckland accounting, finance and business-support recruitment agency within the STILL family of companies.",
-      "chip": "Board · Current",
-      "image": "/images/screenshot-2026-06-11-at-1.46.53 pm.png",
       "image_aspect": "16/10",
       "image_fit": "cover",
       "image_position": "top"
