@@ -38,7 +38,7 @@
       "year": "2014-2016",
       "title": "Trustee",
       "location": "",
-      "description": "The Plunket Foundation is a stand alone Philanthropic Trust, established by Plunket with generous support from Karitane Products Society (KPS) Limited.\n\nThe mandate is simple:\n\nTo build an independent, sustainable, world class children’s endowment fund focused on helping New Zealand communities ‘Grow Great Kiwi Kids’ today, tomorrow, and into the future.\n\nA total of 7 prominent New Zealanders*, all passionate about providing children with the best start in life, act as Trustees and sit on the Plunket Foundation Board which is chaired by former New Zealander of the Year, Sir Ray Avery GNZM.",
+      "description": "The Plunket Foundation is a stand alone Philanthropic Trust, established by Plunket with generous support from Karitane Products Society (KPS) Limited.\n\nThe mandate is simple:\n\nTo build an independent, sustainable, world class children’s endowment fund focused on helping New Zealand communities ‘Grow Great Kiwi Kids’ today, tomorrow, and into the future.\n\nA total of 7 prominent New Zealanders, all passionate about providing children with the best start in life, act as Trustees and sit on the Plunket Foundation Board which is chaired by former New Zealander of the Year, Sir Ray Avery GNZM.",
       "chip": ""
     },
     {
@@ -77,16 +77,18 @@
     {
       "logo_size": "56",
       "title": "Institute of Directors Auckland Emerging Director Award 2022",
-      "image": "/images/institute_of_directors-nobg.png",
+      "image": "/images/img_0532.jpeg",
       "url": "https://www.iod.org.nz/news/articles/iod-recognises-student-armys-sam-johnson-with-auckland-emerging-director-award#/",
-      "description": "Sam Johnson, who founded the Student Volunteer Army in the wake of the devastating Christchurch earthquakes, has won the Institute of Directors’ (IoD) 2022 Auckland Emerging Director Award."
+      "description": "Sam Johnson, who founded the Student Volunteer Army in the wake of the devastating Christchurch earthquakes, has won the Institute of Directors’ (IoD) 2022 Auckland Emerging Director Award.",
+      "logo": "/images/institute_of_directors-nobg.png"
     },
     {
       "logo_size": "56",
       "title": "High Tech Award, Impact for Good, 2021 (SVA)",
-      "image": "/images/screenshot-2026-06-11-at-10.54.21 pm.png",
+      "image": "/images/sam-speaking-.jpeg",
       "url": "https://www.customd.com/our-work/volunteering-mobile-app",
-      "description": "In order to engage as big a community as possible, the SVA platform gives organisers the ability to spin up activities quickly and allows volunteers to self-organise, creating activities of their own and with greater visibility of where they can best offer their time."
+      "description": "In order to engage as big a community as possible, the SVA platform gives organisers the ability to spin up activities quickly and allows volunteers to self-organise, creating activities of their own and with greater visibility of where they can best offer their time.",
+      "logo": "/images/screenshot-2026-06-11-at-10.54.21 pm.png"
     },
     {
       "title": "PRINZ Communicator of the Year 2012",
