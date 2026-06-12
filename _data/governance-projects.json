@@ -164,6 +164,17 @@
   ],
   "projects": [
     {
+      "meta": "Projects Director · 2023 – present",
+      "chip": "Venture · Current",
+      "image_fit": "cover",
+      "image_position": "center",
+      "featured": true,
+      "title": "STILL & the STILL 100",
+      "image": "/images/screenshot-2026-06-11-at-2.53.47 pm.png",
+      "image_aspect": "16/10",
+      "description": "Sam leads projects at STILL, the family office founded by Hideaki Fukutake that backs long-term ventures amplifying people, nature, arts and culture in New Zealand — including a programme of acquiring and growing 100 Kiwi companies."
+    },
+    {
       "title": "Student Volunteer Army",
       "meta": "Founder · 2010 – present · Christchurch & nationwide",
       "description": "Founded after the Christchurch earthquakes, the SVA mobilised 11,000 students through social media and grew into a national volunteering organisation — operating in 258 secondary schools and six universities, with programmes in Tasmania and South Australia and a partnership with IHC recognising volunteers with intellectual disabilities. Sam served as Chief Executive until 2023 and remains on the board.",
@@ -184,16 +195,6 @@
       "image_position": "center"
     },
     {
-      "title": "STILL & the STILL 100",
-      "meta": "Projects Director · 2023 – present",
-      "description": "Sam leads projects at STILL, the family office founded by Hideaki Fukutake that backs long-term ventures amplifying people, nature, arts and culture in New Zealand — including a programme of acquiring and growing 100 Kiwi companies.",
-      "chip": "Venture · Current",
-      "image": "/images/screenshot-2026-06-11-at-2.53.47 pm.png",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
-    },
-    {
       "title": "SVA COVID-19 Response",
       "meta": "2020 – 2022 · Nationwide",
       "description": "During the COVID-19 lockdowns the SVA built a national grocery delivery service with New World, mobilising volunteers across the country to shop for older and vulnerable New Zealanders — one of more than 20 domestic disaster responses Sam led as Chief Executive.",
@@ -204,7 +205,7 @@
       "image_position": "center"
     },
     {
-      "title": "SVA in Schools & the Service Award",
+      "title": "SVA Service Award",
       "meta": "2017 – present · Nationwide",
       "description": "The SVA's education programmes teach volunteering from primary to tertiary level — over 25,000 primary students have taken part in SVA Kids — while the SVA Service Award gives secondary students a nationally recognised record of their volunteer hours.",
       "chip": "Youth Leadership",
@@ -224,21 +225,21 @@
       "image_position": "center"
     },
     {
-      "title": "Tōhoku Earthquake Response",
-      "meta": "2011 · Japan",
-      "description": "Sam's first international deployment — supporting volunteer coordination after the Tōhoku earthquake and tsunami, and testing the SVA model beyond New Zealand.",
-      "chip": "Disaster Response",
-      "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
-    },
-    {
       "title": "Cyclone Pam & Nepal Earthquake Responses",
       "meta": "2015 · Vanuatu · Nepal",
       "description": "Back-to-back disaster deployments focused on volunteer mobilisation and community resilience in two very different contexts.",
       "chip": "Disaster Response",
       "image": "/images/ecdc5d01-e93f-4cb9-bcf4-da0f87620f10.jpg",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Tōhoku Earthquake Response",
+      "meta": "2011 · Japan",
+      "description": "Sam's first international deployment — supporting volunteer coordination after the Tōhoku earthquake and tsunami, and testing the SVA model beyond New Zealand.",
+      "chip": "Disaster Response",
+      "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
       "image_aspect": "16/10",
       "image_fit": "cover",
       "image_position": "center"
