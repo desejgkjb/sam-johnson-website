@@ -175,16 +175,6 @@
       "description": "Sam leads projects at STILL, the family office founded by Hideaki Fukutake that backs long-term ventures amplifying people, nature, arts and culture in New Zealand — including a programme of acquiring and growing 100 Kiwi companies."
     },
     {
-      "title": "Student Volunteer Army",
-      "meta": "Founder · 2010 – present · Christchurch & nationwide",
-      "description": "Founded after the Christchurch earthquakes, the SVA mobilised 11,000 students through social media and grew into a national volunteering organisation — operating in 258 secondary schools and six universities, with programmes in Tasmania and South Australia and a partnership with IHC recognising volunteers with intellectual disabilities. Sam served as Chief Executive until 2023 and remains on the board.",
-      "chip": "11,000 volunteers mobilised",
-      "image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
-    },
-    {
       "title": "Paererewā — The 1,000-Year Bench Project",
       "meta": "General Manager · 2025 – present",
       "description": "A charitable project creating 1,000 places to sit and reflect across Aotearoa, each designed to endure for 1,000 years. Launched at the Aotearoa Art Fair in 2025 in partnership with Hideaki Fukutake and Derek Handley's Aera Foundation.",
@@ -195,11 +185,11 @@
       "image_position": "center"
     },
     {
-      "title": "SVA COVID-19 Response",
-      "meta": "2020 – 2022 · Nationwide",
-      "description": "During the COVID-19 lockdowns the SVA built a national grocery delivery service with New World, mobilising volunteers across the country to shop for older and vulnerable New Zealanders — one of more than 20 domestic disaster responses Sam led as Chief Executive.",
-      "chip": "Disaster Response",
-      "image": "/images/5d3_1732.jpg",
+      "title": "Student Volunteer Army",
+      "meta": "Founder · 2010 – present · Christchurch & nationwide",
+      "description": "Founded after the Christchurch earthquakes, the SVA mobilised 11,000 students through social media and grew into a national volunteering organisation — operating in 258 secondary schools and six universities, with programmes in Tasmania and South Australia and a partnership with IHC recognising volunteers with intellectual disabilities. Sam served as Chief Executive until 2023 and remains on the board.",
+      "chip": "11,000 volunteers mobilised",
+      "image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
       "image_aspect": "16/10",
       "image_fit": "cover",
       "image_position": "center"
@@ -215,11 +205,31 @@
       "image_position": "center"
     },
     {
+      "title": "SVA COVID-19 Response",
+      "meta": "2020 – 2022 · Nationwide",
+      "description": "During the COVID-19 lockdowns the SVA built a national grocery delivery service with New World, mobilising volunteers across the country to shop for older and vulnerable New Zealanders — one of more than 20 domestic disaster responses Sam led as Chief Executive.",
+      "chip": "Disaster Response",
+      "image": "/images/5d3_1732.jpg",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
       "title": "WeVisit & Mycare",
       "meta": "Co-founder · 2016 – 2018",
       "description": "A social enterprise matching young visitors with older New Zealanders living alone, founded with Dr Tyler Brummer to combat loneliness. WeVisit joined forces with home-care platform Mycare in 2017, where Sam became Head of Community Innovation.",
       "chip": "Social Enterprise",
       "image": "/images/9tzi8ywrz924xe3uhad6dfgzqfjedzd7oklsir53vlhvszexpmzurmkdwhbkl9pkhurlhihi0vpj1sadtcx6ethinn8zynb_x6wxj6xegtw3w_fpdt2_ljpntpwbpwi6sjnnd8tollofumze0enpyotom7nj30zyan_nzszmm1r4-oz4rdqdfaikjh_ijark.jpeg",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Global Youth Leadership Advocacy",
+      "meta": "2016 – present · Pacific · Saudi Arabia · Brazil",
+      "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents.",
+      "chip": "Youth Leadership",
+      "image": "/images/tmbfys26krcvrmg5ymm5q6vovm.avif",
       "image_aspect": "16/10",
       "image_fit": "cover",
       "image_position": "center"
@@ -240,16 +250,6 @@
       "description": "Sam's first international deployment — supporting volunteer coordination after the Tōhoku earthquake and tsunami, and testing the SVA model beyond New Zealand.",
       "chip": "Disaster Response",
       "image": "/images/545880838_24425369503784746_5390191594827621849_n.jpg",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
-    },
-    {
-      "title": "Global Youth Leadership Advocacy",
-      "meta": "2016 – present · Pacific · Saudi Arabia · Brazil",
-      "description": "Programme design, advisory work and keynotes that have influenced school students, boardrooms and politicians across three continents.",
-      "chip": "Youth Leadership",
-      "image": "/images/tmbfys26krcvrmg5ymm5q6vovm.avif",
       "image_aspect": "16/10",
       "image_fit": "cover",
       "image_position": "center"
