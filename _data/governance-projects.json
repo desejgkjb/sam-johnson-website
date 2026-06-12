@@ -102,16 +102,6 @@
       "image_position": "center"
     },
     {
-      "title": "Elected Member — Christchurch City Council Community Board",
-      "meta": "Christchurch · 2010 – 2013",
-      "description": "Elected to a local community board as a university student, helping the city navigate planning, infrastructure and disaster-recovery decisions through the earthquake years.",
-      "chip": "Former",
-      "image": "/images/screenshot-2026-06-13-at-10.51.28 am.png",
-      "image_aspect": "16/10",
-      "image_fit": "cover",
-      "image_position": "center"
-    },
-    {
       "title": "Advisory Trustee — Pacific Development and Conservation Trust",
       "meta": "2011 – 2018",
       "description": "Advisory trustee of the government-established trust funding development and conservation projects across the South Pacific.",
@@ -157,6 +147,16 @@
       "description": "Former member of Westpac New Zealand's external sustainability advisory panel.",
       "chip": "Former",
       "image": "/images/screenshot-2026-06-13-at-10.53.51 am.png",
+      "image_aspect": "16/10",
+      "image_fit": "cover",
+      "image_position": "center"
+    },
+    {
+      "title": "Elected Member — Christchurch City Council Community Board",
+      "meta": "Christchurch · 2010 – 2013",
+      "description": "Elected to a local community board as a university student, helping the city navigate planning, infrastructure and disaster-recovery decisions through the earthquake years.",
+      "chip": "Former",
+      "image": "/images/screenshot-2026-06-13-at-10.51.28 am.png",
       "image_aspect": "16/10",
       "image_fit": "cover",
       "image_position": "center"
