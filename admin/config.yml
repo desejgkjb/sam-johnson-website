@@ -298,13 +298,26 @@ collections:
             collapsed: true
             fields:
               - { label: "Values — section heading", name: "values_heading", widget: "string" }
-              - label: "Values — belief cards"
+              - label: "Values — cinematic panels"
                 name: "values"
                 widget: "list"
                 label_singular: "Value"
+                hint: "Each value is a full-width photo panel. Panels alternate text left / text right automatically."
                 fields:
-                  - { label: "Title", name: "title", widget: "string" }
-                  - { label: "Body text", name: "body", widget: "text" }
+                  - { label: "Title", name: "title", widget: "string", hint: "Displayed very large — keep it short and confident." }
+                  - { label: "Description", name: "body", widget: "text", hint: "One or two short sentences." }
+                  - { label: "Background photo", name: "image", widget: "image", required: false, hint: "Large landscape photo. Fills the whole panel behind the text." }
+                  - label: "Photo — crop focus"
+                    name: "image_position"
+                    widget: "select"
+                    required: false
+                    default: "center"
+                    options:
+                      - { label: "Centre", value: "center" }
+                      - { label: "Top (keep heads in frame)", value: "top" }
+                      - { label: "Bottom", value: "bottom" }
+                      - { label: "Left", value: "left" }
+                      - { label: "Right", value: "right" }
               - { label: "Explore card 1 (Timeline) — heading", name: "hub_timeline_heading", widget: "string", required: false }
               - { label: "Explore card 1 (Timeline) — description", name: "hub_timeline_body", widget: "text", required: false }
               - { label: "Explore card 1 (Timeline) — button label", name: "hub_timeline_button", widget: "string", required: false }

@@ -200,6 +200,37 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   });
 })();
 
+/* Values panels — cinematic scroll reveal (re-runs after the CMS render) */
+(function () {
+  const container = document.getElementById('cms-values');
+  if (!container) return;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function observe() {
+    const panels = container.querySelectorAll('.value-panel:not(.vp-watched)');
+    if (!panels.length) return;
+    if (reduced || !('IntersectionObserver' in window)) {
+      panels.forEach(function (p) { p.classList.add('vp-watched', 'vp-in'); });
+      return;
+    }
+    const io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          en.target.classList.add('vp-in');
+          io.unobserve(en.target);
+        }
+      });
+    }, { threshold: 0.18 });
+    panels.forEach(function (p) {
+      p.classList.add('vp-watched');
+      io.observe(p);
+    });
+  }
+
+  new MutationObserver(observe).observe(container, { childList: true });
+  observe();
+})();
+
 /* Experience timeline — dots light up and the line fills as you scroll */
 (function () {
   const container = document.getElementById('cms-timeline');

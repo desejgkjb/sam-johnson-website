@@ -326,13 +326,22 @@
     }).join('');
   }
 
+  // Values — cinematic editorial panels (alternating text side, CMS image per value)
   function renderValues(container, values) {
-    container.innerHTML = values.map(function (v) {
-      return '<div class="value-card">'
-        + '<i aria-hidden="true"></i>'
+    container.innerHTML = values.map(function (v, i) {
+      var num = ('0' + (i + 1)).slice(-2);
+      var bgStyle = v.image
+        ? ' style="background-image:url(\'' + esc(v.image) + '\');background-position:' + esc(v.image_position || 'center') + '"'
+        : '';
+      return '<article class="value-panel' + (i % 2 === 1 ? ' value-panel--right' : '') + '">'
+        + '<div class="vp-bg"' + bgStyle + ' role="img" aria-label="' + esc(v.title) + '"></div>'
+        + '<div class="vp-overlay" aria-hidden="true"></div>'
+        + '<div class="vp-inner"><div class="vp-content">'
+        + '<span class="vp-index">' + num + '</span>'
         + '<h3>' + esc(v.title) + '</h3>'
         + '<p>' + esc(v.body) + '</p>'
-        + '</div>';
+        + '</div></div>'
+        + '</article>';
     }).join('');
   }
 
