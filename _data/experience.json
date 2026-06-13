@@ -4,7 +4,10 @@
       "year": "2010 - 2013",
       "title": "Board Member (elected)",
       "description": "As a University student I stood for election for the local City Council community board in 2010 to better link students with the wider community. In my 3 year term, I helped our board navigate through a number of complex issues around city planning, infrastructure priorities, disaster response and other community issues. I turned down the opportunity to stand for full council, despite a generous offer to become Deputy Mayor, to pursue opportunities further afield in 2013.",
-      "location": "Christchurch, New Zealand"
+      "location": "Christchurch, New Zealand",
+      "badges": [
+        { "name": "Christchurch City Council", "url": "https://www.ccc.govt.nz" }
+      ]
     },
     {
       "year": "2014 - 2015",
@@ -57,20 +60,29 @@
       "year": "2019 - 2023",
       "title": "Chief Executive",
       "location": "Auckland, New Zealand",
-      "description": "As Chief Executive of the Student Volunteer Army, Sam scaled a moment of collective action into one of New Zealand’s most recognised youth service movements, building programmes that connected thousands of young people with practical opportunities to serve their communities."
+      "description": "As Chief Executive of the Student Volunteer Army, Sam scaled a moment of collective action into one of New Zealand’s most recognised youth service movements, building programmes that connected thousands of young people with practical opportunities to serve their communities.",
+      "badges": [
+        { "name": "Student Volunteer Army", "url": "https://www.sva.org.nz" }
+      ]
     },
     {
       "year": "2011 - Present",
       "title": "Chair, Student Volunteer Army",
       "location": "Christchurch, New Zealand",
       "description": "After the February earthquake, Sam mobilised students through social media to clear liquefaction silt across the city. What began as one Facebook event became a coordinated volunteer force.",
-      "chip": "11,000 volunteers"
+      "chip": "11,000 volunteers",
+      "badges": [
+        { "name": "Student Volunteer Army", "url": "https://www.sva.org.nz" }
+      ]
     },
     {
       "year": "2023 - Present",
       "title": "Director of Projects",
       "location": "Auckland, New Zealand",
-      "description": "Sam is the Projects Director for STILL. He is responsible for managing STILL's internal projects, startups and ideas that contribute to the STILL 100.\n\n"
+      "description": "Sam is the Projects Director for STILL. He is responsible for managing STILL’s internal projects, startups and ideas that contribute to the STILL 100.\n\n",
+      "badges": [
+        { "name": "STILL", "url": "" }
+      ]
     }
   ],
   "awards": [

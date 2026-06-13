@@ -215,6 +215,13 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
 .timeline-card p{font-size:15px;margin-bottom:14px}
 .timeline-card .chip{margin-top:0}
 .loc-chip{display:inline-block;border:1.5px solid var(--vermillion);color:var(--vermillion);font-size:12px;font-weight:600;letter-spacing:.04em;padding:4px 12px;border-radius:999px;margin-left:10px;vertical-align:middle}
+/* Organisation badge pills */
+.org-badges{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 4px}
+.org-badge{display:inline-flex;align-items:center;gap:7px;padding:5px 13px 5px 8px;border:1.5px solid rgba(45,45,45,.12);border-radius:999px;background:var(--white);font-family:inherit;font-size:12.5px;font-weight:600;color:var(--charcoal);white-space:nowrap;transition:border-color .2s ease,color .2s ease,transform .2s cubic-bezier(.2,.6,.2,1),box-shadow .2s ease;text-decoration:none;cursor:default}
+.org-badge img{height:18px;width:auto;max-width:54px;object-fit:contain;flex-shrink:0;display:block}
+.org-badge.org-badge--link{cursor:pointer}
+.org-badge.org-badge--link:hover{border-color:var(--vermillion);color:var(--vermillion);transform:translateY(-2px);box-shadow:0 4px 12px rgba(232,65,50,.12)}
+.org-badge.org-badge--link:focus-visible{outline:3px solid var(--vermillion);outline-offset:2px}
 .awards-band{background:var(--blush);padding:96px 0}
 .awards-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
 .awards-head h2{margin-bottom:0}

@@ -569,6 +569,17 @@ collections:
               - { label: "Location", name: "location", widget: "string", required: false }
               - { label: "Description", name: "description", widget: "text" }
               - { label: "Tag (optional)", name: "chip", widget: "string", required: false }
+              - label: "Organisation badges (optional)"
+                name: "badges"
+                widget: "list"
+                required: false
+                collapsed: true
+                label_singular: "Badge"
+                hint: "Pill badges shown beneath the role title — add the organisation(s) you served at, partners, or certifying bodies. Logo is optional."
+                fields:
+                  - { label: "Organisation name", name: "name", widget: "string" }
+                  - { label: "Logo", name: "logo", widget: "image", required: false, hint: "PNG or SVG with transparent background — displayed at 18px height inside the pill." }
+                  - { label: "Link (optional)", name: "url", widget: "string", required: false, hint: "Organisation website — makes the badge clickable." }
 
           - label: "2 · Recognition & awards showcase"
             name: "awards"

@@ -289,6 +289,20 @@
     }).join('');
   }
 
+  function renderOrgBadges(badges) {
+    if (!badges || !badges.length) return '';
+    var pills = badges.map(function (b) {
+      if (!b.name) return '';
+      var logo = b.logo ? '<img src="' + esc(b.logo) + '" alt="">' : '';
+      var label = '<span>' + esc(b.name) + '</span>';
+      if (b.url) {
+        return '<a class="org-badge org-badge--link" href="' + esc(b.url) + '" target="_blank" rel="noopener">' + logo + label + '</a>';
+      }
+      return '<span class="org-badge">' + logo + label + '</span>';
+    }).filter(Boolean).join('');
+    return pills ? '<div class="org-badges">' + pills + '</div>' : '';
+  }
+
   function renderTimeline(container, items) {
     container.innerHTML = '<ol class="timeline-list">'
       + items.map(function (item) {
@@ -299,6 +313,7 @@
           + '<h3>' + esc(item.title)
           + (item.location ? '<span class="loc-chip">' + esc(item.location) + '</span>' : '')
           + '</h3>'
+          + renderOrgBadges(item.badges)
           + '<p>' + esc(item.description) + '</p>'
           + (item.chip ? '<span class="chip">' + esc(item.chip) + '</span>' : '')
           + '</div></li>';
