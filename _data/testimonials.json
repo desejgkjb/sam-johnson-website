@@ -1,13 +1,24 @@
 {
   "testimonials": [
     {
+      "quote": "\"Some of our most remarkable feats of leadership in New Zealand have been carried out by ordinary people.  People like Sam Johnson who organised the Student Volunteer Army in the wake of the Christchurch earthquakes.\"",
+      "author": "Lt Gen The Rt Hon Sir Jerry Mateparae, GNZM, QSO",
+      "title": "Former Governor-General of New Zealand",
+      "organisation": "",
+      "photo": "/images/screenshot-2026-06-13-at-2.08.44 pm.png",
+      "prominent": false,
+      "featured": false,
+      "background": "/images/screenshot-2026-06-13-at-2.07.37 pm.png"
+    },
+    {
       "quote": "\"This young man mobilised the Student Army… and made a huge impression on New Zealand.\"",
       "author": "Paula Bennett",
       "title": "NZ Youth Affairs Minister",
       "organisation": "",
       "photo": "/images/images-1-.jpeg",
       "prominent": false,
-      "featured": false
+      "featured": false,
+      "background": "/images/screenshot-2026-06-13-at-1.59.01 pm.png"
     },
     {
       "quote": "\"Sam Johnson demonstrates incredible strength and leadership capabilities well beyond age.\"",
@@ -19,13 +30,13 @@
       "featured": false
     },
     {
-      "quote": "“Just hours after the September 2010 earthquake… Sam Johnson put out a Facebook plea for volunteers.”",
-      "author": "Sally Blundell",
-      "title": "New Zealand Geographic",
-      "organisation": "",
-      "photo": "/images/download-1-.jpeg",
       "prominent": false,
-      "featured": false
+      "featured": false,
+      "quote": "“A recognised civic entrepreneur and advocate for the role of volunteers and young people in society.”",
+      "author": "University of Cantebury",
+      "background": "/images/screenshot-2026-06-13-at-2.20.26 pm.png",
+      "photo": "/images/canterbury_idgptea7jp_0.png",
+      "title": "Official Website"
     }
   ]
 }
