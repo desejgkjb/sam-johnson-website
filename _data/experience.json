@@ -38,49 +38,59 @@
       "title": "Trustee",
       "location": "",
       "description": "The Plunket Foundation is a stand alone Philanthropic Trust, established by Plunket with generous support from Karitane Products Society (KPS) Limited.\n\nThe mandate is simple:\n\nTo build an independent, sustainable, world class children’s endowment fund focused on helping New Zealand communities ‘Grow Great Kiwi Kids’ today, tomorrow, and into the future.\n\nA total of 7 prominent New Zealanders, all passionate about providing children with the best start in life, act as Trustees and sit on the Plunket Foundation Board which is chaired by former New Zealander of the Year, Sir Ray Avery GNZM.",
-      "chip": ""
+      "chip": "",
+      "badges": [
+        {
+          "logo": "/images/screenshot-2026-06-13-at-3.37.55 pm.png",
+          "name": "The Plunket Foundation"
+        }
+      ]
     },
     {
       "year": "2016 - 2017",
       "description": "WeVisit is a social connection service that matches a trusted young person to visit elderly loved ones when you can't make it. 'Just because you're apart, doesn't mean they have to be alone.' The service is specifically designed for expats and those living busy lives. We visit, help out with odd jobs and share memories of our visit back with your family. www.wevisit.co.nz \n\n",
       "title": "Co-Founder",
-      "location": "Christchurch, New Zealand"
+      "location": "Christchurch, New Zealand",
+      "badges": [
+        {
+          "logo": "/images/screenshot-2026-06-13-at-3.35.39 pm.png"
+        }
+      ]
     },
     {
       "year": "2011 - 2018",
       "title": "Advisory Trustee",
       "location": "",
       "description": "The Pacific Development and Conservation Trust was established by the New Zealand Government on 23 May 1989. Funding of $3.2 million was received from France in recognition of the events surrounding the destruction of the Greenpeace 'Rainbow Warrior' ship in Auckland Harbour on 10 July 1985.",
-      "chip": ""
+      "chip": "",
+      "badges": [
+        {
+          "logo": "/images/screenshot-2026-06-13-at-3.36.22 pm.png"
+        }
+      ]
     },
     {
       "year": "2017 - 2018",
       "title": "Head of Community",
       "location": "Auckland, New Zealand",
-      "description": "Led initiatives to redesign home-care services around human connection, community engagement, and choice. Following the merger of WeVisit with Mycare, Sam helped develop innovative approaches to reducing social isolation and improving support for older New Zealanders."
-    },
-    {
-      "year": "2019 - 2023",
-      "title": "Chief Executive",
-      "location": "Auckland, New Zealand",
-      "description": "As Chief Executive of the Student Volunteer Army, Sam scaled a moment of collective action into one of New Zealand’s most recognised youth service movements, building programmes that connected thousands of young people with practical opportunities to serve their communities.",
+      "description": "Led initiatives to redesign home-care services around human connection, community engagement, and choice. Following the merger of WeVisit with Mycare, Sam helped develop innovative approaches to reducing social isolation and improving support for older New Zealanders.",
       "badges": [
         {
-          "name": "Student Volunteer Army",
-          "url": "https://www.sva.org.nz"
+          "logo": "/images/screenshot-2026-06-13-at-3.35.39 pm.png"
         }
       ]
     },
     {
       "year": "2011 - Present",
-      "title": "Chair, Student Volunteer Army",
+      "title": "Founder and Chair, Student Volunteer Army",
       "location": "Christchurch, New Zealand",
       "description": "After the February earthquake, Sam mobilised students through social media to clear liquefaction silt across the city. What began as one Facebook event became a coordinated volunteer force.",
       "chip": "11,000 volunteers",
       "badges": [
         {
           "name": "Student Volunteer Army",
-          "url": "https://www.sva.org.nz"
+          "url": "https://www.sva.org.nz",
+          "logo": "/images/emblem-orange.png"
         }
       ]
     },
