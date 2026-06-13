@@ -127,6 +127,36 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
   .vp-content{opacity:1;transform:none}
 }
 
+/* Sam's Journey — cinematic three-panel chapter selector */
+.journey{background:#0D0B0A;overflow:hidden}
+.journey-head{padding:96px 24px 72px;text-align:center;max-width:780px;margin:0 auto}
+.journey-head h2{color:var(--white);font-size:clamp(30px,3.5vw,50px);font-weight:700;letter-spacing:-.02em;margin-bottom:20px;line-height:1.12}
+.journey-head p{color:rgba(255,255,255,.68);font-size:clamp(16px,1.2vw,18px);line-height:1.7;max-width:56ch;margin:0 auto}
+.journey-panels{display:grid;grid-template-columns:repeat(3,1fr);height:clamp(520px,78vh,780px)}
+.journey-panel{position:relative;overflow:hidden;cursor:pointer;display:flex;align-items:flex-end;isolation:isolate;text-decoration:none;outline-offset:-3px;border-right:1px solid rgba(255,255,255,.07)}
+.journey-panel:last-child{border-right:none}
+.jp-bg{position:absolute;inset:0;background:#26221F center/cover no-repeat;transform:scale(1.08);transition:transform 7s cubic-bezier(.16,.6,.2,1);will-change:transform;z-index:-2}
+.journey-panel:hover .jp-bg{transform:scale(1.14);transition-duration:5s}
+.jp-overlay{position:absolute;inset:0;z-index:-1;background:linear-gradient(0deg,rgba(10,8,7,.92) 0%,rgba(10,8,7,.6) 45%,rgba(10,8,7,.28) 100%);transition:background .6s ease}
+.journey-panel:hover .jp-overlay{background:linear-gradient(0deg,rgba(10,8,7,.82) 0%,rgba(10,8,7,.42) 45%,rgba(10,8,7,.14) 100%)}
+.jp-content{padding:clamp(28px,3vw,48px);transform:translateY(6px);transition:transform .6s cubic-bezier(.2,.6,.2,1)}
+.journey-panel:hover .jp-content{transform:translateY(-10px)}
+.jp-num{display:flex;align-items:center;gap:12px;font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--vermillion);margin-bottom:14px}
+.jp-num::before{content:"";width:32px;height:2px;background:var(--vermillion);flex-shrink:0}
+.jp-content h3{color:var(--white);font-size:clamp(20px,2vw,30px);font-weight:700;line-height:1.12;letter-spacing:-.02em;margin-bottom:12px;text-wrap:balance}
+.jp-content p{color:rgba(255,255,255,.72);font-size:clamp(14px,.9vw,15px);line-height:1.65;margin-bottom:20px;max-width:28ch}
+.jp-cta{display:inline-flex;align-items:center;gap:8px;font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--vermillion);opacity:0;transform:translateX(-8px);transition:opacity .4s ease .1s,transform .4s ease .1s}
+.journey-panel:hover .jp-cta{opacity:1;transform:translateX(0)}
+.journey-panel:focus-visible{outline:3px solid var(--vermillion)}
+/* Scroll offset so fixed nav doesn't cover chapters on anchor jump */
+.chapter-panel{scroll-margin-top:84px}
+@media (prefers-reduced-motion:reduce){
+  .jp-bg{transform:none}
+  .jp-content{transform:none}
+  .jp-bg,.jp-content,.jp-overlay,.jp-cta{transition:none}
+  .jp-cta{opacity:1;transform:none}
+}
+
 /* About page — cinematic quote section */
 .quote-cinema{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;padding:120px 24px;overflow:hidden;background:#1A1817 center/cover no-repeat}
 .quote-cinema .hero-photo-note{position:absolute;top:96px;left:0;right:0;text-align:center;z-index:1;font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45)}
@@ -486,6 +516,11 @@ a,button{-webkit-tap-highlight-color:transparent}
   .contact-grid{grid-template-columns:1fr;gap:48px}
   .awards-nav{display:none}
   .award-poster{flex:0 0 280px;min-height:430px}
+  .journey-panels{grid-template-columns:1fr;height:auto}
+  .journey-panel{min-height:300px;border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
+  .journey-panel:last-child{border-bottom:none}
+  .jp-cta{opacity:1;transform:none}
+  .journey-head{padding:72px 24px 56px}
   .explore-hub{padding:64px 20px}
   .explore-grid{grid-template-columns:1fr;gap:24px}
   .explore-card{min-height:420px}

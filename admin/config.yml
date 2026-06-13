@@ -243,6 +243,50 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
+              - { label: "Journey overview — section heading", name: "journey_heading", widget: "string", required: false, hint: "e.g. Three Chapters. One Purpose." }
+              - { label: "Journey overview — supporting text", name: "journey_subheading", widget: "text", required: false, hint: "One sentence shown under the heading." }
+              - { label: "Journey panel 1 — heading", name: "journey_1_heading", widget: "string", required: false }
+              - { label: "Journey panel 1 — supporting copy", name: "journey_1_copy", widget: "string", required: false, hint: "Short teaser — two or three phrases only." }
+              - { label: "Journey panel 1 — background photo", name: "journey_1_image", widget: "image", required: false, hint: "Christchurch / early SVA imagery. Fills the panel behind the text." }
+              - label: "Journey panel 1 — crop focus"
+                name: "journey_1_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep heads in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - { label: "Journey panel 2 — heading", name: "journey_2_heading", widget: "string", required: false }
+              - { label: "Journey panel 2 — supporting copy", name: "journey_2_copy", widget: "string", required: false, hint: "Short teaser — two or three phrases only." }
+              - { label: "Journey panel 2 — background photo", name: "journey_2_image", widget: "image", required: false, hint: "International SVA work, disaster response, or community leadership imagery." }
+              - label: "Journey panel 2 — crop focus"
+                name: "journey_2_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep heads in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - { label: "Journey panel 3 — heading", name: "journey_3_heading", widget: "string", required: false }
+              - { label: "Journey panel 3 — supporting copy", name: "journey_3_copy", widget: "string", required: false, hint: "Short teaser — two or three phrases only." }
+              - { label: "Journey panel 3 — background photo", name: "journey_3_image", widget: "image", required: false, hint: "Contemporary photo of Sam (STILL, speaking, governance)." }
+              - label: "Journey panel 3 — crop focus"
+                name: "journey_3_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep face in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
               - { label: "Chapter 01 (Origin story) — heading", name: "origin_heading", widget: "string" }
               - { label: "Chapter 01 — short body copy", name: "origin_intro", widget: "text", hint: "Two or three short sentences shown over the photo" }
               - { label: "Chapter 01 — highlighted line", name: "origin_quote", widget: "string", required: false, hint: "Bold line with a red accent, e.g. 'Eleven thousand student volunteers answered.'" }
@@ -258,11 +302,26 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
-              - { label: "Chapter 02 (Where Sam is today) — heading", name: "today_heading", widget: "string", required: false }
-              - { label: "Chapter 02 — short body copy", name: "today_intro", widget: "text", required: false, hint: "Two or three short sentences shown over the photo" }
-              - { label: "Chapter 02 — role line", name: "today_role", widget: "string", required: false, hint: "Small red detail line, e.g. 'Projects Director — STILL'" }
-              - { label: "Chapter 02 — background photo", name: "today_image", widget: "image", required: false, hint: "Contemporary photo of Sam (leadership, projects, governance, STILL). Fills the whole panel." }
+              - { label: "Chapter 02 (International) — heading", name: "international_heading", widget: "string", required: false }
+              - { label: "Chapter 02 — short body copy", name: "international_intro", widget: "text", required: false, hint: "Two or three short sentences shown over the photo" }
+              - { label: "Chapter 02 — highlighted line", name: "international_quote", widget: "string", required: false, hint: "Bold line with a red accent, e.g. 'From local streets to global stages.'" }
+              - { label: "Chapter 02 — background photo", name: "international_image", widget: "image", required: false, hint: "International SVA work, disaster response, overseas projects, or global leadership imagery." }
               - label: "Chapter 02 photo — crop focus"
+                name: "international_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep heads in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - { label: "Chapter 03 (Where Sam is today) — heading", name: "today_heading", widget: "string", required: false }
+              - { label: "Chapter 03 — short body copy", name: "today_intro", widget: "text", required: false, hint: "Two or three short sentences shown over the photo" }
+              - { label: "Chapter 03 — role line", name: "today_role", widget: "string", required: false, hint: "Small red detail line, e.g. 'Projects Director — STILL'" }
+              - { label: "Chapter 03 — background photo", name: "today_image", widget: "image", required: false, hint: "Contemporary photo of Sam (leadership, projects, governance, STILL). Fills the whole panel." }
+              - label: "Chapter 03 photo — crop focus"
                 name: "today_image_position"
                 widget: "select"
                 required: false
