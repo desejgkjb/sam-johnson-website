@@ -13,7 +13,29 @@
     "portrait": "/images/68ed75be-8b16-46a2-8db9-8de1847d3c0a.jpg",
     "quote_avatar": "/images/sam-j-headshot.png",
     "portrait_aspect": "4/5",
-    "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now."
+    "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now.",
+    "origin_kicker": "Chapter One · Christchurch, February 2011",
+    "origin_caption": "Christchurch, Aotearoa New Zealand — 2011",
+    "origin_quote": "Eleven thousand volunteers answered.",
+    "origin_quote_meta": "The Student Volunteer Army was born.",
+    "origin_milestones": [
+      {
+        "label": "The earthquake",
+        "meta": "22 February 2011 — Christchurch breaks apart"
+      },
+      {
+        "label": "The Facebook post",
+        "meta": "One student calls for shovels"
+      },
+      {
+        "label": "11,000 volunteers",
+        "meta": "A generation shows up"
+      },
+      {
+        "label": "The SVA is born",
+        "meta": "A movement, not a moment"
+      }
+    ]
   },
   "copy": {
     "hub_projects_image": "/images/sj-profile-2.jpg",

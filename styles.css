@@ -90,6 +90,37 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
 .about h2{margin-bottom:24px}
 .about p{max-width:620px;margin-bottom:20px}
 .about .img-placeholder{aspect-ratio:4/5;border-radius:8px}
+
+/* Origin story — editorial chapter */
+.origin{background:var(--white);padding:140px 0 0;overflow:hidden}
+.origin-head{max-width:980px}
+.origin-head .section-label{margin-bottom:22px}
+.origin-title{font-size:clamp(48px,7vw,104px);font-weight:700;line-height:.98;letter-spacing:-.03em;color:var(--charcoal);margin-bottom:0}
+.origin-milestones{list-style:none;display:grid;grid-template-columns:repeat(4,1fr);gap:36px;margin:88px 0 104px}
+.origin-milestones li{border-top:2px solid rgba(45,45,45,.12);padding-top:22px;position:relative}
+.origin-milestones li::before{content:"";position:absolute;top:-2px;left:0;width:44px;height:2px;background:var(--vermillion)}
+.om-step{display:block;font-size:13px;font-weight:600;letter-spacing:.16em;color:var(--vermillion);margin-bottom:12px}
+.origin-milestones strong{display:block;font-size:clamp(19px,1.7vw,24px);font-weight:700;line-height:1.2;letter-spacing:-.01em;color:var(--charcoal);margin-bottom:8px}
+.om-meta{display:block;font-size:14px;line-height:1.5;color:var(--mid-grey)}
+.origin-milestones li.reveal-in{transition-delay:0s}
+.origin-milestones li:nth-child(2).reveal-in{transition-delay:.12s}
+.origin-milestones li:nth-child(3).reveal-in{transition-delay:.24s}
+.origin-milestones li:nth-child(4).reveal-in{transition-delay:.36s}
+.origin-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(48px,7vw,110px);align-items:start}
+.origin-body p{font-size:17.5px;line-height:1.8;color:var(--charcoal);max-width:58ch;margin-bottom:26px}
+.origin-body p:first-child{font-size:clamp(19px,1.6vw,22px);line-height:1.7}
+.origin-body p:first-child::first-letter{float:left;font-size:86px;line-height:.78;font-weight:700;color:var(--vermillion);padding:10px 14px 0 0}
+.origin-photo{margin:64px 0 0;position:relative}
+.origin-photo::before{content:"";position:absolute;top:-22px;right:-22px;bottom:42px;left:22px;border:2px solid var(--blush-deep);z-index:0;pointer-events:none}
+.origin-photo-media{position:relative;z-index:1;aspect-ratio:4/5}
+.origin-photo .img-frame{border-radius:0!important}
+.origin-photo figcaption{position:relative;z-index:1;display:flex;align-items:center;gap:12px;margin-top:18px;font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--mid-grey)}
+.origin-photo figcaption::before{content:"";width:34px;height:2px;background:var(--vermillion);flex-shrink:0}
+.origin-pull{padding:150px 0 160px;text-align:left}
+.origin-pull blockquote{font-size:clamp(40px,6vw,96px);font-weight:700;line-height:1.02;letter-spacing:-.03em;color:var(--charcoal);max-width:1080px;text-wrap:balance}
+.origin-pull blockquote::before{content:"“";display:block;font-size:clamp(64px,7vw,110px);line-height:.6;color:var(--vermillion);margin-bottom:26px}
+.origin-pull-meta{display:inline-flex;align-items:center;gap:14px;margin-top:38px;font-size:14px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--vermillion)}
+.origin-pull-meta::before{content:"";width:44px;height:2px;background:var(--vermillion)}
 /* Values — cinematic editorial panels */
 .values{background:#141211;padding:128px 0 0;color:var(--white);overflow:hidden}
 .values .values-head{padding-bottom:88px}
@@ -450,6 +481,13 @@ a,button{-webkit-tap-highlight-color:transparent}
   .about-hero-inner{padding:0 24px}
   .about-grid{grid-template-columns:1fr;gap:40px}
   .about .img-placeholder{order:-1}
+  .origin{padding:96px 0 0}
+  .origin-milestones{grid-template-columns:1fr 1fr;gap:28px;margin:56px 0 64px}
+  .origin-grid{grid-template-columns:1fr;gap:56px}
+  .origin-photo{order:-1;margin:0 0 8px}
+  .origin-photo::before{top:-14px;right:-12px;bottom:50px;left:14px}
+  .origin-body p:first-child::first-letter{font-size:62px}
+  .origin-pull{padding:96px 0 104px}
   .stat-grid{grid-template-columns:1fr;gap:40px}
   .card-grid,.card-grid-2,.awards-grid{grid-template-columns:1fr}
   .values{padding:88px 0 0}

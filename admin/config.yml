@@ -243,8 +243,21 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
+              - { label: "Origin story — chapter kicker", name: "origin_kicker", widget: "string", required: false, hint: "Small red label above the heading, e.g. 'Chapter One · Christchurch, February 2011'" }
               - { label: "Origin story heading", name: "origin_heading", widget: "string" }
               - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
+              - label: "Origin story — milestones"
+                name: "origin_milestones"
+                widget: "list"
+                label_singular: "Milestone"
+                required: false
+                hint: "The story beats shown as a numbered progression (e.g. The earthquake → The Facebook post → 11,000 volunteers → The SVA is born)."
+                fields:
+                  - { label: "Milestone", name: "label", widget: "string" }
+                  - { label: "Small detail line", name: "meta", widget: "string", required: false }
+              - { label: "Origin story — photo caption", name: "origin_caption", widget: "string", required: false, hint: "Small archival caption under the documentary photo" }
+              - { label: "Origin story — pull quote", name: "origin_quote", widget: "string", required: false, hint: "Displayed at huge editorial scale, e.g. 'Eleven thousand volunteers answered.'" }
+              - { label: "Origin story — pull quote detail line", name: "origin_quote_meta", widget: "string", required: false, hint: "Small red line under the pull quote" }
               - { label: "Quote section — quote text", name: "quote", widget: "text", hint: "Displays at huge cinematic scale over the photo — keep it tight. Quote marks are added automatically." }
               - { label: "Quote section — name", name: "quote_cite", widget: "string" }
               - { label: "Quote section — title / role", name: "quote_role", widget: "string", required: false, hint: "e.g. Founder, Student Volunteer Army" }

@@ -181,11 +181,11 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   update();
 })();
 
-/* Scroll reveal — elements with [data-reveal] fade and lift in */
+/* Scroll reveal — elements with [data-reveal] fade and lift in.
+   Re-scans after the CMS loader injects content (cms:data event). */
 (function () {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const els = document.querySelectorAll('[data-reveal]');
-  if (!els.length || !('IntersectionObserver' in window)) return;
+  if (!('IntersectionObserver' in window)) return;
   const io = new IntersectionObserver((entries) => {
     entries.forEach((en) => {
       if (en.isIntersecting) {
@@ -194,10 +194,14 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
       }
     });
   }, { threshold: 0.15 });
-  els.forEach((el) => {
-    el.classList.add('reveal-init');
-    io.observe(el);
-  });
+  function scan() {
+    document.querySelectorAll('[data-reveal]:not(.reveal-watched)').forEach((el) => {
+      el.classList.add('reveal-watched', 'reveal-init');
+      io.observe(el);
+    });
+  }
+  scan();
+  document.addEventListener('cms:data', scan);
 })();
 
 /* Values panels — cinematic scroll reveal (re-runs after the CMS render) */
