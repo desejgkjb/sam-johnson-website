@@ -8,7 +8,8 @@
       "badges": [
         {
           "name": "Christchurch City Council",
-          "url": "https://www.ccc.govt.nz"
+          "url": "https://www.ccc.govt.nz",
+          "logo": "/images/screenshot-2026-06-13-at-3.40.42 pm.png"
         }
       ]
     },
@@ -24,14 +25,25 @@
       "title": "Trustee",
       "location": "Philippines",
       "description": "Ministry of Awesome is the starting point for people wanting to achieve new projects or ventures in Christchurch. We are an enabler, do-er and champion of and for awesome. We connect awesome ideas with the resources to turn them into reality -- people, funding, mentors, government entry points and enthusiasm, all with the aim of rippling awesome through our community to strengthen, encourage and inspire.",
-      "chip": ""
+      "chip": "",
+      "badges": [
+        {
+          "logo": "/images/screenshot-2026-06-13-at-3.42.05 pm.png"
+        }
+      ]
     },
     {
       "year": "2015",
       "title": "Consultant",
       "location": "New York City Metropolitan Area",
       "description": "Veracity Worldwide is the premium advisor on political, reputation and corruption risks in opaque markets.",
-      "chip": ""
+      "chip": "",
+      "badges": [
+        {
+          "logo": "/images/screenshot-2026-06-13-at-3.42.59 pm.png",
+          "name": "Veracity Worldwide"
+        }
+      ]
     },
     {
       "year": "2014-2016",
