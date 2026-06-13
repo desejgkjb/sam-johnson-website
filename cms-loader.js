@@ -277,7 +277,8 @@
       var initial = (t.author || '?').charAt(0).toUpperCase();
       return '<button type="button" class="endorse-profile'
         + (t.prominent ? ' prominent' : '') + (i === 0 ? ' active' : '')
-        + '" data-quote="' + esc(t.quote) + '">'
+        + '" data-quote="' + esc(t.quote) + '"'
+        + (t.background ? ' data-bg="' + esc(t.background) + '"' : '') + '>'
         + (t.photo
             ? '<img src="' + esc(t.photo) + '" alt="">'
             : '<span class="endorse-avatar" aria-hidden="true">' + esc(initial) + '</span>')
@@ -323,18 +324,6 @@
       return a.url
         ? '<a class="award-poster" href="' + esc(a.url) + '" target="_blank" rel="noopener">' + inner + '</a>'
         : '<div class="award-poster">' + inner + '</div>';
-    }).join('');
-  }
-
-  // Origin story — milestone progression (CMS list, staggered reveal)
-  function renderOriginMilestones(container, items) {
-    container.innerHTML = items.map(function (m, i) {
-      var num = ('0' + (i + 1)).slice(-2);
-      return '<li data-reveal>'
-        + '<span class="om-step">' + num + '</span>'
-        + '<strong>' + esc(m.label) + '</strong>'
-        + (m.meta ? '<span class="om-meta">' + esc(m.meta) + '</span>' : '')
-        + '</li>';
     }).join('');
   }
 
@@ -441,11 +430,6 @@
 
     el = document.getElementById('cms-awards');
     if (el && data.awards) renderAwards(el, data.awards);
-
-    el = document.getElementById('cms-origin-milestones');
-    if (el && data.about_full && data.about_full.origin_milestones && data.about_full.origin_milestones.length) {
-      renderOriginMilestones(el, data.about_full.origin_milestones);
-    }
 
     el = document.getElementById('cms-values');
     if (el && data.pages && data.pages.about && data.pages.about.values) {

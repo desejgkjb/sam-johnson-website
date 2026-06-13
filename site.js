@@ -204,14 +204,14 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   document.addEventListener('cms:data', scan);
 })();
 
-/* Values panels — cinematic scroll reveal (re-runs after the CMS render) */
+/* Cinematic panels (values + story chapters) — scroll reveal (re-runs after the CMS render) */
 (function () {
   const container = document.getElementById('cms-values');
-  if (!container) return;
+  if (!container && !document.querySelector('.value-panel')) return;
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   function observe() {
-    const panels = container.querySelectorAll('.value-panel:not(.vp-watched)');
+    const panels = document.querySelectorAll('.value-panel:not(.vp-watched)');
     if (!panels.length) return;
     if (reduced || !('IntersectionObserver' in window)) {
       panels.forEach(function (p) { p.classList.add('vp-watched', 'vp-in'); });
@@ -231,7 +231,7 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
     });
   }
 
-  new MutationObserver(observe).observe(container, { childList: true });
+  if (container) new MutationObserver(observe).observe(container, { childList: true });
   observe();
 })();
 
@@ -284,10 +284,43 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Per-testimonial background image — two layers crossfade behind the section */
+  const sec = row.closest('.testimonials');
+  const bgA = document.getElementById('endorseBgA');
+  const bgB = document.getElementById('endorseBgB');
+  let bgCurrent = null;
+  let frontIsA = false;
+
+  function setBg(url) {
+    if (!bgA || !bgB || !sec) return;
+    url = url || '';
+    if (url === bgCurrent) return;
+    bgCurrent = url;
+    if (!url) {
+      bgA.classList.remove('visible');
+      bgB.classList.remove('visible');
+      sec.classList.remove('has-bg');
+      return;
+    }
+    const img = new Image();
+    img.onload = function () {
+      if (bgCurrent !== url) return; // a newer selection superseded this one
+      const front = frontIsA ? bgA : bgB;
+      const back = frontIsA ? bgB : bgA;
+      back.style.backgroundImage = 'url(' + url + ')';
+      back.classList.add('visible');
+      front.classList.remove('visible');
+      frontIsA = !frontIsA;
+      sec.classList.add('has-bg');
+    };
+    img.src = url;
+  }
+
   function activate(btn, instant) {
     row.querySelectorAll('.endorse-profile').forEach(function (b) {
       b.classList.toggle('active', b === btn);
     });
+    setBg(btn.dataset.bg);
     const text = btn.dataset.quote || '';
     const apply = function () {
       // Show curly quotes unless the quote already includes its own

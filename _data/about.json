@@ -2,40 +2,26 @@
   "about_full": {
     "heading": "Who is Sam Johnson?",
     "subheading": "Sam Johnson is a Civic Entrepreneur - a career focused on identifying opportunities that create value for society and enhance common well-being. ",
-    "origin_heading": "The origin story",
+    "origin_heading": "The Origin Story",
     "portrait_position": "top",
     "portrait_fit": "cover",
     "hero_position": "left",
     "hero_image": "/images/9tzi8ywrz924xe3uhad6dz3ef-idboiylviror5vlqusezyzbm-su0zjmnnqdfql8yk4r-ht43oxrl86vwi5if7k1tzfvp_gwcls2ai-jhhzxbddwmksawlkizr89ush01cbbnl6idzfuiemmrbkn1jwcmtmywb2xu9uxsf640elyfm4gy2xhxibfpqd8vaduax0fypexv3pcmjdtkt0q6dak0fgpfybxhzmxnr0bvtnvrz.webp",
     "quote_image": "/images/sam-.jpeg",
     "quote_cite": "Sam Johnson",
-    "origin_body": "<p>In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart while thousands of young people were being told to stay out of the way. He disagreed. Using Facebook, he called on students to grab shovels and help dig the city out of liquefaction silt.</p>\n\n<p>Eleven thousand student volunteers answered. The Student Volunteer Army was born, proving that young people, when given trust and a practical task, will show up in extraordinary numbers.</p>\n\n<p>In the years since, Sam has carried that lesson into disaster zones in Japan, the Philippines, Vanuatu and Nepal, and into classrooms, boardrooms and parliaments across the Pacific, Saudi Arabia, Brazil and the United States. His work has been recognised with the Young New Zealander of the Year award, Communicator of the Year, and the Sir Peter Blake Leadership Award.</p>\n\n<p>His vision today remains the same as it was in 2011 and he continues to inspire the new generation of volunteers!</p>",
     "portrait": "/images/68ed75be-8b16-46a2-8db9-8de1847d3c0a.jpg",
     "quote_avatar": "/images/sam-j-headshot.png",
     "portrait_aspect": "4/5",
     "quote": "Young people aren't the leaders of tomorrow. Given a shovel and some trust, they are the leaders of right now.",
-    "origin_kicker": "Chapter One · Christchurch, February 2011",
-    "origin_caption": "Christchurch, Aotearoa New Zealand — 2011",
-    "origin_quote": "Eleven thousand volunteers answered.",
-    "origin_quote_meta": "The Student Volunteer Army was born.",
-    "origin_milestones": [
-      {
-        "label": "The earthquake",
-        "meta": "22 February 2011 — Christchurch breaks apart"
-      },
-      {
-        "label": "The Facebook post",
-        "meta": "One student calls for shovels"
-      },
-      {
-        "label": "11,000 volunteers",
-        "meta": "A generation shows up"
-      },
-      {
-        "label": "The SVA is born",
-        "meta": "A movement, not a moment"
-      }
-    ]
+    "origin_quote": "Eleven thousand student volunteers answered.",
+    "origin_intro": "In February 2011, a devastating earthquake struck Christchurch. Sam Johnson was a university student watching his city break apart while thousands of young people were being told to stay out of the way. He disagreed.",
+    "origin_image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
+    "origin_image_position": "center",
+    "today_heading": "Where Sam Is Today",
+    "today_intro": "Sam is the Projects Director at STILL, a family office venture founded by Hideaki Fukutake. Through STILL, he works on projects that amplify the fundamentals of human nature, with a focus on people, nature, arts, and culture.",
+    "today_role": "Projects Director — STILL",
+    "today_image": "/images/sj-profile-2.jpg",
+    "today_image_position": "center"
   },
   "copy": {
     "hub_projects_image": "/images/sj-profile-2.jpg",

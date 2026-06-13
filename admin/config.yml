@@ -243,21 +243,36 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
-              - { label: "Origin story — chapter kicker", name: "origin_kicker", widget: "string", required: false, hint: "Small red label above the heading, e.g. 'Chapter One · Christchurch, February 2011'" }
-              - { label: "Origin story heading", name: "origin_heading", widget: "string" }
-              - { label: "Origin story body (HTML)", name: "origin_body", widget: "markdown" }
-              - label: "Origin story — milestones"
-                name: "origin_milestones"
-                widget: "list"
-                label_singular: "Milestone"
+              - { label: "Chapter 01 (Origin story) — heading", name: "origin_heading", widget: "string" }
+              - { label: "Chapter 01 — short body copy", name: "origin_intro", widget: "text", hint: "Two or three short sentences shown over the photo" }
+              - { label: "Chapter 01 — highlighted line", name: "origin_quote", widget: "string", required: false, hint: "Bold line with a red accent, e.g. 'Eleven thousand student volunteers answered.'" }
+              - { label: "Chapter 01 — background photo", name: "origin_image", widget: "image", required: false, hint: "Full-width documentary photo (early SVA / Christchurch). Fills the whole panel behind the text." }
+              - label: "Chapter 01 photo — crop focus"
+                name: "origin_image_position"
+                widget: "select"
                 required: false
-                hint: "The story beats shown as a numbered progression (e.g. The earthquake → The Facebook post → 11,000 volunteers → The SVA is born)."
-                fields:
-                  - { label: "Milestone", name: "label", widget: "string" }
-                  - { label: "Small detail line", name: "meta", widget: "string", required: false }
-              - { label: "Origin story — photo caption", name: "origin_caption", widget: "string", required: false, hint: "Small archival caption under the documentary photo" }
-              - { label: "Origin story — pull quote", name: "origin_quote", widget: "string", required: false, hint: "Displayed at huge editorial scale, e.g. 'Eleven thousand volunteers answered.'" }
-              - { label: "Origin story — pull quote detail line", name: "origin_quote_meta", widget: "string", required: false, hint: "Small red line under the pull quote" }
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep heads in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
+              - { label: "Chapter 02 (Where Sam is today) — heading", name: "today_heading", widget: "string", required: false }
+              - { label: "Chapter 02 — short body copy", name: "today_intro", widget: "text", required: false, hint: "Two or three short sentences shown over the photo" }
+              - { label: "Chapter 02 — role line", name: "today_role", widget: "string", required: false, hint: "Small red detail line, e.g. 'Projects Director — STILL'" }
+              - { label: "Chapter 02 — background photo", name: "today_image", widget: "image", required: false, hint: "Contemporary photo of Sam (leadership, projects, governance, STILL). Fills the whole panel." }
+              - label: "Chapter 02 photo — crop focus"
+                name: "today_image_position"
+                widget: "select"
+                required: false
+                default: "center"
+                options:
+                  - { label: "Centre", value: "center" }
+                  - { label: "Top (keep face in frame)", value: "top" }
+                  - { label: "Bottom", value: "bottom" }
+                  - { label: "Left", value: "left" }
+                  - { label: "Right", value: "right" }
               - { label: "Quote section — quote text", name: "quote", widget: "text", hint: "Displays at huge cinematic scale over the photo — keep it tight. Quote marks are added automatically." }
               - { label: "Quote section — name", name: "quote_cite", widget: "string" }
               - { label: "Quote section — title / role", name: "quote_role", widget: "string", required: false, hint: "e.g. Founder, Student Volunteer Army" }
@@ -274,36 +289,6 @@ collections:
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
               - { label: "Quote section — small profile photo", name: "quote_avatar", widget: "image", required: false, hint: "Circular headshot under the quote" }
-              - { label: "Portrait photo", name: "portrait", widget: "image", required: false, hint: "Upload or pick from media library to replace." }
-              - label: "Portrait — shape / size"
-                name: "portrait_aspect"
-                widget: "select"
-                required: false
-                default: "4/5"
-                options:
-                  - { label: "Portrait 4:5 (default)", value: "4/5" }
-                  - { label: "Square 1:1", value: "1/1" }
-                  - { label: "Portrait 3:4", value: "3/4" }
-                  - { label: "Landscape 16:10", value: "16/10" }
-              - label: "Portrait — fit"
-                name: "portrait_fit"
-                widget: "select"
-                required: false
-                default: "cover"
-                options:
-                  - { label: "Fill the frame (crops edges)", value: "cover" }
-                  - { label: "Show whole photo (may leave gaps)", value: "contain" }
-              - label: "Portrait — crop focus"
-                name: "portrait_position"
-                widget: "select"
-                required: false
-                default: "center"
-                options:
-                  - { label: "Centre", value: "center" }
-                  - { label: "Top (keep head in frame)", value: "top" }
-                  - { label: "Bottom", value: "bottom" }
-                  - { label: "Left", value: "left" }
-                  - { label: "Right", value: "right" }
 
           - label: "2 · Values section & page CTA"
             name: "copy"
@@ -659,6 +644,7 @@ collections:
               - { label: "Title / role", name: "title", widget: "string", hint: "e.g. Former Prime Minister of New Zealand" }
               - { label: "Organisation (optional)", name: "organisation", widget: "string", required: false }
               - { label: "Profile photo", name: "photo", widget: "image", required: false, hint: "Square headshot works best — shown as a circle. Without one, initials show instead." }
+              - { label: "Background photo", name: "background", widget: "image", required: false, hint: "Full-width photo shown behind the section while this endorsement is selected. A dark overlay keeps the quote readable. The background crossfades when visitors switch endorsements." }
               - { label: "Prominent (larger profile)", name: "prominent", widget: "boolean", required: false, default: false, hint: "For especially senior endorsers — shows a larger portrait" }
               - { label: "Featured (show first)", name: "featured", widget: "boolean", required: false, default: false }
 
