@@ -307,11 +307,11 @@ a.press-item:hover{color:var(--vermillion)}
 
 /* Contact page — hero with enquiry bar */
 .contact-hero{position:relative;background:var(--blush-deep) repeating-linear-gradient(45deg,rgba(244,224,220,.5) 0 22px,transparent 22px 44px);background-size:cover;background-position:center;padding:190px 0 120px;overflow:hidden}
-.contact-hero::after{content:"";position:absolute;inset:0;background:var(--blush);opacity:.42;pointer-events:none}
+.contact-hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(16,13,12,.72) 0%,rgba(16,13,12,.58) 100%);opacity:1;pointer-events:none}
 .contact-hero-inner{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:0 24px;text-align:center}
-.contact-hero .hero-photo-note{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(45,45,45,.5);margin-bottom:28px}
-.contact-hero h1{font-size:clamp(34px,4.5vw,54px);font-weight:700;color:var(--charcoal)}
-.contact-hero p{font-size:18px;color:var(--charcoal);margin:18px auto 44px;max-width:560px}
+.contact-hero .hero-photo-note{font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:28px}
+.contact-hero h1{font-size:clamp(34px,4.5vw,54px);font-weight:700;color:var(--white)}
+.contact-hero p{font-size:18px;color:rgba(255,255,255,.88);margin:18px auto 44px;max-width:560px}
 .enquiry-bar{position:relative;display:flex;align-items:center;gap:10px;background:var(--white);border-radius:999px;padding:10px 10px 10px 26px;box-shadow:0 24px 48px rgba(45,45,45,.16),0 2px 8px rgba(45,45,45,.06);max-width:660px;margin:0 auto;transition:box-shadow .25s ease}
 .enquiry-bar:focus-within{box-shadow:0 24px 48px rgba(232,65,50,.18),0 0 0 3px rgba(232,65,50,.15)}
 .enquiry-bar svg{flex:none;color:var(--mid-grey)}
