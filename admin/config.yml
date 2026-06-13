@@ -332,6 +332,95 @@ collections:
                   - { label: "Bottom", value: "bottom" }
                   - { label: "Left", value: "left" }
                   - { label: "Right", value: "right" }
+              - label: "Chapter 01 expanded — narrative paragraph 1"
+                name: "ch1_para1"
+                widget: "text"
+                required: false
+                hint: "First body paragraph in the expanded chapter view."
+              - label: "Chapter 01 expanded — narrative paragraph 2"
+                name: "ch1_para2"
+                widget: "text"
+                required: false
+              - { label: "Chapter 01 expanded — pull quote", name: "ch1_pullquote", widget: "string", required: false, hint: "Large featured quote in the chapter body, e.g. 'Eleven thousand student volunteers answered.'" }
+              - { label: "Chapter 01 expanded — narrative photo", name: "ch1_narrative_image", widget: "image", required: false, hint: "4:3 photo beside the body text." }
+              - label: "Chapter 01 expanded — gallery photo 1"
+                name: "ch1_gal1"
+                widget: "image"
+                required: false
+              - label: "Chapter 01 expanded — gallery photo 2"
+                name: "ch1_gal2"
+                widget: "image"
+                required: false
+              - label: "Chapter 01 expanded — gallery photo 3"
+                name: "ch1_gal3"
+                widget: "image"
+                required: false
+              - label: "Chapter 01 expanded — milestones"
+                name: "ch1_milestones"
+                widget: "list"
+                required: false
+                hint: "Up to 4 key moments for Chapter 01."
+                fields:
+                  - { label: "Year / date", name: "year", widget: "string" }
+                  - { label: "Description", name: "label", widget: "string" }
+              - label: "Chapter 02 expanded — narrative paragraph 1"
+                name: "ch2_para1"
+                widget: "text"
+                required: false
+              - label: "Chapter 02 expanded — narrative paragraph 2"
+                name: "ch2_para2"
+                widget: "text"
+                required: false
+              - { label: "Chapter 02 expanded — pull quote", name: "ch2_pullquote", widget: "string", required: false }
+              - { label: "Chapter 02 expanded — narrative photo", name: "ch2_narrative_image", widget: "image", required: false }
+              - label: "Chapter 02 expanded — gallery photo 1"
+                name: "ch2_gal1"
+                widget: "image"
+                required: false
+              - label: "Chapter 02 expanded — gallery photo 2"
+                name: "ch2_gal2"
+                widget: "image"
+                required: false
+              - label: "Chapter 02 expanded — gallery photo 3"
+                name: "ch2_gal3"
+                widget: "image"
+                required: false
+              - label: "Chapter 02 expanded — milestones"
+                name: "ch2_milestones"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Year / date", name: "year", widget: "string" }
+                  - { label: "Description", name: "label", widget: "string" }
+              - label: "Chapter 03 expanded — narrative paragraph 1"
+                name: "ch3_para1"
+                widget: "text"
+                required: false
+              - label: "Chapter 03 expanded — narrative paragraph 2"
+                name: "ch3_para2"
+                widget: "text"
+                required: false
+              - { label: "Chapter 03 expanded — pull quote", name: "ch3_pullquote", widget: "string", required: false }
+              - { label: "Chapter 03 expanded — narrative photo", name: "ch3_narrative_image", widget: "image", required: false }
+              - label: "Chapter 03 expanded — gallery photo 1"
+                name: "ch3_gal1"
+                widget: "image"
+                required: false
+              - label: "Chapter 03 expanded — gallery photo 2"
+                name: "ch3_gal2"
+                widget: "image"
+                required: false
+              - label: "Chapter 03 expanded — gallery photo 3"
+                name: "ch3_gal3"
+                widget: "image"
+                required: false
+              - label: "Chapter 03 expanded — milestones"
+                name: "ch3_milestones"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Year / date", name: "year", widget: "string" }
+                  - { label: "Description", name: "label", widget: "string" }
               - { label: "Quote section — quote text", name: "quote", widget: "text", hint: "Displays at huge cinematic scale over the photo — keep it tight. Quote marks are added automatically." }
               - { label: "Quote section — name", name: "quote_cite", widget: "string" }
               - { label: "Quote section — title / role", name: "quote_role", widget: "string", required: false, hint: "e.g. Founder, Student Volunteer Army" }

@@ -276,6 +276,131 @@ menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
   queueUpdate();
 })();
 
+/* Journey chapters — panel click expands inline chapter view */
+(function () {
+  var section = document.getElementById('journey-section');
+  if (!section) return;
+  var panelsWrap = document.getElementById('journey-panels-wrap');
+  var chapterWrap = document.getElementById('journey-chapter-wrap');
+  if (!panelsWrap || !chapterWrap) return;
+
+  var currentChapter = 0;
+  var reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function allChapters() {
+    return section.querySelectorAll('.journey-chapter');
+  }
+
+  function openChapter(n) {
+    currentChapter = n;
+    if (!reduced) {
+      panelsWrap.classList.add('jpw-exiting');
+    }
+    var delay = reduced ? 0 : 340;
+    setTimeout(function () {
+      panelsWrap.style.display = 'none';
+      panelsWrap.classList.remove('jpw-exiting');
+      allChapters().forEach(function (el) {
+        el.style.display = 'none';
+        el.classList.remove('jc--in', 'jc--out', 'jc--switching-out');
+      });
+      chapterWrap.style.display = 'block';
+      var target = document.getElementById('jc-' + n);
+      if (!target) return;
+      target.style.display = 'block';
+      if (reduced) {
+        target.classList.add('jc--in');
+      } else {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            target.classList.add('jc--in');
+          });
+        });
+      }
+      section.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
+    }, delay);
+  }
+
+  function closeChapters() {
+    var active = section.querySelector('.journey-chapter.jc--in');
+    if (active) {
+      active.classList.remove('jc--in');
+      if (!reduced) active.classList.add('jc--out');
+    }
+    var delay = reduced ? 0 : 300;
+    setTimeout(function () {
+      chapterWrap.style.display = 'none';
+      allChapters().forEach(function (el) {
+        el.style.display = 'none';
+        el.classList.remove('jc--in', 'jc--out', 'jc--switching-out');
+      });
+      panelsWrap.style.display = 'block';
+      if (!reduced) {
+        panelsWrap.style.opacity = '0';
+        panelsWrap.style.transform = 'scale(.97)';
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () {
+            panelsWrap.style.transition = 'opacity .42s ease, transform .42s cubic-bezier(.2,.6,.2,1)';
+            panelsWrap.style.opacity = '';
+            panelsWrap.style.transform = '';
+            setTimeout(function () { panelsWrap.style.transition = ''; }, 450);
+          });
+        });
+      }
+      section.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
+      currentChapter = 0;
+    }, delay);
+  }
+
+  function switchChapter(n) {
+    var from = section.querySelector('.journey-chapter.jc--in');
+    if (from) {
+      from.classList.remove('jc--in');
+      if (!reduced) from.classList.add('jc--switching-out');
+    }
+    var delay = reduced ? 0 : 290;
+    setTimeout(function () {
+      if (from) {
+        from.style.display = 'none';
+        from.classList.remove('jc--switching-out');
+      }
+      currentChapter = n;
+      var to = document.getElementById('jc-' + n);
+      if (!to) return;
+      to.style.display = 'block';
+      if (reduced) {
+        to.classList.add('jc--in');
+      } else {
+        requestAnimationFrame(function () {
+          requestAnimationFrame(function () { to.classList.add('jc--in'); });
+        });
+      }
+      section.scrollIntoView({ behavior: reduced ? 'instant' : 'smooth', block: 'start' });
+    }, delay);
+  }
+
+  /* Panel clicks */
+  section.querySelectorAll('.journey-panel[data-chapter]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      openChapter(parseInt(this.dataset.chapter, 10));
+    });
+  });
+
+  /* Back / forward buttons — event delegation inside chapter wrap */
+  chapterWrap.addEventListener('click', function (e) {
+    if (e.target.closest('.jc-back-btn')) { closeChapters(); return; }
+    var nav = e.target.closest('.jc-forward-btn, .jc-prev-btn');
+    if (nav && nav.dataset.chapter) {
+      switchChapter(parseInt(nav.dataset.chapter, 10));
+    }
+  });
+
+  /* Escape key */
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && currentChapter > 0) closeChapters();
+  });
+})();
+
 /* Endorsement wall — profile row drives the hero quote */
 (function () {
   const quote = document.getElementById('endorseQuote');

@@ -40,7 +40,46 @@
     "today_intro": "Sam is the Projects Director at STILL, a family office venture founded by Hideaki Fukutake. Through STILL, he works on projects that amplify the fundamentals of human nature, with a focus on people, nature, arts, and culture.",
     "today_role": "Projects Director — STILL",
     "today_image": "/images/sj-profile-2.jpg",
-    "today_image_position": "center"
+    "today_image_position": "center",
+    "ch1_para1": "In February 2011, a 6.3 magnitude earthquake struck Christchurch, killing 185 people and destroying the city's heart. Sam Johnson was a 23-year-old law student watching his peers being told to go home and stay safe. He disagreed.",
+    "ch1_para2": "Within hours, Sam posted a call to action on Facebook. By the end of the first day, thousands of students had turned up to clear liquefaction silt from homes and streets. Eleven thousand volunteers would follow. The Student Volunteer Army was born from a moment of refusal — the refusal to watch from the sidelines.",
+    "ch1_pullquote": "Eleven thousand student volunteers answered.",
+    "ch1_narrative_image": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
+    "ch1_gal1": "/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg",
+    "ch1_gal2": "/images/480446915_1015942060555418_4962552790525564478_n.jpg",
+    "ch1_gal3": "/images/weixin-image_20260613115911_12_53.jpg",
+    "ch1_milestones": [
+      { "year": "22 Feb 2011", "label": "Earthquake strikes Christchurch — 185 lives lost, the city centre destroyed" },
+      { "year": "Mar 2011", "label": "SVA deploys 3,000 students in the first week of operation" },
+      { "year": "2011", "label": "11,000 volunteers mobilised — the largest student movement in NZ history" },
+      { "year": "2012", "label": "Young New Zealander of the Year — national recognition for a generation's response" }
+    ],
+    "ch2_para1": "The model Sam built in Christchurch — trust young people, give them a real problem, get out of the way — turned out to be useful far beyond New Zealand. Within years, the SVA framework was being studied and adapted by communities navigating their own disasters, and by governments rethinking how they mobilise citizens.",
+    "ch2_para2": "Sam went on to advise on participatory response models internationally, working with governments and NGOs to put communities, not institutions, at the centre of change. TOMLAB in Switzerland, consulting in New York, governance roles across the Pacific — the work kept widening.",
+    "ch2_pullquote": "From local streets to global stages.",
+    "ch2_narrative_image": "/images/480446915_1015942060555418_4962552790525564478_n.jpg",
+    "ch2_gal1": "/images/480446915_1015942060555418_4962552790525564478_n.jpg",
+    "ch2_gal2": "/images/sam-speaking-.jpeg",
+    "ch2_gal3": "/images/with-pm-photo.jpg",
+    "ch2_milestones": [
+      { "year": "2012", "label": "Young New Zealander of the Year — the SVA model enters global consciousness" },
+      { "year": "2014", "label": "TOMLAB, Switzerland — nine leaders from small states develop transformative ideas" },
+      { "year": "2015", "label": "Consulting in New York City on political and reputational risk" },
+      { "year": "2019", "label": "Appointed Chief Executive of SVA — scaling the movement into a national programme" }
+    ],
+    "ch3_para1": "Today Sam is the Projects Director at STILL, a family office venture founded by Hideaki Fukutake. STILL works at the intersection of people, nature, arts, and culture — building projects that amplify what makes us human and investing in a future worth inhabiting.",
+    "ch3_para2": "Alongside STILL, Sam continues to serve on governance boards, champion participatory models of change, and speak to audiences around the world about what happens when you trust ordinary people with extraordinary problems. In 2026, he was appointed an Officer of the New Zealand Order of Merit for services to the community and youth.",
+    "ch3_pullquote": "Building projects that amplify people, nature, arts and culture.",
+    "ch3_narrative_image": "/images/sj-profile-2.jpg",
+    "ch3_gal1": "/images/sam-speaking-.jpeg",
+    "ch3_gal2": "/images/sj-profile-2.jpg",
+    "ch3_gal3": "/images/horse-.jpeg",
+    "ch3_milestones": [
+      { "year": "2022", "label": "IoD Auckland Emerging Director Award — outstanding governance leadership" },
+      { "year": "2023", "label": "Director of Projects at STILL — a new chapter in civic entrepreneurship" },
+      { "year": "2026", "label": "ONZM — Officer of the New Zealand Order of Merit (King's Birthday Honours)" },
+      { "year": "Present", "label": "Trustee, speaker, builder — amplifying human potential" }
+    ]
   },
   "copy": {
     "hub_projects_image": "/images/sj-profile-2.jpg",

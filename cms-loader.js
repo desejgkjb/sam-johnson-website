@@ -303,6 +303,21 @@
     return pills ? '<div class="org-badges">' + pills + '</div>' : '';
   }
 
+  function renderChapterMilestones(data) {
+    for (var i = 1; i <= 3; i++) {
+      var el = document.getElementById('jc-' + i + '-milestones');
+      if (!el) continue;
+      var milestones = get(data, 'about_full.ch' + i + '_milestones');
+      if (!milestones || !milestones.length) continue;
+      el.innerHTML = milestones.map(function (m) {
+        return '<div class="jcm-item">'
+          + '<span class="jcm-year">' + esc(m.year || '') + '</span>'
+          + '<span class="jcm-label">' + esc(m.label || '') + '</span>'
+          + '</div>';
+      }).join('');
+    }
+  }
+
   function renderTimeline(container, items) {
     container.innerHTML = '<ol class="timeline-list">'
       + items.map(function (item) {
@@ -442,6 +457,9 @@
 
     el = document.getElementById('cms-timeline');
     if (el && data.timeline) renderTimeline(el, data.timeline);
+
+    // Chapter milestone lists — rendered from about_full.ch[1-3]_milestones
+    renderChapterMilestones(data);
 
     el = document.getElementById('cms-awards');
     if (el && data.awards) renderAwards(el, data.awards);

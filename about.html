@@ -53,44 +53,202 @@
 </section>
 
 
-<section class="journey" aria-label="Sam's Journey">
+<section class="journey" id="journey-section" aria-label="Sam's Journey">
   <div class="container journey-head" data-reveal>
     <span class="section-label">Sam's Journey</span>
     <h2 data-cms-field="about_full.journey_heading">Three Chapters. One Purpose.</h2>
     <p data-cms-field="about_full.journey_subheading">From a student-led response in Christchurch to international impact and a career dedicated to people, purpose, and progress.</p>
   </div>
-  <div class="journey-panels">
-    <a class="journey-panel" href="#about-quote">
-      <div class="jp-bg" data-cms-bg="about_full.journey_1_image" data-cms-bg-pos="about_full.journey_1_image_position" style="background-image:url('/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg')" role="img" aria-label="Christchurch earthquake response, 2011"></div>
-      <div class="jp-overlay" aria-hidden="true"></div>
-      <div class="jp-content">
-        <span class="jp-num">01</span>
-        <h3 data-cms-field="about_full.journey_1_heading">The Origin Story</h3>
-        <p data-cms-field="about_full.journey_1_copy">Christchurch, 2011. A Facebook post. Eleven thousand volunteers.</p>
-        <span class="jp-cta" aria-hidden="true">Read chapter →</span>
-      </div>
-    </a>
-    <a class="journey-panel" href="experience.html">
-      <div class="jp-bg" data-cms-bg="about_full.journey_2_image" data-cms-bg-pos="about_full.journey_2_image_position" style="background-image:url('/images/480446915_1015942060555418_4962552790525564478_n.jpg')" role="img" aria-label="Sam's international work"></div>
-      <div class="jp-overlay" aria-hidden="true"></div>
-      <div class="jp-content">
-        <span class="jp-num">02</span>
-        <h3 data-cms-field="about_full.journey_2_heading">What Started in Christchurch Didn't Stay There</h3>
-        <p data-cms-field="about_full.journey_2_copy">From New Zealand to communities across the world.</p>
-        <span class="jp-cta" aria-hidden="true">Read chapter →</span>
-      </div>
-    </a>
-    <a class="journey-panel" href="#about-explore">
-      <div class="jp-bg" data-cms-bg="about_full.journey_3_image" data-cms-bg-pos="about_full.journey_3_image_position" style="background-image:url('/images/sj-profile-2.jpg')" role="img" aria-label="Sam Johnson today"></div>
-      <div class="jp-overlay" aria-hidden="true"></div>
-      <div class="jp-content">
-        <span class="jp-num">03</span>
-        <h3 data-cms-field="about_full.journey_3_heading">Where Sam Is Today</h3>
-        <p data-cms-field="about_full.journey_3_copy">Building projects that amplify people, nature, arts and culture.</p>
-        <span class="jp-cta" aria-hidden="true">Read chapter →</span>
-      </div>
-    </a>
+
+  <!-- ── Panel grid (default view) ── -->
+  <div class="journey-panels-wrap" id="journey-panels-wrap">
+    <div class="journey-panels">
+
+      <button class="journey-panel" type="button" data-chapter="1" aria-label="Open chapter: The Origin Story">
+        <div class="jp-bg" data-cms-bg="about_full.journey_1_image" data-cms-bg-pos="about_full.journey_1_image_position" style="background-image:url('/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg')" role="img" aria-label="Christchurch earthquake response, 2011"></div>
+        <div class="jp-overlay" aria-hidden="true"></div>
+        <div class="jp-content">
+          <span class="jp-num">01</span>
+          <h3 data-cms-field="about_full.journey_1_heading">The Origin Story</h3>
+          <p data-cms-field="about_full.journey_1_copy">Christchurch, 2011. A Facebook post. Eleven thousand volunteers.</p>
+          <span class="jp-cta" aria-hidden="true">Read chapter →</span>
+        </div>
+      </button>
+
+      <button class="journey-panel" type="button" data-chapter="2" aria-label="Open chapter: What Started in Christchurch Didn't Stay There">
+        <div class="jp-bg" data-cms-bg="about_full.journey_2_image" data-cms-bg-pos="about_full.journey_2_image_position" style="background-image:url('/images/480446915_1015942060555418_4962552790525564478_n.jpg')" role="img" aria-label="Sam's international work"></div>
+        <div class="jp-overlay" aria-hidden="true"></div>
+        <div class="jp-content">
+          <span class="jp-num">02</span>
+          <h3 data-cms-field="about_full.journey_2_heading">What Started in Christchurch Didn't Stay There</h3>
+          <p data-cms-field="about_full.journey_2_copy">From New Zealand to communities across the world.</p>
+          <span class="jp-cta" aria-hidden="true">Read chapter →</span>
+        </div>
+      </button>
+
+      <button class="journey-panel" type="button" data-chapter="3" aria-label="Open chapter: Where Sam Is Today">
+        <div class="jp-bg" data-cms-bg="about_full.journey_3_image" data-cms-bg-pos="about_full.journey_3_image_position" style="background-image:url('/images/sj-profile-2.jpg')" role="img" aria-label="Sam Johnson today"></div>
+        <div class="jp-overlay" aria-hidden="true"></div>
+        <div class="jp-content">
+          <span class="jp-num">03</span>
+          <h3 data-cms-field="about_full.journey_3_heading">Where Sam Is Today</h3>
+          <p data-cms-field="about_full.journey_3_copy">Building projects that amplify people, nature, arts and culture.</p>
+          <span class="jp-cta" aria-hidden="true">Read chapter →</span>
+        </div>
+      </button>
+
+    </div>
   </div>
+
+  <!-- ── Chapter expanded views ── -->
+  <div class="journey-chapter-wrap" id="journey-chapter-wrap">
+
+    <!-- Chapter 1: The Origin Story -->
+    <div class="journey-chapter" id="jc-1" style="display:none">
+      <div class="jc-hero">
+        <div class="jc-hero-bg" data-cms-bg="about_full.journey_1_image" data-cms-bg-pos="about_full.journey_1_image_position" style="background-image:url('/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg')"></div>
+        <div class="jc-hero-overlay" aria-hidden="true"></div>
+        <div class="jc-hero-inner">
+          <span class="vp-index">01</span>
+          <h2 data-cms-field="about_full.journey_1_heading">The Origin Story</h2>
+          <p class="jc-hero-tagline" data-cms-field="about_full.journey_1_copy">Christchurch, 2011. A Facebook post. Eleven thousand volunteers.</p>
+        </div>
+      </div>
+      <div class="jc-body">
+        <div class="jc-narrative-grid">
+          <div class="jc-text">
+            <p data-cms-field="about_full.ch1_para1">In February 2011, a 6.3 magnitude earthquake struck Christchurch, killing 185 people and destroying the city's heart. Sam Johnson was a 23-year-old law student watching his peers being told to go home and stay safe. He disagreed.</p>
+            <p data-cms-field="about_full.ch1_para2">Within hours, Sam posted a call to action on Facebook. By the end of the first day, thousands of students had turned up to clear liquefaction silt from homes and streets. Eleven thousand volunteers would follow. The Student Volunteer Army was born from a moment of refusal — the refusal to watch from the sidelines.</p>
+          </div>
+          <div class="jc-narrative-image" data-cms-bg="about_full.ch1_narrative_image" style="background-image:url('/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg')"></div>
+        </div>
+        <blockquote class="jc-pullquote"><span data-cms-field="about_full.ch1_pullquote">Eleven thousand student volunteers answered.</span></blockquote>
+        <div class="jc-milestones-block">
+          <span class="jc-section-label">Key moments</span>
+          <div class="jc-milestones" id="jc-1-milestones"></div>
+        </div>
+        <div class="jc-gallery">
+          <div class="jc-gal-img" data-cms-bg="about_full.ch1_gal1" style="background-image:url('/images/student-volunteer-army-earthquake-response-2010.-pictured_-sam-johnson-founder-of-student-volunteer-army.-credit_-neil-macbeth.jpg')"></div>
+          <div class="jc-gal-img" data-cms-bg="about_full.ch1_gal2" style="background-image:url('/images/480446915_1015942060555418_4962552790525564478_n.jpg')"></div>
+          <div class="jc-gal-img" data-cms-bg="about_full.ch1_gal3" style="background-image:url('/images/weixin-image_20260613115911_12_53.jpg')"></div>
+        </div>
+      </div>
+      <div class="jc-nav-bar">
+        <button class="jc-back-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All chapters
+        </button>
+        <button class="jc-forward-btn" type="button" data-chapter="2">
+          <span class="jc-fwd-inner">
+            <span class="jc-fwd-label">Next chapter</span>
+            <span class="jc-fwd-title" data-cms-field="about_full.journey_2_heading">What Started in Christchurch Didn't Stay There</span>
+          </span>
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Chapter 2: What Started in Christchurch Didn't Stay There -->
+    <div class="journey-chapter" id="jc-2" style="display:none">
+      <div class="jc-hero">
+        <div class="jc-hero-bg" data-cms-bg="about_full.journey_2_image" data-cms-bg-pos="about_full.journey_2_image_position" style="background-image:url('/images/480446915_1015942060555418_4962552790525564478_n.jpg')"></div>
+        <div class="jc-hero-overlay" aria-hidden="true"></div>
+        <div class="jc-hero-inner">
+          <span class="vp-index">02</span>
+          <h2 data-cms-field="about_full.journey_2_heading">What Started in Christchurch Didn't Stay There</h2>
+          <p class="jc-hero-tagline" data-cms-field="about_full.journey_2_copy">From New Zealand to communities across the world.</p>
+        </div>
+      </div>
+      <div class="jc-body">
+        <div class="jc-narrative-grid">
+          <div class="jc-text">
+            <p data-cms-field="about_full.ch2_para1">The model Sam built in Christchurch — trust young people, give them a real problem, get out of the way — turned out to be useful far beyond New Zealand. Within years, the SVA framework was being studied and adapted by communities navigating their own disasters, and by governments rethinking how they mobilise citizens.</p>
+            <p data-cms-field="about_full.ch2_para2">Sam went on to advise on participatory response models internationally, working with governments and NGOs to put communities, not institutions, at the centre of change. TOMLAB in Switzerland, consulting in New York, governance roles across the Pacific — the work kept widening.</p>
+          </div>
+          <div class="jc-narrative-image" data-cms-bg="about_full.ch2_narrative_image" style="background-image:url('/images/480446915_1015942060555418_4962552790525564478_n.jpg')"></div>
+        </div>
+        <blockquote class="jc-pullquote"><span data-cms-field="about_full.ch2_pullquote">From local streets to global stages.</span></blockquote>
+        <div class="jc-milestones-block">
+          <span class="jc-section-label">Key moments</span>
+          <div class="jc-milestones" id="jc-2-milestones"></div>
+        </div>
+        <div class="jc-gallery">
+          <div class="jc-gal-img" data-cms-bg="about_full.ch2_gal1" style="background-image:url('/images/480446915_1015942060555418_4962552790525564478_n.jpg')"></div>
+          <div class="jc-gal-img" data-cms-bg="about_full.ch2_gal2" style="background-image:url('/images/sam-speaking-.jpeg')"></div>
+          <div class="jc-gal-img" data-cms-bg="about_full.ch2_gal3" style="background-image:url('/images/with-pm-photo.jpg')"></div>
+        </div>
+      </div>
+      <div class="jc-nav-bar">
+        <button class="jc-back-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All chapters
+        </button>
+        <div class="jc-nav-btns">
+          <button class="jc-prev-btn" type="button" data-chapter="1">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <span class="jc-fwd-inner">
+              <span class="jc-fwd-label">Previous chapter</span>
+              <span class="jc-fwd-title" data-cms-field="about_full.journey_1_heading">The Origin Story</span>
+            </span>
+          </button>
+          <button class="jc-forward-btn" type="button" data-chapter="3">
+            <span class="jc-fwd-inner">
+              <span class="jc-fwd-label">Next chapter</span>
+              <span class="jc-fwd-title" data-cms-field="about_full.journey_3_heading">Where Sam Is Today</span>
+            </span>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 3l5 5-5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Chapter 3: Where Sam Is Today -->
+    <div class="journey-chapter" id="jc-3" style="display:none">
+      <div class="jc-hero">
+        <div class="jc-hero-bg" data-cms-bg="about_full.journey_3_image" data-cms-bg-pos="about_full.journey_3_image_position" style="background-image:url('/images/sj-profile-2.jpg')"></div>
+        <div class="jc-hero-overlay" aria-hidden="true"></div>
+        <div class="jc-hero-inner">
+          <span class="vp-index">03</span>
+          <h2 data-cms-field="about_full.journey_3_heading">Where Sam Is Today</h2>
+          <p class="jc-hero-tagline" data-cms-field="about_full.journey_3_copy">Building projects that amplify people, nature, arts and culture.</p>
+        </div>
+      </div>
+      <div class="jc-body">
+        <div class="jc-narrative-grid">
+          <div class="jc-text">
+            <p data-cms-field="about_full.ch3_para1">Today Sam is the Projects Director at STILL, a family office venture founded by Hideaki Fukutake. STILL works at the intersection of people, nature, arts, and culture — building projects that amplify what makes us human and investing in a future worth inhabiting.</p>
+            <p data-cms-field="about_full.ch3_para2">Alongside STILL, Sam continues to serve on governance boards, champion participatory models of change, and speak to audiences around the world about what happens when you trust ordinary people with extraordinary problems. In 2026, he was appointed an Officer of the New Zealand Order of Merit for services to the community and youth.</p>
+          </div>
+          <div class="jc-narrative-image" data-cms-bg="about_full.ch3_narrative_image" style="background-image:url('/images/sj-profile-2.jpg')"></div>
+        </div>
+        <blockquote class="jc-pullquote"><span data-cms-field="about_full.ch3_pullquote">Building projects that amplify people, nature, arts and culture.</span></blockquote>
+        <div class="jc-milestones-block">
+          <span class="jc-section-label">Key moments</span>
+          <div class="jc-milestones" id="jc-3-milestones"></div>
+        </div>
+        <div class="jc-gallery">
+          <div class="jc-gal-img" data-cms-bg="about_full.ch3_gal1" style="background-image:url('/images/sam-speaking-.jpeg')"></div>
+          <div class="jc-gal-img" data-cms-bg="about_full.ch3_gal2" style="background-image:url('/images/sj-profile-2.jpg')"></div>
+          <div class="jc-gal-img" data-cms-bg="about_full.ch3_gal3" style="background-image:url('/images/horse-.jpeg')"></div>
+        </div>
+      </div>
+      <div class="jc-nav-bar">
+        <button class="jc-back-btn" type="button">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          All chapters
+        </button>
+        <button class="jc-prev-btn" type="button" data-chapter="2">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="jc-fwd-inner">
+            <span class="jc-fwd-label">Previous chapter</span>
+            <span class="jc-fwd-title" data-cms-field="about_full.journey_2_heading">What Started in Christchurch Didn't Stay There</span>
+          </span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+
 </section>
 
 <section class="quote-cinema" id="about-quote" data-cms-bg="about_full.quote_image" data-cms-bg-pos="about_full.quote_image_position" aria-label="Quote from Sam Johnson">

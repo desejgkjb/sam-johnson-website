@@ -155,7 +155,62 @@ a.badge:hover .badge-text strong{color:var(--vermillion)}
   .jp-content{transform:none}
   .jp-bg,.jp-content,.jp-overlay,.jp-cta{transition:none}
   .jp-cta{opacity:1;transform:none}
+  .journey-chapter,.journey-panels-wrap{transition:none}
+  .jc-hero-bg{transform:none}
 }
+
+/* Journey — button reset for panel buttons */
+.journey-panel{background:none;border:none;padding:0;text-align:left;font-family:inherit;width:100%}
+/* Journey chapter wrap — hidden until a panel is clicked */
+.journey-chapter-wrap{display:none;background:#141211}
+/* Panel wrap transition — fades out when a chapter is open */
+.journey-panels-wrap{transition:opacity .32s ease,transform .32s ease}
+.journey-panels-wrap.jpw-exiting{opacity:0;transform:scale(.97);pointer-events:none}
+/* Individual chapter enter/exit animations */
+.journey-chapter{opacity:0;transform:translateY(20px);transition:opacity .48s ease,transform .48s cubic-bezier(.2,.6,.2,1)}
+.journey-chapter.jc--in{opacity:1;transform:none}
+.journey-chapter.jc--out,.journey-chapter.jc--switching-out{opacity:0;transform:translateY(-14px);transition:opacity .28s ease,transform .28s ease}
+/* Chapter hero */
+.jc-hero{position:relative;height:clamp(460px,62vh,700px);display:flex;align-items:flex-end;overflow:hidden}
+.jc-hero-bg{position:absolute;inset:0;background:#26221F center/cover no-repeat;transform:scale(1.04);z-index:0}
+.jc-hero-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(16,13,12,.95) 0%,rgba(16,13,12,.7) 45%,rgba(16,13,12,.25) 100%),linear-gradient(0deg,rgba(16,13,12,.75) 0%,rgba(16,13,12,.08) 55%);z-index:1}
+.jc-hero-inner{position:relative;z-index:2;width:100%;max-width:1320px;margin:0 auto;padding:clamp(48px,6vw,96px) clamp(24px,4vw,56px)}
+.jc-hero-inner .vp-index{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--vermillion);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.jc-hero-inner .vp-index::before{content:"";width:32px;height:2px;background:var(--vermillion);flex-shrink:0;display:block}
+.jc-hero-inner h2{color:#fff;font-size:clamp(36px,5.5vw,76px);font-weight:700;line-height:1.04;letter-spacing:-.025em;max-width:16ch;margin-bottom:22px;text-wrap:balance}
+.jc-hero-tagline{color:rgba(255,255,255,.72);font-size:clamp(15px,1.2vw,18px);max-width:46ch;line-height:1.6}
+/* Chapter body */
+.jc-body{background:#141211;max-width:1320px;margin:0 auto;padding:clamp(56px,6vw,96px) clamp(24px,4vw,56px)}
+/* Narrative grid — text + image side by side */
+.jc-narrative-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,5vw,80px);align-items:center;margin-bottom:72px}
+.jc-text p{color:rgba(255,255,255,.82);font-size:clamp(16px,1.2vw,19px);line-height:1.82;margin-bottom:28px}
+.jc-text p:last-child{margin-bottom:0}
+.jc-narrative-image{aspect-ratio:4/3;border-radius:6px;background:#26221F center/cover no-repeat}
+/* Pull quote */
+.jc-pullquote{margin:0 0 72px;padding:28px 36px;border-left:4px solid var(--vermillion);font-size:clamp(21px,2.4vw,36px);font-weight:700;color:#fff;font-style:normal;line-height:1.3;max-width:820px}
+/* Milestones */
+.jc-milestones-block{margin-bottom:72px}
+.jc-section-label{display:block;font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--vermillion);margin-bottom:28px}
+.jc-milestones{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.jcm-item{border-top:2px solid rgba(255,255,255,.12);padding-top:18px}
+.jcm-year{display:block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--vermillion);margin-bottom:10px}
+.jcm-label{display:block;font-size:14px;color:rgba(255,255,255,.82);line-height:1.55}
+/* Gallery */
+.jc-gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.jc-gal-img{aspect-ratio:4/3;border-radius:4px;background:#26221F center/cover no-repeat}
+/* Chapter nav bar */
+.jc-nav-bar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;border-top:1px solid rgba(255,255,255,.1);padding:clamp(28px,3vw,44px) clamp(24px,4vw,56px);max-width:1320px;margin:0 auto;background:#141211}
+.jc-back-btn{display:inline-flex;align-items:center;gap:10px;background:none;border:1.5px solid rgba(255,255,255,.18);color:rgba(255,255,255,.8);font-family:inherit;font-size:13px;font-weight:600;letter-spacing:.06em;padding:12px 22px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease}
+.jc-back-btn:hover{border-color:rgba(255,255,255,.45);color:#fff}
+.jc-forward-btn{display:inline-flex;align-items:center;gap:14px;background:var(--vermillion);border:none;color:#fff;font-family:inherit;padding:12px 22px 12px 18px;border-radius:999px;cursor:pointer;transition:background .2s ease,transform .2s ease}
+.jc-forward-btn:hover{background:#cf3325;transform:translateX(3px)}
+.jc-prev-btn{display:inline-flex;align-items:center;gap:14px;background:none;border:1.5px solid rgba(255,255,255,.18);color:rgba(255,255,255,.8);font-family:inherit;padding:12px 22px 12px 18px;border-radius:999px;cursor:pointer;transition:border-color .2s ease,color .2s ease,transform .2s ease}
+.jc-prev-btn:hover{border-color:rgba(255,255,255,.45);color:#fff;transform:translateX(-3px)}
+.jc-fwd-inner{display:flex;flex-direction:column;text-align:left}
+.jc-fwd-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:.65;line-height:1}
+.jc-fwd-title{font-size:14px;font-weight:700;max-width:24ch;line-height:1.3;margin-top:3px}
+.jc-nav-btns{display:flex;gap:12px;flex-wrap:wrap}
+.jc-back-btn:focus-visible,.jc-forward-btn:focus-visible,.jc-prev-btn:focus-visible{outline:3px solid var(--vermillion);outline-offset:2px}
 
 /* About page — cinematic quote section */
 .quote-cinema{position:relative;min-height:92vh;display:flex;align-items:center;justify-content:center;padding:120px 24px;overflow:hidden;background:#1A1817 center/cover no-repeat}
@@ -527,6 +582,14 @@ a,button{-webkit-tap-highlight-color:transparent}
   .journey-panel{min-height:300px;border-right:none;border-bottom:1px solid rgba(255,255,255,.07)}
   .journey-panel:last-child{border-bottom:none}
   .jp-cta{opacity:1;transform:none}
+  .jc-narrative-grid{grid-template-columns:1fr;gap:32px}
+  .jc-milestones{grid-template-columns:repeat(2,1fr)}
+  .jc-gallery{grid-template-columns:1fr;gap:8px}
+  .jc-nav-bar{flex-direction:column;align-items:stretch}
+  .jc-back-btn,.jc-forward-btn,.jc-prev-btn{justify-content:center;text-align:center;width:100%}
+  .jc-fwd-inner{text-align:center;align-items:center}
+  .jc-nav-btns{flex-direction:column}
+  .jc-hero{height:clamp(380px,70vw,560px)}
   .journey-head{padding:72px 24px 56px}
   .explore-hub{padding:64px 20px}
   .explore-grid{grid-template-columns:1fr;gap:24px}
